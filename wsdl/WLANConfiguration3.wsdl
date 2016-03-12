@@ -1,0 +1,749 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="WLANConfiguration3">
+    <documentation>http://avm.de/fileadmin/user_upload/Global/Service/Schnittstellen/wlanconfigSCPD.pdf</documentation>
+    <port binding="WLANConfiguration3" name="SetEnable">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="GetInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="SetConfig">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="SetSecurityKeys">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="GetSecurityKeys">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="SetDefaultWEPKeyIndex">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="GetDefaultWEPKeyIndex">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="SetBasBeaconSecurityProperties">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="GetBasBeaconSecurityProperties">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="GetStatistics">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="GetPacketStatistics">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="GetBSSID">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="GetSSID">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="SetSSID">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="GetBeaconType">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="SetBeaconType">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="GetChannelInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="SetChannel">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="GetBeaconAdvertisement">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="SetBeaconAdvertisement">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="GetTotalAssociations">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="GetGenericAssociatedDeviceInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="GetSpecificAssociatedDeviceInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="X_SetHighFrequencyBand">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="X_AVM-DE_SetStickSurfEnable">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="X_AVM-DE_GetIPTVOptimized">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="X_AVM-DE_SetIPTVOptimized">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="X_AVM-DE_GetNightControl">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="X_AVM-DE_GetWLANHybridMode">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="X_AVM-DE_SetWLANHybridMode">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="X_AVM-DE_GetWLANExtInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="X_AVM-DE_GetWPSInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration3" name="X_AVM-DE_SetWPSConfig">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+  </service>
+  <binding name="WLANConfiguration3" type="WLANConfiguration3">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="SetEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#SetEnable"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#GetInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#SetConfig"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetSecurityKeys">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#SetSecurityKeys"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetSecurityKeys">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#GetSecurityKeys"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetDefaultWEPKeyIndex">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#SetDefaultWEPKeyIndex"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetDefaultWEPKeyIndex">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#GetDefaultWEPKeyIndex"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetBasBeaconSecurityProperties">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#SetBasBeaconSecurityProperties"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetBasBeaconSecurityProperties">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#GetBasBeaconSecurityProperties"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetStatistics">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#GetStatistics"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetPacketStatistics">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#GetPacketStatistics"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetBSSID">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#GetBSSID"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetSSID">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#GetSSID"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetSSID">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#SetSSID"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetBeaconType">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#GetBeaconType"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetBeaconType">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#SetBeaconType"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetChannelInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#GetChannelInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetChannel">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#SetChannel"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetBeaconAdvertisement">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#GetBeaconAdvertisement"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetBeaconAdvertisement">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#SetBeaconAdvertisement"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetTotalAssociations">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#GetTotalAssociations"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetGenericAssociatedDeviceInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#GetGenericAssociatedDeviceInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetSpecificAssociatedDeviceInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#GetSpecificAssociatedDeviceInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_SetHighFrequencyBand">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_SetHighFrequencyBand"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_SetStickSurfEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_SetStickSurfEnable"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_GetIPTVOptimized">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_GetIPTVOptimized"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_SetIPTVOptimized">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_SetIPTVOptimized"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_GetNightControl">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_GetNightControl"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_GetWLANHybridMode">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_GetWLANHybridMode"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_SetWLANHybridMode">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_SetWLANHybridMode"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_GetWLANExtInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_GetWLANExtInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_GetWPSInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_GetWPSInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_SetWPSConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_SetWPSConfig"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <portType name="WLANConfiguration3">
+    <operation name="SetEnable">
+      <input message="SetEnableRequest"/>
+      <output message="SetEnableResponse"/>
+    </operation>
+    <operation name="GetInfo">
+      <input message="GetInfoRequest"/>
+      <output message="GetInfoResponse"/>
+    </operation>
+    <operation name="SetConfig">
+      <input message="SetConfigRequest"/>
+      <output message="SetConfigResponse"/>
+    </operation>
+    <operation name="SetSecurityKeys">
+      <input message="SetSecurityKeysRequest"/>
+      <output message="SetSecurityKeysResponse"/>
+    </operation>
+    <operation name="GetSecurityKeys">
+      <input message="GetSecurityKeysRequest"/>
+      <output message="GetSecurityKeysResponse"/>
+    </operation>
+    <operation name="SetDefaultWEPKeyIndex">
+      <input message="SetDefaultWEPKeyIndexRequest"/>
+      <output message="SetDefaultWEPKeyIndexResponse"/>
+    </operation>
+    <operation name="GetDefaultWEPKeyIndex">
+      <input message="GetDefaultWEPKeyIndexRequest"/>
+      <output message="GetDefaultWEPKeyIndexResponse"/>
+    </operation>
+    <operation name="SetBasBeaconSecurityProperties">
+      <input message="SetBasBeaconSecurityPropertiesRequest"/>
+      <output message="SetBasBeaconSecurityPropertiesResponse"/>
+    </operation>
+    <operation name="GetBasBeaconSecurityProperties">
+      <input message="GetBasBeaconSecurityPropertiesRequest"/>
+      <output message="GetBasBeaconSecurityPropertiesResponse"/>
+    </operation>
+    <operation name="GetStatistics">
+      <input message="GetStatisticsRequest"/>
+      <output message="GetStatisticsResponse"/>
+    </operation>
+    <operation name="GetPacketStatistics">
+      <input message="GetPacketStatisticsRequest"/>
+      <output message="GetPacketStatisticsResponse"/>
+    </operation>
+    <operation name="GetBSSID">
+      <input message="GetBSSIDRequest"/>
+      <output message="GetBSSIDResponse"/>
+    </operation>
+    <operation name="GetSSID">
+      <input message="GetSSIDRequest"/>
+      <output message="GetSSIDResponse"/>
+    </operation>
+    <operation name="SetSSID">
+      <input message="SetSSIDRequest"/>
+      <output message="SetSSIDResponse"/>
+    </operation>
+    <operation name="GetBeaconType">
+      <input message="GetBeaconTypeRequest"/>
+      <output message="GetBeaconTypeResponse"/>
+    </operation>
+    <operation name="SetBeaconType">
+      <input message="SetBeaconTypeRequest"/>
+      <output message="SetBeaconTypeResponse"/>
+    </operation>
+    <operation name="GetChannelInfo">
+      <input message="GetChannelInfoRequest"/>
+      <output message="GetChannelInfoResponse"/>
+    </operation>
+    <operation name="SetChannel">
+      <input message="SetChannelRequest"/>
+      <output message="SetChannelResponse"/>
+    </operation>
+    <operation name="GetBeaconAdvertisement">
+      <input message="GetBeaconAdvertisementRequest"/>
+      <output message="GetBeaconAdvertisementResponse"/>
+    </operation>
+    <operation name="SetBeaconAdvertisement">
+      <input message="SetBeaconAdvertisementRequest"/>
+      <output message="SetBeaconAdvertisementResponse"/>
+    </operation>
+    <operation name="GetTotalAssociations">
+      <input message="GetTotalAssociationsRequest"/>
+      <output message="GetTotalAssociationsResponse"/>
+    </operation>
+    <operation name="GetGenericAssociatedDeviceInfo">
+      <input message="GetGenericAssociatedDeviceInfoRequest"/>
+      <output message="GetGenericAssociatedDeviceInfoResponse"/>
+    </operation>
+    <operation name="GetSpecificAssociatedDeviceInfo">
+      <input message="GetSpecificAssociatedDeviceInfoRequest"/>
+      <output message="GetSpecificAssociatedDeviceInfoResponse"/>
+    </operation>
+    <operation name="X_SetHighFrequencyBand">
+      <input message="X_SetHighFrequencyBandRequest"/>
+      <output message="X_SetHighFrequencyBandResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_SetStickSurfEnable">
+      <input message="X_AVM-DE_SetStickSurfEnableRequest"/>
+      <output message="X_AVM-DE_SetStickSurfEnableResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_GetIPTVOptimized">
+      <input message="X_AVM-DE_GetIPTVOptimizedRequest"/>
+      <output message="X_AVM-DE_GetIPTVOptimizedResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_SetIPTVOptimized">
+      <input message="X_AVM-DE_SetIPTVOptimizedRequest"/>
+      <output message="X_AVM-DE_SetIPTVOptimizedResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_GetNightControl">
+      <input message="X_AVM-DE_GetNightControlRequest"/>
+      <output message="X_AVM-DE_GetNightControlResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_GetWLANHybridMode">
+      <input message="X_AVM-DE_GetWLANHybridModeRequest"/>
+      <output message="X_AVM-DE_GetWLANHybridModeResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_SetWLANHybridMode">
+      <input message="X_AVM-DE_SetWLANHybridModeRequest"/>
+      <output message="X_AVM-DE_SetWLANHybridModeResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_GetWLANExtInfo">
+      <input message="X_AVM-DE_GetWLANExtInfoRequest"/>
+      <output message="X_AVM-DE_GetWLANExtInfoResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_GetWPSInfo">
+      <input message="X_AVM-DE_GetWPSInfoRequest"/>
+      <output message="X_AVM-DE_GetWPSInfoResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_SetWPSConfig">
+      <input message="X_AVM-DE_SetWPSConfigRequest"/>
+      <output message="X_AVM-DE_SetWPSConfigResponse"/>
+    </operation>
+  </portType>
+  <message name="SetEnableRequest">
+    <part type="xsd:boolean" name="NewEnable"/>
+  </message>
+  <message name="SetEnableResponse"/>
+  <message name="GetInfoRequest"/>
+  <message name="GetInfoResponse">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewStatus"/>
+    <part type="xsd:string" name="NewMaxBitRate"/>
+    <part type="xsd:unsignedByte" name="NewChannel"/>
+    <part type="xsd:string" name="NewSSID"/>
+    <part type="xsd:string" name="NewBeaconType"/>
+    <part type="xsd:boolean" name="NewMACAddressControlEnabled"/>
+    <part type="xsd:string" name="NewStandard"/>
+    <part type="xsd:string" name="NewBSSID"/>
+    <part type="xsd:string" name="NewBasicEncryptionModes"/>
+    <part type="xsd:string" name="NewBasicAuthenticationMode"/>
+    <part type="xsd:unsignedByte" name="NewMaxCharsSSID"/>
+    <part type="xsd:unsignedByte" name="NewMinCharsSSID"/>
+    <part type="xsd:string" name="NewAllowedCharsSSID"/>
+    <part type="xsd:unsignedByte" name="NewMinCharsPSK"/>
+    <part type="xsd:unsignedByte" name="NewMaxCharsPSK"/>
+    <part type="xsd:string" name="NewAllowedCharsPSK"/>
+  </message>
+  <message name="SetConfigRequest">
+    <part type="xsd:string" name="NewMaxBitRate"/>
+    <part type="xsd:unsignedByte" name="NewChannel"/>
+    <part type="xsd:string" name="NewSSID"/>
+    <part type="xsd:string" name="NewBeaconType"/>
+    <part type="xsd:boolean" name="NewMACAddressControlEnabled"/>
+    <part type="xsd:string" name="NewBasicEncryptionModes"/>
+    <part type="xsd:string" name="NewBasicAuthenticationMode"/>
+  </message>
+  <message name="SetConfigResponse"/>
+  <message name="SetSecurityKeysRequest">
+    <part type="xsd:string" name="NewWEPKey0"/>
+    <part type="xsd:string" name="NewWEPKey1"/>
+    <part type="xsd:string" name="NewWEPKey2"/>
+    <part type="xsd:string" name="NewWEPKey3"/>
+    <part type="xsd:string" name="NewPreSharedKey"/>
+    <part type="xsd:string" name="NewKeyPassphrase"/>
+  </message>
+  <message name="SetSecurityKeysResponse"/>
+  <message name="GetSecurityKeysRequest"/>
+  <message name="GetSecurityKeysResponse">
+    <part type="xsd:string" name="NewWEPKey0"/>
+    <part type="xsd:string" name="NewWEPKey1"/>
+    <part type="xsd:string" name="NewWEPKey2"/>
+    <part type="xsd:string" name="NewWEPKey3"/>
+    <part type="xsd:string" name="NewPreSharedKey"/>
+    <part type="xsd:string" name="NewKeyPassphrase"/>
+  </message>
+  <message name="SetDefaultWEPKeyIndexRequest">
+    <part type="xsd:unsignedByte" name="NewDefaultWEPKeyIndex"/>
+  </message>
+  <message name="SetDefaultWEPKeyIndexResponse"/>
+  <message name="GetDefaultWEPKeyIndexRequest"/>
+  <message name="GetDefaultWEPKeyIndexResponse">
+    <part type="xsd:unsignedByte" name="NewDefaultWEPKeyIndex"/>
+  </message>
+  <message name="SetBasBeaconSecurityPropertiesRequest">
+    <part type="xsd:string" name="NewBasicEncryptionModes"/>
+    <part type="xsd:string" name="NewBasicAuthenticationMode"/>
+  </message>
+  <message name="SetBasBeaconSecurityPropertiesResponse"/>
+  <message name="GetBasBeaconSecurityPropertiesRequest"/>
+  <message name="GetBasBeaconSecurityPropertiesResponse">
+    <part type="xsd:string" name="NewBasicEncryptionModes"/>
+    <part type="xsd:string" name="NewBasicAuthenticationMode"/>
+  </message>
+  <message name="GetStatisticsRequest"/>
+  <message name="GetStatisticsResponse">
+    <part type="xsd:unsignedInt" name="NewTotalPacketsSent"/>
+    <part type="xsd:unsignedInt" name="NewTotalPacketsReceived"/>
+  </message>
+  <message name="GetPacketStatisticsRequest"/>
+  <message name="GetPacketStatisticsResponse">
+    <part type="xsd:unsignedInt" name="NewTotalPacketsSent"/>
+    <part type="xsd:unsignedInt" name="NewTotalPacketsReceived"/>
+  </message>
+  <message name="GetBSSIDRequest"/>
+  <message name="GetBSSIDResponse">
+    <part type="xsd:string" name="NewBSSID"/>
+  </message>
+  <message name="GetSSIDRequest"/>
+  <message name="GetSSIDResponse">
+    <part type="xsd:string" name="NewSSID"/>
+  </message>
+  <message name="SetSSIDRequest">
+    <part type="xsd:string" name="NewSSID"/>
+  </message>
+  <message name="SetSSIDResponse"/>
+  <message name="GetBeaconTypeRequest"/>
+  <message name="GetBeaconTypeResponse">
+    <part type="xsd:string" name="NewBeaconType"/>
+  </message>
+  <message name="SetBeaconTypeRequest">
+    <part type="xsd:string" name="NewBeaconType"/>
+  </message>
+  <message name="SetBeaconTypeResponse"/>
+  <message name="GetChannelInfoRequest"/>
+  <message name="GetChannelInfoResponse">
+    <part type="xsd:unsignedByte" name="NewChannel"/>
+    <part type="xsd:string" name="NewPossibleChannels"/>
+  </message>
+  <message name="SetChannelRequest">
+    <part type="xsd:unsignedByte" name="NewChannel"/>
+  </message>
+  <message name="SetChannelResponse"/>
+  <message name="GetBeaconAdvertisementRequest"/>
+  <message name="GetBeaconAdvertisementResponse">
+    <part type="xsd:boolean" name="NewBeaconAdvertisementEnabled"/>
+  </message>
+  <message name="SetBeaconAdvertisementRequest">
+    <part type="xsd:boolean" name="NewBeaconAdvertisementEnabled"/>
+  </message>
+  <message name="SetBeaconAdvertisementResponse"/>
+  <message name="GetTotalAssociationsRequest"/>
+  <message name="GetTotalAssociationsResponse">
+    <part type="xsd:unsignedShort" name="NewTotalAssociations"/>
+  </message>
+  <message name="GetGenericAssociatedDeviceInfoRequest">
+    <part type="xsd:unsignedShort" name="NewAssociatedDeviceIndex"/>
+  </message>
+  <message name="GetGenericAssociatedDeviceInfoResponse">
+    <part type="xsd:string" name="NewAssociatedDeviceMACAddress"/>
+    <part type="xsd:string" name="NewAssociatedDeviceIPAddress"/>
+    <part type="xsd:boolean" name="NewAssociatedDeviceAuthState"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_Speed"/>
+    <part type="xsd:unsignedByte" name="NewX_AVM-DE_SignalStrength"/>
+  </message>
+  <message name="GetSpecificAssociatedDeviceInfoRequest">
+    <part type="xsd:string" name="NewAssociatedDeviceMACAddress"/>
+  </message>
+  <message name="GetSpecificAssociatedDeviceInfoResponse">
+    <part type="xsd:string" name="NewAssociatedDeviceIPAddress"/>
+    <part type="xsd:boolean" name="NewAssociatedDeviceAuthState"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_Speed"/>
+    <part type="xsd:unsignedByte" name="NewX_AVM-DE_SignalStrength"/>
+  </message>
+  <message name="X_SetHighFrequencyBandRequest">
+    <part type="xsd:boolean" name="NewEnableHighFrequency"/>
+  </message>
+  <message name="X_SetHighFrequencyBandResponse"/>
+  <message name="X_AVM-DE_SetStickSurfEnableRequest">
+    <part type="xsd:boolean" name="NewStickSurfEnable"/>
+  </message>
+  <message name="X_AVM-DE_SetStickSurfEnableResponse"/>
+  <message name="X_AVM-DE_GetIPTVOptimizedRequest"/>
+  <message name="X_AVM-DE_GetIPTVOptimizedResponse">
+    <part type="xsd:boolean" name="NewX_AVM-DE_IPTVoptimize"/>
+  </message>
+  <message name="X_AVM-DE_SetIPTVOptimizedRequest">
+    <part type="xsd:boolean" name="NewX_AVM-DE_IPTVoptimize"/>
+  </message>
+  <message name="X_AVM-DE_SetIPTVOptimizedResponse"/>
+  <message name="X_AVM-DE_GetNightControlRequest"/>
+  <message name="X_AVM-DE_GetNightControlResponse">
+    <part type="xsd:string" name="NewNightControl"/>
+    <part type="xsd:boolean" name="NewNightTimeControlNoForcedOff"/>
+  </message>
+  <message name="X_AVM-DE_GetWLANHybridModeRequest"/>
+  <message name="X_AVM-DE_GetWLANHybridModeResponse">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewBeaconType"/>
+    <part type="xsd:string" name="NewKeyPassphrase"/>
+    <part type="xsd:string" name="NewSSID"/>
+    <part type="xsd:string" name="NewBSSID"/>
+    <part type="xsd:string" name="NewTrafficMode"/>
+    <part type="xsd:boolean" name="NewManualSpeed"/>
+    <part type="xsd:unsignedInt" name="NewMaxSpeedDS"/>
+    <part type="xsd:unsignedInt" name="NewMaxSpeedUS"/>
+  </message>
+  <message name="X_AVM-DE_SetWLANHybridModeRequest">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewBeaconType"/>
+    <part type="xsd:string" name="NewKeyPassphrase"/>
+    <part type="xsd:string" name="NewSSID"/>
+    <part type="xsd:string" name="NewBSSID"/>
+    <part type="xsd:string" name="NewTrafficMode"/>
+    <part type="xsd:boolean" name="NewManualSpeed"/>
+    <part type="xsd:unsignedInt" name="NewMaxSpeedDS"/>
+    <part type="xsd:unsignedInt" name="NewMaxSpeedUS"/>
+  </message>
+  <message name="X_AVM-DE_SetWLANHybridModeResponse"/>
+  <message name="X_AVM-DE_GetWLANExtInfoRequest"/>
+  <message name="X_AVM-DE_GetWLANExtInfoResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_APEnabled"/>
+    <part type="xsd:string" name="NewX_AVM-DE_APType"/>
+    <part type="xsd:string" name="NewX_AVM-DE_TimeoutActive"/>
+    <part type="xsd:string" name="NewX_AVM-DE_Timeout"/>
+    <part type="xsd:string" name="NewX_AVM-DE_TimeRemain"/>
+    <part type="xsd:string" name="NewX_AVM-DE_NoForcedOff"/>
+    <part type="xsd:string" name="NewX_AVM-DE_UserIsolation"/>
+    <part type="xsd:string" name="NewX_AVM-DE_EncryptionMode"/>
+    <part type="xsd:unsignedInt" name="NewX_AVM-DE_LastChangedStamp"/>
+  </message>
+  <message name="X_AVM-DE_GetWPSInfoRequest"/>
+  <message name="X_AVM-DE_GetWPSInfoResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_WPSMode"/>
+    <part type="xsd:string" name="NewX_AVM-DE_WPSStatus"/>
+  </message>
+  <message name="X_AVM-DE_SetWPSConfigRequest">
+    <part type="xsd:string" name="NewX_AVM-DE_WPSMode"/>
+    <part type="xsd:string" name="NewX_AVM-DE_WPSClientPIN"/>
+  </message>
+  <message name="X_AVM-DE_SetWPSConfigResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_WPSAPPIN"/>
+    <part type="xsd:string" name="NewX_AVM-DE_WPSStatus"/>
+  </message>
+</definitions>

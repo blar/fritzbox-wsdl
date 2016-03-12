@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="Hosts1">
+    <documentation>http://avm.de/fileadmin/user_upload/Global/Service/Schnittstellen/hostsSCPD.pdf</documentation>
+    <port binding="Hosts1" name="GetHostNumberOfEntries">
+      <soap:address location="http://fritz.box:49000/upnp/control/hosts"/>
+    </port>
+    <port binding="Hosts1" name="GetSpecificHostEntry">
+      <soap:address location="http://fritz.box:49000/upnp/control/hosts"/>
+    </port>
+    <port binding="Hosts1" name="GetGenericHostEntry">
+      <soap:address location="http://fritz.box:49000/upnp/control/hosts"/>
+    </port>
+    <port binding="Hosts1" name="X_AVM-DE_GetChangeCounter">
+      <soap:address location="http://fritz.box:49000/upnp/control/hosts"/>
+    </port>
+    <port binding="Hosts1" name="X_AVM-DE_SetHostNameByMACAddress">
+      <soap:address location="http://fritz.box:49000/upnp/control/hosts"/>
+    </port>
+    <port binding="Hosts1" name="X_AVM-DE_GetAutoWakeOnLANByMACAddress">
+      <soap:address location="http://fritz.box:49000/upnp/control/hosts"/>
+    </port>
+    <port binding="Hosts1" name="X_AVM-DE_SetAutoWakeOnLANByMACAddress">
+      <soap:address location="http://fritz.box:49000/upnp/control/hosts"/>
+    </port>
+    <port binding="Hosts1" name="X_AVM-DE_WakeOnLANByMACAddress">
+      <soap:address location="http://fritz.box:49000/upnp/control/hosts"/>
+    </port>
+  </service>
+  <binding name="Hosts1" type="Hosts1">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="GetHostNumberOfEntries">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#GetHostNumberOfEntries"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetSpecificHostEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#GetSpecificHostEntry"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetGenericHostEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#GetGenericHostEntry"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_GetChangeCounter">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_GetChangeCounter"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_SetHostNameByMACAddress">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_SetHostNameByMACAddress"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_GetAutoWakeOnLANByMACAddress">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_GetAutoWakeOnLANByMACAddress"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_SetAutoWakeOnLANByMACAddress">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_SetAutoWakeOnLANByMACAddress"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_WakeOnLANByMACAddress">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_WakeOnLANByMACAddress"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <portType name="Hosts1">
+    <operation name="GetHostNumberOfEntries">
+      <input message="GetHostNumberOfEntriesRequest"/>
+      <output message="GetHostNumberOfEntriesResponse"/>
+    </operation>
+    <operation name="GetSpecificHostEntry">
+      <input message="GetSpecificHostEntryRequest"/>
+      <output message="GetSpecificHostEntryResponse"/>
+    </operation>
+    <operation name="GetGenericHostEntry">
+      <input message="GetGenericHostEntryRequest"/>
+      <output message="GetGenericHostEntryResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_GetChangeCounter">
+      <input message="X_AVM-DE_GetChangeCounterRequest"/>
+      <output message="X_AVM-DE_GetChangeCounterResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_SetHostNameByMACAddress">
+      <input message="X_AVM-DE_SetHostNameByMACAddressRequest"/>
+      <output message="X_AVM-DE_SetHostNameByMACAddressResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_GetAutoWakeOnLANByMACAddress">
+      <input message="X_AVM-DE_GetAutoWakeOnLANByMACAddressRequest"/>
+      <output message="X_AVM-DE_GetAutoWakeOnLANByMACAddressResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_SetAutoWakeOnLANByMACAddress">
+      <input message="X_AVM-DE_SetAutoWakeOnLANByMACAddressRequest"/>
+      <output message="X_AVM-DE_SetAutoWakeOnLANByMACAddressResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_WakeOnLANByMACAddress">
+      <input message="X_AVM-DE_WakeOnLANByMACAddressRequest"/>
+      <output message="X_AVM-DE_WakeOnLANByMACAddressResponse"/>
+    </operation>
+  </portType>
+  <message name="GetHostNumberOfEntriesRequest"/>
+  <message name="GetHostNumberOfEntriesResponse">
+    <part type="xsd:unsignedShort" name="NewHostNumberOfEntries"/>
+  </message>
+  <message name="GetSpecificHostEntryRequest">
+    <part type="xsd:string" name="NewMACAddress"/>
+  </message>
+  <message name="GetSpecificHostEntryResponse">
+    <part type="xsd:string" name="NewIPAddress"/>
+    <part type="xsd:string" name="NewAddressSource"/>
+    <part type="xsd:int" name="NewLeaseTimeRemaining"/>
+    <part type="xsd:string" name="NewInterfaceType"/>
+    <part type="xsd:boolean" name="NewActive"/>
+    <part type="xsd:string" name="NewHostName"/>
+  </message>
+  <message name="GetGenericHostEntryRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+  </message>
+  <message name="GetGenericHostEntryResponse">
+    <part type="xsd:string" name="NewIPAddress"/>
+    <part type="xsd:string" name="NewAddressSource"/>
+    <part type="xsd:int" name="NewLeaseTimeRemaining"/>
+    <part type="xsd:string" name="NewMACAddress"/>
+    <part type="xsd:string" name="NewInterfaceType"/>
+    <part type="xsd:boolean" name="NewActive"/>
+    <part type="xsd:string" name="NewHostName"/>
+  </message>
+  <message name="X_AVM-DE_GetChangeCounterRequest"/>
+  <message name="X_AVM-DE_GetChangeCounterResponse">
+    <part type="xsd:unsignedInt" name="NewX_AVM-DE_ChangeCounter"/>
+  </message>
+  <message name="X_AVM-DE_SetHostNameByMACAddressRequest">
+    <part type="xsd:string" name="NewMACAddress"/>
+    <part type="xsd:string" name="NewHostName"/>
+  </message>
+  <message name="X_AVM-DE_SetHostNameByMACAddressResponse"/>
+  <message name="X_AVM-DE_GetAutoWakeOnLANByMACAddressRequest">
+    <part type="xsd:string" name="NewMACAddress"/>
+  </message>
+  <message name="X_AVM-DE_GetAutoWakeOnLANByMACAddressResponse">
+    <part type="xsd:boolean" name="NewAutoWOLEnabled"/>
+  </message>
+  <message name="X_AVM-DE_SetAutoWakeOnLANByMACAddressRequest">
+    <part type="xsd:string" name="NewMACAddress"/>
+    <part type="xsd:boolean" name="NewAutoWOLEnabled"/>
+  </message>
+  <message name="X_AVM-DE_SetAutoWakeOnLANByMACAddressResponse"/>
+  <message name="X_AVM-DE_WakeOnLANByMACAddressRequest">
+    <part type="xsd:string" name="NewMACAddress"/>
+  </message>
+  <message name="X_AVM-DE_WakeOnLANByMACAddressResponse"/>
+</definitions>

@@ -1,0 +1,550 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="WANPPPConnection1">
+    <documentation>http://avm.de/fileadmin/user_upload/Global/Service/Schnittstellen/wanpppconnSCPD.pdf</documentation>
+    <port binding="WANPPPConnection1" name="GetInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="GetConnectionTypeInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="SetConnectionType">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="GetStatusInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="GetUserName">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="SetUserName">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="SetPassword">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="GetNATRSIPStatus">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="SetConnectionTrigger">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="ForceTermination">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="RequestConnection">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="GetGenericPortMappingEntry">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="GetSpecificPortMappingEntry">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="AddPortMapping">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="DeletePortMapping">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="GetExternalIPAddress">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="X_GetDNSServers">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="X_SetDNSServers">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="GetLinkLayerMaxBitRates">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="GetPortMappingNumberOfEntries">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="SetRouteProtocolRx">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="SetIdleDisconnectTime">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="X_AVM-DE_GetAutoDisconnectTimeSpan">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+    <port binding="WANPPPConnection1" name="X_AVM-DE_SetAutoDisconnectTimeSpan">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+  </service>
+  <binding name="WANPPPConnection1" type="WANPPPConnection1">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="GetInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#GetInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetConnectionTypeInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#GetConnectionTypeInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetConnectionType">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#SetConnectionType"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetStatusInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#GetStatusInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetUserName">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#GetUserName"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetUserName">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#SetUserName"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetPassword">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#SetPassword"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetNATRSIPStatus">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#GetNATRSIPStatus"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetConnectionTrigger">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#SetConnectionTrigger"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="ForceTermination">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#ForceTermination"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="RequestConnection">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#RequestConnection"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetGenericPortMappingEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#GetGenericPortMappingEntry"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetSpecificPortMappingEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#GetSpecificPortMappingEntry"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="AddPortMapping">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#AddPortMapping"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="DeletePortMapping">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#DeletePortMapping"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetExternalIPAddress">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#GetExternalIPAddress"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_GetDNSServers">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#X_GetDNSServers"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_SetDNSServers">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#X_SetDNSServers"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetLinkLayerMaxBitRates">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#GetLinkLayerMaxBitRates"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetPortMappingNumberOfEntries">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#GetPortMappingNumberOfEntries"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetRouteProtocolRx">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#SetRouteProtocolRx"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetIdleDisconnectTime">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#SetIdleDisconnectTime"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_GetAutoDisconnectTimeSpan">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#X_AVM-DE_GetAutoDisconnectTimeSpan"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_SetAutoDisconnectTimeSpan">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#X_AVM-DE_SetAutoDisconnectTimeSpan"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANPPPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <portType name="WANPPPConnection1">
+    <operation name="GetInfo">
+      <input message="GetInfoRequest"/>
+      <output message="GetInfoResponse"/>
+    </operation>
+    <operation name="GetConnectionTypeInfo">
+      <input message="GetConnectionTypeInfoRequest"/>
+      <output message="GetConnectionTypeInfoResponse"/>
+    </operation>
+    <operation name="SetConnectionType">
+      <input message="SetConnectionTypeRequest"/>
+      <output message="SetConnectionTypeResponse"/>
+    </operation>
+    <operation name="GetStatusInfo">
+      <input message="GetStatusInfoRequest"/>
+      <output message="GetStatusInfoResponse"/>
+    </operation>
+    <operation name="GetUserName">
+      <input message="GetUserNameRequest"/>
+      <output message="GetUserNameResponse"/>
+    </operation>
+    <operation name="SetUserName">
+      <input message="SetUserNameRequest"/>
+      <output message="SetUserNameResponse"/>
+    </operation>
+    <operation name="SetPassword">
+      <input message="SetPasswordRequest"/>
+      <output message="SetPasswordResponse"/>
+    </operation>
+    <operation name="GetNATRSIPStatus">
+      <input message="GetNATRSIPStatusRequest"/>
+      <output message="GetNATRSIPStatusResponse"/>
+    </operation>
+    <operation name="SetConnectionTrigger">
+      <input message="SetConnectionTriggerRequest"/>
+      <output message="SetConnectionTriggerResponse"/>
+    </operation>
+    <operation name="ForceTermination">
+      <input message="ForceTerminationRequest"/>
+      <output message="ForceTerminationResponse"/>
+    </operation>
+    <operation name="RequestConnection">
+      <input message="RequestConnectionRequest"/>
+      <output message="RequestConnectionResponse"/>
+    </operation>
+    <operation name="GetGenericPortMappingEntry">
+      <input message="GetGenericPortMappingEntryRequest"/>
+      <output message="GetGenericPortMappingEntryResponse"/>
+    </operation>
+    <operation name="GetSpecificPortMappingEntry">
+      <input message="GetSpecificPortMappingEntryRequest"/>
+      <output message="GetSpecificPortMappingEntryResponse"/>
+    </operation>
+    <operation name="AddPortMapping">
+      <input message="AddPortMappingRequest"/>
+      <output message="AddPortMappingResponse"/>
+    </operation>
+    <operation name="DeletePortMapping">
+      <input message="DeletePortMappingRequest"/>
+      <output message="DeletePortMappingResponse"/>
+    </operation>
+    <operation name="GetExternalIPAddress">
+      <input message="GetExternalIPAddressRequest"/>
+      <output message="GetExternalIPAddressResponse"/>
+    </operation>
+    <operation name="X_GetDNSServers">
+      <input message="X_GetDNSServersRequest"/>
+      <output message="X_GetDNSServersResponse"/>
+    </operation>
+    <operation name="X_SetDNSServers">
+      <input message="X_SetDNSServersRequest"/>
+      <output message="X_SetDNSServersResponse"/>
+    </operation>
+    <operation name="GetLinkLayerMaxBitRates">
+      <input message="GetLinkLayerMaxBitRatesRequest"/>
+      <output message="GetLinkLayerMaxBitRatesResponse"/>
+    </operation>
+    <operation name="GetPortMappingNumberOfEntries">
+      <input message="GetPortMappingNumberOfEntriesRequest"/>
+      <output message="GetPortMappingNumberOfEntriesResponse"/>
+    </operation>
+    <operation name="SetRouteProtocolRx">
+      <input message="SetRouteProtocolRxRequest"/>
+      <output message="SetRouteProtocolRxResponse"/>
+    </operation>
+    <operation name="SetIdleDisconnectTime">
+      <input message="SetIdleDisconnectTimeRequest"/>
+      <output message="SetIdleDisconnectTimeResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_GetAutoDisconnectTimeSpan">
+      <input message="X_AVM-DE_GetAutoDisconnectTimeSpanRequest"/>
+      <output message="X_AVM-DE_GetAutoDisconnectTimeSpanResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_SetAutoDisconnectTimeSpan">
+      <input message="X_AVM-DE_SetAutoDisconnectTimeSpanRequest"/>
+      <output message="X_AVM-DE_SetAutoDisconnectTimeSpanResponse"/>
+    </operation>
+  </portType>
+  <message name="GetInfoRequest"/>
+  <message name="GetInfoResponse">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewConnectionStatus"/>
+    <part type="xsd:string" name="NewPossibleConnectionTypes"/>
+    <part type="xsd:string" name="NewConnectionType"/>
+    <part type="xsd:string" name="NewName"/>
+    <part type="xsd:unsignedInt" name="NewUptime"/>
+    <part type="xsd:unsignedInt" name="NewUpstreamMaxBitRate"/>
+    <part type="xsd:unsignedInt" name="NewDownstreamMaxBitRate"/>
+    <part type="xsd:string" name="NewLastConnectionError"/>
+    <part type="xsd:unsignedInt" name="NewIdleDisconnectTime"/>
+    <part type="xsd:boolean" name="NewRSIPAvailable"/>
+    <part type="xsd:string" name="NewUserName"/>
+    <part type="xsd:boolean" name="NewNATEnabled"/>
+    <part type="xsd:string" name="NewExternalIPAddress"/>
+    <part type="xsd:string" name="NewDNSServers"/>
+    <part type="xsd:string" name="NewMACAddress"/>
+    <part type="xsd:string" name="NewConnectionTrigger"/>
+    <part type="xsd:string" name="NewLastAuthErrorInfo"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsUsername"/>
+    <part type="xsd:unsignedShort" name="NewMinCharsUsername"/>
+    <part type="xsd:string" name="NewAllowedCharsUsername"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsPassword"/>
+    <part type="xsd:unsignedShort" name="NewMinCharsPassword"/>
+    <part type="xsd:string" name="NewAllowedCharsPassword"/>
+    <part type="xsd:string" name="NewTransportType"/>
+    <part type="xsd:string" name="NewRouteProtocolRx"/>
+    <part type="xsd:string" name="NewPPPoEServiceName"/>
+    <part type="xsd:string" name="NewRemoteIPAddress"/>
+    <part type="xsd:string" name="NewPPPoEACName"/>
+    <part type="xsd:boolean" name="NewDNSEnabled"/>
+    <part type="xsd:boolean" name="NewDNSOverrideAllowed"/>
+  </message>
+  <message name="GetConnectionTypeInfoRequest"/>
+  <message name="GetConnectionTypeInfoResponse">
+    <part type="xsd:string" name="NewConnectionType"/>
+    <part type="xsd:string" name="NewPossibleConnectionTypes"/>
+  </message>
+  <message name="SetConnectionTypeRequest">
+    <part type="xsd:string" name="NewConnectionType"/>
+  </message>
+  <message name="SetConnectionTypeResponse"/>
+  <message name="GetStatusInfoRequest"/>
+  <message name="GetStatusInfoResponse">
+    <part type="xsd:string" name="NewConnectionStatus"/>
+    <part type="xsd:string" name="NewLastConnectionError"/>
+    <part type="xsd:unsignedInt" name="NewUptime"/>
+  </message>
+  <message name="GetUserNameRequest"/>
+  <message name="GetUserNameResponse">
+    <part type="xsd:string" name="NewUserName"/>
+  </message>
+  <message name="SetUserNameRequest">
+    <part type="xsd:string" name="NewUserName"/>
+  </message>
+  <message name="SetUserNameResponse"/>
+  <message name="SetPasswordRequest">
+    <part type="xsd:string" name="NewPassword"/>
+  </message>
+  <message name="SetPasswordResponse"/>
+  <message name="GetNATRSIPStatusRequest"/>
+  <message name="GetNATRSIPStatusResponse">
+    <part type="xsd:boolean" name="NewRSIPAvailable"/>
+    <part type="xsd:boolean" name="NewNATEnabled"/>
+  </message>
+  <message name="SetConnectionTriggerRequest">
+    <part type="xsd:string" name="NewConnectionTrigger"/>
+  </message>
+  <message name="SetConnectionTriggerResponse"/>
+  <message name="ForceTerminationRequest"/>
+  <message name="ForceTerminationResponse"/>
+  <message name="RequestConnectionRequest"/>
+  <message name="RequestConnectionResponse"/>
+  <message name="GetGenericPortMappingEntryRequest">
+    <part type="xsd:unsignedShort" name="NewPortMappingIndex"/>
+  </message>
+  <message name="GetGenericPortMappingEntryResponse">
+    <part type="xsd:string" name="NewRemoteHost"/>
+    <part type="xsd:unsignedShort" name="NewExternalPort"/>
+    <part type="xsd:string" name="NewProtocol"/>
+    <part type="xsd:unsignedShort" name="NewInternalPort"/>
+    <part type="xsd:string" name="NewInternalClient"/>
+    <part type="xsd:boolean" name="NewEnabled"/>
+    <part type="xsd:string" name="NewPortMappingDescription"/>
+    <part type="xsd:unsignedInt" name="NewLeaseDuration"/>
+  </message>
+  <message name="GetSpecificPortMappingEntryRequest">
+    <part type="xsd:string" name="NewRemoteHost"/>
+    <part type="xsd:unsignedShort" name="NewExternalPort"/>
+    <part type="xsd:string" name="NewProtocol"/>
+  </message>
+  <message name="GetSpecificPortMappingEntryResponse">
+    <part type="xsd:unsignedShort" name="NewInternalPort"/>
+    <part type="xsd:string" name="NewInternalClient"/>
+    <part type="xsd:boolean" name="NewEnabled"/>
+    <part type="xsd:string" name="NewPortMappingDescription"/>
+    <part type="xsd:unsignedInt" name="NewLeaseDuration"/>
+  </message>
+  <message name="AddPortMappingRequest">
+    <part type="xsd:string" name="NewRemoteHost"/>
+    <part type="xsd:unsignedShort" name="NewExternalPort"/>
+    <part type="xsd:string" name="NewProtocol"/>
+    <part type="xsd:unsignedShort" name="NewInternalPort"/>
+    <part type="xsd:string" name="NewInternalClient"/>
+    <part type="xsd:boolean" name="NewEnabled"/>
+    <part type="xsd:string" name="NewPortMappingDescription"/>
+    <part type="xsd:unsignedInt" name="NewLeaseDuration"/>
+  </message>
+  <message name="AddPortMappingResponse"/>
+  <message name="DeletePortMappingRequest">
+    <part type="xsd:string" name="NewRemoteHost"/>
+    <part type="xsd:unsignedShort" name="NewExternalPort"/>
+    <part type="xsd:string" name="NewProtocol"/>
+  </message>
+  <message name="DeletePortMappingResponse"/>
+  <message name="GetExternalIPAddressRequest"/>
+  <message name="GetExternalIPAddressResponse">
+    <part type="xsd:string" name="NewExternalIPAddress"/>
+  </message>
+  <message name="X_GetDNSServersRequest"/>
+  <message name="X_GetDNSServersResponse">
+    <part type="xsd:string" name="NewDNSServers"/>
+  </message>
+  <message name="X_SetDNSServersRequest">
+    <part type="xsd:string" name="NewDNSServers"/>
+  </message>
+  <message name="X_SetDNSServersResponse"/>
+  <message name="GetLinkLayerMaxBitRatesRequest"/>
+  <message name="GetLinkLayerMaxBitRatesResponse">
+    <part type="xsd:unsignedInt" name="NewUpstreamMaxBitRate"/>
+    <part type="xsd:unsignedInt" name="NewDownstreamMaxBitRate"/>
+  </message>
+  <message name="GetPortMappingNumberOfEntriesRequest"/>
+  <message name="GetPortMappingNumberOfEntriesResponse">
+    <part type="xsd:unsignedShort" name="NewPortMappingNumberOfEntries"/>
+  </message>
+  <message name="SetRouteProtocolRxRequest">
+    <part type="xsd:string" name="NewRouteProtocolRx"/>
+  </message>
+  <message name="SetRouteProtocolRxResponse"/>
+  <message name="SetIdleDisconnectTimeRequest">
+    <part type="xsd:unsignedInt" name="NewIdleDisconnectTime"/>
+  </message>
+  <message name="SetIdleDisconnectTimeResponse"/>
+  <message name="X_AVM-DE_GetAutoDisconnectTimeSpanRequest"/>
+  <message name="X_AVM-DE_GetAutoDisconnectTimeSpanResponse">
+    <part type="xsd:boolean" name="NewX_AVM-DE_DisconnectPreventionEnable"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_DisconnectPreventionHour"/>
+  </message>
+  <message name="X_AVM-DE_SetAutoDisconnectTimeSpanRequest">
+    <part type="xsd:boolean" name="NewX_AVM-DE_DisconnectPreventionEnable"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_DisconnectPreventionHour"/>
+  </message>
+  <message name="X_AVM-DE_SetAutoDisconnectTimeSpanResponse"/>
+</definitions>

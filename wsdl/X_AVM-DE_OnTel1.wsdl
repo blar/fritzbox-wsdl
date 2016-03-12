@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="X_AVM-DE_OnTel1">
+    <documentation>http://avm.de/fileadmin/user_upload/Global/Service/Schnittstellen/x_contactSCPD.pdf</documentation>
+    <port binding="X_AVM-DE_OnTel1" name="GetInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel1" name="SetEnable">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel1" name="SetConfig">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel1" name="GetInfoByIndex">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel1" name="SetEnableByIndex">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel1" name="SetConfigByIndex">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel1" name="DeleteByIndex">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel1" name="GetNumberOfEntries">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel1" name="GetCallList">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel1" name="GetPhonebookList">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel1" name="GetPhonebook">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel1" name="AddPhonebook">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel1" name="DeletePhonebook">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel1" name="GetPhonebookEntry">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel1" name="SetPhonebookEntry">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel1" name="DeletePhonebookEntry">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel1" name="GetDECTHandsetList">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel1" name="GetDECTHandsetInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel1" name="SetDECTHandsetPhonebook">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+  </service>
+  <binding name="X_AVM-DE_OnTel1" type="X_AVM-DE_OnTel1">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="GetInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#SetEnable"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#SetConfig"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetInfoByIndex">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetInfoByIndex"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetEnableByIndex">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#SetEnableByIndex"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetConfigByIndex">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#SetConfigByIndex"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="DeleteByIndex">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#DeleteByIndex"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetNumberOfEntries">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetNumberOfEntries"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetCallList">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetCallList"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetPhonebookList">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetPhonebookList"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetPhonebook">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetPhonebook"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="AddPhonebook">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#AddPhonebook"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="DeletePhonebook">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#DeletePhonebook"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetPhonebookEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetPhonebookEntry"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetPhonebookEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#SetPhonebookEntry"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="DeletePhonebookEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#DeletePhonebookEntry"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetDECTHandsetList">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetDECTHandsetList"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetDECTHandsetInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetDECTHandsetInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetDECTHandsetPhonebook">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#SetDECTHandsetPhonebook"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <portType name="X_AVM-DE_OnTel1">
+    <operation name="GetInfo">
+      <input message="GetInfoRequest"/>
+      <output message="GetInfoResponse"/>
+    </operation>
+    <operation name="SetEnable">
+      <input message="SetEnableRequest"/>
+      <output message="SetEnableResponse"/>
+    </operation>
+    <operation name="SetConfig">
+      <input message="SetConfigRequest"/>
+      <output message="SetConfigResponse"/>
+    </operation>
+    <operation name="GetInfoByIndex">
+      <input message="GetInfoByIndexRequest"/>
+      <output message="GetInfoByIndexResponse"/>
+    </operation>
+    <operation name="SetEnableByIndex">
+      <input message="SetEnableByIndexRequest"/>
+      <output message="SetEnableByIndexResponse"/>
+    </operation>
+    <operation name="SetConfigByIndex">
+      <input message="SetConfigByIndexRequest"/>
+      <output message="SetConfigByIndexResponse"/>
+    </operation>
+    <operation name="DeleteByIndex">
+      <input message="DeleteByIndexRequest"/>
+      <output message="DeleteByIndexResponse"/>
+    </operation>
+    <operation name="GetNumberOfEntries">
+      <input message="GetNumberOfEntriesRequest"/>
+      <output message="GetNumberOfEntriesResponse"/>
+    </operation>
+    <operation name="GetCallList">
+      <input message="GetCallListRequest"/>
+      <output message="GetCallListResponse"/>
+    </operation>
+    <operation name="GetPhonebookList">
+      <input message="GetPhonebookListRequest"/>
+      <output message="GetPhonebookListResponse"/>
+    </operation>
+    <operation name="GetPhonebook">
+      <input message="GetPhonebookRequest"/>
+      <output message="GetPhonebookResponse"/>
+    </operation>
+    <operation name="AddPhonebook">
+      <input message="AddPhonebookRequest"/>
+      <output message="AddPhonebookResponse"/>
+    </operation>
+    <operation name="DeletePhonebook">
+      <input message="DeletePhonebookRequest"/>
+      <output message="DeletePhonebookResponse"/>
+    </operation>
+    <operation name="GetPhonebookEntry">
+      <input message="GetPhonebookEntryRequest"/>
+      <output message="GetPhonebookEntryResponse"/>
+    </operation>
+    <operation name="SetPhonebookEntry">
+      <input message="SetPhonebookEntryRequest"/>
+      <output message="SetPhonebookEntryResponse"/>
+    </operation>
+    <operation name="DeletePhonebookEntry">
+      <input message="DeletePhonebookEntryRequest"/>
+      <output message="DeletePhonebookEntryResponse"/>
+    </operation>
+    <operation name="GetDECTHandsetList">
+      <input message="GetDECTHandsetListRequest"/>
+      <output message="GetDECTHandsetListResponse"/>
+    </operation>
+    <operation name="GetDECTHandsetInfo">
+      <input message="GetDECTHandsetInfoRequest"/>
+      <output message="GetDECTHandsetInfoResponse"/>
+    </operation>
+    <operation name="SetDECTHandsetPhonebook">
+      <input message="SetDECTHandsetPhonebookRequest"/>
+      <output message="SetDECTHandsetPhonebookResponse"/>
+    </operation>
+  </portType>
+  <message name="GetInfoRequest"/>
+  <message name="GetInfoResponse">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewStatus"/>
+    <part type="xsd:string" name="NewLastConnect"/>
+    <part type="xsd:string" name="NewUrl"/>
+    <part type="xsd:string" name="NewServiceId"/>
+    <part type="xsd:string" name="NewUsername"/>
+    <part type="xsd:string" name="NewName"/>
+  </message>
+  <message name="SetEnableRequest">
+    <part type="xsd:boolean" name="NewEnable"/>
+  </message>
+  <message name="SetEnableResponse"/>
+  <message name="SetConfigRequest">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewUrl"/>
+    <part type="xsd:string" name="NewServiceId"/>
+    <part type="xsd:string" name="NewUsername"/>
+    <part type="xsd:string" name="NewPassword"/>
+    <part type="xsd:string" name="NewName"/>
+  </message>
+  <message name="SetConfigResponse"/>
+  <message name="GetInfoByIndexRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+  </message>
+  <message name="GetInfoByIndexResponse">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewStatus"/>
+    <part type="xsd:string" name="NewLastConnect"/>
+    <part type="xsd:string" name="NewUrl"/>
+    <part type="xsd:string" name="NewServiceId"/>
+    <part type="xsd:string" name="NewUsername"/>
+    <part type="xsd:string" name="NewName"/>
+  </message>
+  <message name="SetEnableByIndexRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+    <part type="xsd:boolean" name="NewEnable"/>
+  </message>
+  <message name="SetEnableByIndexResponse"/>
+  <message name="SetConfigByIndexRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewUrl"/>
+    <part type="xsd:string" name="NewServiceId"/>
+    <part type="xsd:string" name="NewUsername"/>
+    <part type="xsd:string" name="NewPassword"/>
+    <part type="xsd:string" name="NewName"/>
+  </message>
+  <message name="SetConfigByIndexResponse"/>
+  <message name="DeleteByIndexRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+  </message>
+  <message name="DeleteByIndexResponse"/>
+  <message name="GetNumberOfEntriesRequest"/>
+  <message name="GetNumberOfEntriesResponse">
+    <part type="xsd:unsignedShort" name="NewOnTelNumberOfEntries"/>
+  </message>
+  <message name="GetCallListRequest"/>
+  <message name="GetCallListResponse">
+    <part type="xsd:string" name="NewCallListURL"/>
+  </message>
+  <message name="GetPhonebookListRequest"/>
+  <message name="GetPhonebookListResponse">
+    <part type="xsd:string" name="NewPhonebookList"/>
+  </message>
+  <message name="GetPhonebookRequest">
+    <part type="xsd:unsignedShort" name="NewPhonebookID"/>
+  </message>
+  <message name="GetPhonebookResponse">
+    <part type="xsd:string" name="NewPhonebookName"/>
+    <part type="xsd:string" name="NewPhonebookExtraID"/>
+    <part type="xsd:string" name="NewPhonebookURL"/>
+  </message>
+  <message name="AddPhonebookRequest">
+    <part type="xsd:string" name="NewPhonebookExtraID"/>
+    <part type="xsd:string" name="NewPhonebookName"/>
+  </message>
+  <message name="AddPhonebookResponse"/>
+  <message name="DeletePhonebookRequest">
+    <part type="xsd:unsignedShort" name="NewPhonebookID"/>
+    <part type="xsd:string" name="NewPhonebookExtraID"/>
+  </message>
+  <message name="DeletePhonebookResponse"/>
+  <message name="GetPhonebookEntryRequest">
+    <part type="xsd:unsignedShort" name="NewPhonebookID"/>
+    <part type="xsd:unsignedInt" name="NewPhonebookEntryID"/>
+  </message>
+  <message name="GetPhonebookEntryResponse">
+    <part type="xsd:string" name="NewPhonebookEntryData"/>
+  </message>
+  <message name="SetPhonebookEntryRequest">
+    <part type="xsd:unsignedShort" name="NewPhonebookID"/>
+    <part type="xsd:unsignedInt" name="NewPhonebookEntryID"/>
+    <part type="xsd:string" name="NewPhonebookEntryData"/>
+  </message>
+  <message name="SetPhonebookEntryResponse"/>
+  <message name="DeletePhonebookEntryRequest">
+    <part type="xsd:unsignedShort" name="NewPhonebookID"/>
+    <part type="xsd:unsignedInt" name="NewPhonebookEntryID"/>
+  </message>
+  <message name="DeletePhonebookEntryResponse"/>
+  <message name="GetDECTHandsetListRequest"/>
+  <message name="GetDECTHandsetListResponse">
+    <part type="xsd:string" name="NewDectIDList"/>
+  </message>
+  <message name="GetDECTHandsetInfoRequest">
+    <part type="xsd:unsignedShort" name="NewDectID"/>
+  </message>
+  <message name="GetDECTHandsetInfoResponse">
+    <part type="xsd:string" name="NewHandsetName"/>
+    <part type="xsd:unsignedShort" name="NewPhonebookID"/>
+  </message>
+  <message name="SetDECTHandsetPhonebookRequest">
+    <part type="xsd:unsignedShort" name="NewDectID"/>
+    <part type="xsd:unsignedShort" name="NewPhonebookID"/>
+  </message>
+  <message name="SetDECTHandsetPhonebookResponse"/>
+</definitions>

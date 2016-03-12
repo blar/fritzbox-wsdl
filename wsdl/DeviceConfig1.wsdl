@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="DeviceConfig1">
+    <documentation>http://avm.de/fileadmin/user_upload/Global/Service/Schnittstellen/deviceconfigSCPD.pdf</documentation>
+    <port binding="DeviceConfig1" name="GetPersistentData">
+      <soap:address location="http://fritz.box:49000/upnp/control/deviceconfig"/>
+    </port>
+    <port binding="DeviceConfig1" name="SetPersistentData">
+      <soap:address location="http://fritz.box:49000/upnp/control/deviceconfig"/>
+    </port>
+    <port binding="DeviceConfig1" name="ConfigurationStarted">
+      <soap:address location="http://fritz.box:49000/upnp/control/deviceconfig"/>
+    </port>
+    <port binding="DeviceConfig1" name="ConfigurationFinished">
+      <soap:address location="http://fritz.box:49000/upnp/control/deviceconfig"/>
+    </port>
+    <port binding="DeviceConfig1" name="FactoryReset">
+      <soap:address location="http://fritz.box:49000/upnp/control/deviceconfig"/>
+    </port>
+    <port binding="DeviceConfig1" name="Reboot">
+      <soap:address location="http://fritz.box:49000/upnp/control/deviceconfig"/>
+    </port>
+    <port binding="DeviceConfig1" name="X_GenerateUUID">
+      <soap:address location="http://fritz.box:49000/upnp/control/deviceconfig"/>
+    </port>
+    <port binding="DeviceConfig1" name="X_AVM-DE_GetConfigFile">
+      <soap:address location="http://fritz.box:49000/upnp/control/deviceconfig"/>
+    </port>
+    <port binding="DeviceConfig1" name="X_AVM-DE_SetConfigFile">
+      <soap:address location="http://fritz.box:49000/upnp/control/deviceconfig"/>
+    </port>
+    <port binding="DeviceConfig1" name="X_AVM-DE_CreateUrlSID">
+      <soap:address location="http://fritz.box:49000/upnp/control/deviceconfig"/>
+    </port>
+  </service>
+  <binding name="DeviceConfig1" type="DeviceConfig1">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="GetPersistentData">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#GetPersistentData"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetPersistentData">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#SetPersistentData"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="ConfigurationStarted">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#ConfigurationStarted"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="ConfigurationFinished">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#ConfigurationFinished"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="FactoryReset">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#FactoryReset"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="Reboot">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#Reboot"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_GenerateUUID">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#X_GenerateUUID"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_GetConfigFile">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#X_AVM-DE_GetConfigFile"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_SetConfigFile">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#X_AVM-DE_SetConfigFile"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_CreateUrlSID">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#X_AVM-DE_CreateUrlSID"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <portType name="DeviceConfig1">
+    <operation name="GetPersistentData">
+      <input message="GetPersistentDataRequest"/>
+      <output message="GetPersistentDataResponse"/>
+    </operation>
+    <operation name="SetPersistentData">
+      <input message="SetPersistentDataRequest"/>
+      <output message="SetPersistentDataResponse"/>
+    </operation>
+    <operation name="ConfigurationStarted">
+      <input message="ConfigurationStartedRequest"/>
+      <output message="ConfigurationStartedResponse"/>
+    </operation>
+    <operation name="ConfigurationFinished">
+      <input message="ConfigurationFinishedRequest"/>
+      <output message="ConfigurationFinishedResponse"/>
+    </operation>
+    <operation name="FactoryReset">
+      <input message="FactoryResetRequest"/>
+      <output message="FactoryResetResponse"/>
+    </operation>
+    <operation name="Reboot">
+      <input message="RebootRequest"/>
+      <output message="RebootResponse"/>
+    </operation>
+    <operation name="X_GenerateUUID">
+      <input message="X_GenerateUUIDRequest"/>
+      <output message="X_GenerateUUIDResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_GetConfigFile">
+      <input message="X_AVM-DE_GetConfigFileRequest"/>
+      <output message="X_AVM-DE_GetConfigFileResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_SetConfigFile">
+      <input message="X_AVM-DE_SetConfigFileRequest"/>
+      <output message="X_AVM-DE_SetConfigFileResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_CreateUrlSID">
+      <input message="X_AVM-DE_CreateUrlSIDRequest"/>
+      <output message="X_AVM-DE_CreateUrlSIDResponse"/>
+    </operation>
+  </portType>
+  <message name="GetPersistentDataRequest"/>
+  <message name="GetPersistentDataResponse">
+    <part type="xsd:string" name="NewPersistentData"/>
+  </message>
+  <message name="SetPersistentDataRequest">
+    <part type="xsd:string" name="NewPersistentData"/>
+  </message>
+  <message name="SetPersistentDataResponse"/>
+  <message name="ConfigurationStartedRequest">
+    <part type="xsd:string" name="NewSessionID"/>
+  </message>
+  <message name="ConfigurationStartedResponse"/>
+  <message name="ConfigurationFinishedRequest"/>
+  <message name="ConfigurationFinishedResponse">
+    <part type="xsd:string" name="NewStatus"/>
+  </message>
+  <message name="FactoryResetRequest"/>
+  <message name="FactoryResetResponse"/>
+  <message name="RebootRequest"/>
+  <message name="RebootResponse"/>
+  <message name="X_GenerateUUIDRequest"/>
+  <message name="X_GenerateUUIDResponse">
+    <part type="xsd:string" name="NewUUID"/>
+  </message>
+  <message name="X_AVM-DE_GetConfigFileRequest">
+    <part type="xsd:string" name="NewX_AVM-DE_Password"/>
+  </message>
+  <message name="X_AVM-DE_GetConfigFileResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_ConfigFileUrl"/>
+  </message>
+  <message name="X_AVM-DE_SetConfigFileRequest">
+    <part type="xsd:string" name="NewX_AVM-DE_Password"/>
+    <part type="xsd:string" name="NewX_AVM-DE_ConfigFileUrl"/>
+  </message>
+  <message name="X_AVM-DE_SetConfigFileResponse"/>
+  <message name="X_AVM-DE_CreateUrlSIDRequest"/>
+  <message name="X_AVM-DE_CreateUrlSIDResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_UrlSID"/>
+  </message>
+</definitions>

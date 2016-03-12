@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="WANCommonInterfaceConfig1">
+    <documentation>http://avm.de/fileadmin/user_upload/Global/Service/Schnittstellen/wancommonifconfigSCPD.pdf</documentation>
+    <port binding="WANCommonInterfaceConfig1" name="GetCommonLinkProperties">
+      <soap:address location="http://fritz.box:49000/upnp/control/wancommonifconfig1"/>
+    </port>
+    <port binding="WANCommonInterfaceConfig1" name="GetTotalBytesSent">
+      <soap:address location="http://fritz.box:49000/upnp/control/wancommonifconfig1"/>
+    </port>
+    <port binding="WANCommonInterfaceConfig1" name="GetTotalBytesReceived">
+      <soap:address location="http://fritz.box:49000/upnp/control/wancommonifconfig1"/>
+    </port>
+    <port binding="WANCommonInterfaceConfig1" name="GetTotalPacketsSent">
+      <soap:address location="http://fritz.box:49000/upnp/control/wancommonifconfig1"/>
+    </port>
+    <port binding="WANCommonInterfaceConfig1" name="GetTotalPacketsReceived">
+      <soap:address location="http://fritz.box:49000/upnp/control/wancommonifconfig1"/>
+    </port>
+    <port binding="WANCommonInterfaceConfig1" name="X_AVM-DE_SetWANAccessType">
+      <soap:address location="http://fritz.box:49000/upnp/control/wancommonifconfig1"/>
+    </port>
+    <port binding="WANCommonInterfaceConfig1" name="X_AVM-DE_GetOnlineMonitor">
+      <soap:address location="http://fritz.box:49000/upnp/control/wancommonifconfig1"/>
+    </port>
+  </service>
+  <binding name="WANCommonInterfaceConfig1" type="WANCommonInterfaceConfig1">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="GetCommonLinkProperties">
+      <soap:operation soapAction="urn:dslforum-org:service:WANCommonInterfaceConfig:1#GetCommonLinkProperties"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetTotalBytesSent">
+      <soap:operation soapAction="urn:dslforum-org:service:WANCommonInterfaceConfig:1#GetTotalBytesSent"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetTotalBytesReceived">
+      <soap:operation soapAction="urn:dslforum-org:service:WANCommonInterfaceConfig:1#GetTotalBytesReceived"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetTotalPacketsSent">
+      <soap:operation soapAction="urn:dslforum-org:service:WANCommonInterfaceConfig:1#GetTotalPacketsSent"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetTotalPacketsReceived">
+      <soap:operation soapAction="urn:dslforum-org:service:WANCommonInterfaceConfig:1#GetTotalPacketsReceived"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_SetWANAccessType">
+      <soap:operation soapAction="urn:dslforum-org:service:WANCommonInterfaceConfig:1#X_AVM-DE_SetWANAccessType"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_GetOnlineMonitor">
+      <soap:operation soapAction="urn:dslforum-org:service:WANCommonInterfaceConfig:1#X_AVM-DE_GetOnlineMonitor"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <portType name="WANCommonInterfaceConfig1">
+    <operation name="GetCommonLinkProperties">
+      <input message="GetCommonLinkPropertiesRequest"/>
+      <output message="GetCommonLinkPropertiesResponse"/>
+    </operation>
+    <operation name="GetTotalBytesSent">
+      <input message="GetTotalBytesSentRequest"/>
+      <output message="GetTotalBytesSentResponse"/>
+    </operation>
+    <operation name="GetTotalBytesReceived">
+      <input message="GetTotalBytesReceivedRequest"/>
+      <output message="GetTotalBytesReceivedResponse"/>
+    </operation>
+    <operation name="GetTotalPacketsSent">
+      <input message="GetTotalPacketsSentRequest"/>
+      <output message="GetTotalPacketsSentResponse"/>
+    </operation>
+    <operation name="GetTotalPacketsReceived">
+      <input message="GetTotalPacketsReceivedRequest"/>
+      <output message="GetTotalPacketsReceivedResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_SetWANAccessType">
+      <input message="X_AVM-DE_SetWANAccessTypeRequest"/>
+      <output message="X_AVM-DE_SetWANAccessTypeResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_GetOnlineMonitor">
+      <input message="X_AVM-DE_GetOnlineMonitorRequest"/>
+      <output message="X_AVM-DE_GetOnlineMonitorResponse"/>
+    </operation>
+  </portType>
+  <message name="GetCommonLinkPropertiesRequest"/>
+  <message name="GetCommonLinkPropertiesResponse">
+    <part type="xsd:string" name="NewWANAccessType"/>
+    <part type="xsd:unsignedInt" name="NewLayer1UpstreamMaxBitRate"/>
+    <part type="xsd:unsignedInt" name="NewLayer1DownstreamMaxBitRate"/>
+    <part type="xsd:string" name="NewPhysicalLinkStatus"/>
+  </message>
+  <message name="GetTotalBytesSentRequest"/>
+  <message name="GetTotalBytesSentResponse">
+    <part type="xsd:unsignedInt" name="NewTotalBytesSent"/>
+  </message>
+  <message name="GetTotalBytesReceivedRequest"/>
+  <message name="GetTotalBytesReceivedResponse">
+    <part type="xsd:unsignedInt" name="NewTotalBytesReceived"/>
+  </message>
+  <message name="GetTotalPacketsSentRequest"/>
+  <message name="GetTotalPacketsSentResponse">
+    <part type="xsd:unsignedInt" name="NewTotalPacketsSent"/>
+  </message>
+  <message name="GetTotalPacketsReceivedRequest"/>
+  <message name="GetTotalPacketsReceivedResponse">
+    <part type="xsd:unsignedInt" name="NewTotalPacketsReceived"/>
+  </message>
+  <message name="X_AVM-DE_SetWANAccessTypeRequest">
+    <part type="xsd:string" name="NewAccessType"/>
+  </message>
+  <message name="X_AVM-DE_SetWANAccessTypeResponse"/>
+  <message name="X_AVM-DE_GetOnlineMonitorRequest">
+    <part type="xsd:unsignedInt" name="NewSyncGroupIndex"/>
+  </message>
+  <message name="X_AVM-DE_GetOnlineMonitorResponse">
+    <part type="xsd:unsignedInt" name="NewTotalNumberSyncGroups"/>
+    <part type="xsd:string" name="NewSyncGroupName"/>
+    <part type="xsd:string" name="NewSyncGroupMode"/>
+    <part type="xsd:string" name="NewSyncGroupMode"/>
+    <part type="xsd:unsignedInt" name="Newmax_ds"/>
+    <part type="xsd:unsignedInt" name="Newmax_us"/>
+    <part type="xsd:string" name="Newds_current_bps"/>
+    <part type="xsd:string" name="Newmc_current_bps"/>
+    <part type="xsd:string" name="Newus_current_bps"/>
+    <part type="xsd:string" name="Newprio_realtime_bps"/>
+    <part type="xsd:string" name="Newprio_high_bps"/>
+    <part type="xsd:string" name="Newprio_default_bps"/>
+    <part type="xsd:string" name="Newprio_low_bps"/>
+  </message>
+</definitions>
