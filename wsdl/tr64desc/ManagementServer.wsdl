@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="ManagementServer">
+    <port binding="ManagementServer" name="GetInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/mgmsrv"/>
+    </port>
+    <port binding="ManagementServer" name="SetManagementServerURL">
+      <soap:address location="http://fritz.box:49000/upnp/control/mgmsrv"/>
+    </port>
+    <port binding="ManagementServer" name="SetManagementServerUsername">
+      <soap:address location="http://fritz.box:49000/upnp/control/mgmsrv"/>
+    </port>
+    <port binding="ManagementServer" name="SetManagementServerPassword">
+      <soap:address location="http://fritz.box:49000/upnp/control/mgmsrv"/>
+    </port>
+    <port binding="ManagementServer" name="SetPeriodicInform">
+      <soap:address location="http://fritz.box:49000/upnp/control/mgmsrv"/>
+    </port>
+    <port binding="ManagementServer" name="SetConnectionRequestAuthentication">
+      <soap:address location="http://fritz.box:49000/upnp/control/mgmsrv"/>
+    </port>
+    <port binding="ManagementServer" name="SetUpgradeManagement">
+      <soap:address location="http://fritz.box:49000/upnp/control/mgmsrv"/>
+    </port>
+    <port binding="ManagementServer" name="X_SetTR069Enable">
+      <soap:address location="http://fritz.box:49000/upnp/control/mgmsrv"/>
+    </port>
+    <port binding="ManagementServer" name="X_AVM-DE_GetTR069FirmwareDownloadEnabled">
+      <soap:address location="http://fritz.box:49000/upnp/control/mgmsrv"/>
+    </port>
+    <port binding="ManagementServer" name="X_AVM-DE_SetTR069FirmwareDownloadEnabled">
+      <soap:address location="http://fritz.box:49000/upnp/control/mgmsrv"/>
+    </port>
+  </service>
+  <binding name="ManagementServer" type="ManagementServer">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="GetInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#GetInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetManagementServerURL">
+      <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#SetManagementServerURL"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetManagementServerUsername">
+      <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#SetManagementServerUsername"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetManagementServerPassword">
+      <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#SetManagementServerPassword"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetPeriodicInform">
+      <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#SetPeriodicInform"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetConnectionRequestAuthentication">
+      <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#SetConnectionRequestAuthentication"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetUpgradeManagement">
+      <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#SetUpgradeManagement"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_SetTR069Enable">
+      <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#X_SetTR069Enable"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_GetTR069FirmwareDownloadEnabled">
+      <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#X_AVM-DE_GetTR069FirmwareDownloadEnabled"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_SetTR069FirmwareDownloadEnabled">
+      <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#X_AVM-DE_SetTR069FirmwareDownloadEnabled"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <portType name="ManagementServer">
+    <operation name="GetInfo">
+      <input message="GetInfoRequest"/>
+      <output message="GetInfoResponse"/>
+    </operation>
+    <operation name="SetManagementServerURL">
+      <input message="SetManagementServerURLRequest"/>
+      <output message="SetManagementServerURLResponse"/>
+    </operation>
+    <operation name="SetManagementServerUsername">
+      <input message="SetManagementServerUsernameRequest"/>
+      <output message="SetManagementServerUsernameResponse"/>
+    </operation>
+    <operation name="SetManagementServerPassword">
+      <input message="SetManagementServerPasswordRequest"/>
+      <output message="SetManagementServerPasswordResponse"/>
+    </operation>
+    <operation name="SetPeriodicInform">
+      <input message="SetPeriodicInformRequest"/>
+      <output message="SetPeriodicInformResponse"/>
+    </operation>
+    <operation name="SetConnectionRequestAuthentication">
+      <input message="SetConnectionRequestAuthenticationRequest"/>
+      <output message="SetConnectionRequestAuthenticationResponse"/>
+    </operation>
+    <operation name="SetUpgradeManagement">
+      <input message="SetUpgradeManagementRequest"/>
+      <output message="SetUpgradeManagementResponse"/>
+    </operation>
+    <operation name="X_SetTR069Enable">
+      <input message="X_SetTR069EnableRequest"/>
+      <output message="X_SetTR069EnableResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_GetTR069FirmwareDownloadEnabled">
+      <input message="X_AVM-DE_GetTR069FirmwareDownloadEnabledRequest"/>
+      <output message="X_AVM-DE_GetTR069FirmwareDownloadEnabledResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_SetTR069FirmwareDownloadEnabled">
+      <input message="X_AVM-DE_SetTR069FirmwareDownloadEnabledRequest"/>
+      <output message="X_AVM-DE_SetTR069FirmwareDownloadEnabledResponse"/>
+    </operation>
+  </portType>
+  <message name="GetInfoRequest"/>
+  <message name="GetInfoResponse">
+    <part type="xsd:string" name="NewURL"/>
+    <part type="xsd:string" name="NewUsername"/>
+    <part name="NewPeriodicInformEnable"/>
+    <part type="xsd:unsignedInt" name="NewPeriodicInformInterval"/>
+    <part name="NewPeriodicInformTime"/>
+    <part type="xsd:string" name="NewParameterKey"/>
+    <part type="xsd:string" name="NewParameterHash"/>
+    <part type="xsd:string" name="NewConnectionRequestURL"/>
+    <part type="xsd:string" name="NewConnectionRequestUsername"/>
+    <part name="NewUpgradesManaged"/>
+  </message>
+  <message name="SetManagementServerURLRequest">
+    <part type="xsd:string" name="NewURL"/>
+  </message>
+  <message name="SetManagementServerURLResponse"/>
+  <message name="SetManagementServerUsernameRequest">
+    <part type="xsd:string" name="NewUsername"/>
+  </message>
+  <message name="SetManagementServerUsernameResponse"/>
+  <message name="SetManagementServerPasswordRequest">
+    <part type="xsd:string" name="NewPassword"/>
+  </message>
+  <message name="SetManagementServerPasswordResponse"/>
+  <message name="SetPeriodicInformRequest">
+    <part name="NewPeriodicInformEnable"/>
+    <part type="xsd:unsignedInt" name="NewPeriodicInformInterval"/>
+    <part name="NewPeriodicInformTime"/>
+  </message>
+  <message name="SetPeriodicInformResponse"/>
+  <message name="SetConnectionRequestAuthenticationRequest">
+    <part type="xsd:string" name="NewConnectionRequestUsername"/>
+    <part type="xsd:string" name="NewConnectionRequestPassword"/>
+  </message>
+  <message name="SetConnectionRequestAuthenticationResponse"/>
+  <message name="SetUpgradeManagementRequest">
+    <part name="NewUpgradesManaged"/>
+  </message>
+  <message name="SetUpgradeManagementResponse"/>
+  <message name="X_SetTR069EnableRequest">
+    <part name="NewTR069Enabled"/>
+  </message>
+  <message name="X_SetTR069EnableResponse"/>
+  <message name="X_AVM-DE_GetTR069FirmwareDownloadEnabledRequest"/>
+  <message name="X_AVM-DE_GetTR069FirmwareDownloadEnabledResponse">
+    <part name="NewTR069FirmwareDownloadEnabled"/>
+  </message>
+  <message name="X_AVM-DE_SetTR069FirmwareDownloadEnabledRequest">
+    <part name="NewTR069FirmwareDownloadEnabled"/>
+  </message>
+  <message name="X_AVM-DE_SetTR069FirmwareDownloadEnabledResponse"/>
+</definitions>

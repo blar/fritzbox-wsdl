@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="UserInterface">
+    <port binding="UserInterface" name="GetInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/userif"/>
+    </port>
+    <port binding="UserInterface" name="X_AVM-DE_CheckUpdate">
+      <soap:address location="http://fritz.box:49000/upnp/control/userif"/>
+    </port>
+    <port binding="UserInterface" name="X_AVM-DE_DoUpdate">
+      <soap:address location="http://fritz.box:49000/upnp/control/userif"/>
+    </port>
+    <port binding="UserInterface" name="X_AVM-DE_DoPrepareCGI">
+      <soap:address location="http://fritz.box:49000/upnp/control/userif"/>
+    </port>
+    <port binding="UserInterface" name="X_AVM-DE_DoManualUpdate">
+      <soap:address location="http://fritz.box:49000/upnp/control/userif"/>
+    </port>
+    <port binding="UserInterface" name="X_AVM-DE_GetInternationalConfig">
+      <soap:address location="http://fritz.box:49000/upnp/control/userif"/>
+    </port>
+    <port binding="UserInterface" name="X_AVM-DE_SetInternationalConfig">
+      <soap:address location="http://fritz.box:49000/upnp/control/userif"/>
+    </port>
+    <port binding="UserInterface" name="X_AVM-DE_GetInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/userif"/>
+    </port>
+    <port binding="UserInterface" name="X_AVM-DE_SetConfig">
+      <soap:address location="http://fritz.box:49000/upnp/control/userif"/>
+    </port>
+  </service>
+  <binding name="UserInterface" type="UserInterface">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="GetInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#GetInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_CheckUpdate">
+      <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_CheckUpdate"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_DoUpdate">
+      <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_DoUpdate"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_DoPrepareCGI">
+      <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_DoPrepareCGI"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_DoManualUpdate">
+      <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_DoManualUpdate"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_GetInternationalConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_GetInternationalConfig"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_SetInternationalConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_SetInternationalConfig"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_GetInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_GetInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM-DE_SetConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_SetConfig"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <portType name="UserInterface">
+    <operation name="GetInfo">
+      <input message="GetInfoRequest"/>
+      <output message="GetInfoResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_CheckUpdate">
+      <input message="X_AVM-DE_CheckUpdateRequest"/>
+      <output message="X_AVM-DE_CheckUpdateResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_DoUpdate">
+      <input message="X_AVM-DE_DoUpdateRequest"/>
+      <output message="X_AVM-DE_DoUpdateResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_DoPrepareCGI">
+      <input message="X_AVM-DE_DoPrepareCGIRequest"/>
+      <output message="X_AVM-DE_DoPrepareCGIResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_DoManualUpdate">
+      <input message="X_AVM-DE_DoManualUpdateRequest"/>
+      <output message="X_AVM-DE_DoManualUpdateResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_GetInternationalConfig">
+      <input message="X_AVM-DE_GetInternationalConfigRequest"/>
+      <output message="X_AVM-DE_GetInternationalConfigResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_SetInternationalConfig">
+      <input message="X_AVM-DE_SetInternationalConfigRequest"/>
+      <output message="X_AVM-DE_SetInternationalConfigResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_GetInfo">
+      <input message="X_AVM-DE_GetInfoRequest"/>
+      <output message="X_AVM-DE_GetInfoResponse"/>
+    </operation>
+    <operation name="X_AVM-DE_SetConfig">
+      <input message="X_AVM-DE_SetConfigRequest"/>
+      <output message="X_AVM-DE_SetConfigResponse"/>
+    </operation>
+  </portType>
+  <message name="GetInfoRequest"/>
+  <message name="GetInfoResponse">
+    <part name="NewUpgradeAvailable"/>
+    <part name="NewPasswordRequired"/>
+    <part name="NewPasswordUserSelectable"/>
+    <part name="NewWarrantyDate"/>
+    <part type="xsd:string" name="NewX_AVM-DE_Version"/>
+    <part type="xsd:string" name="NewX_AVM-DE_DownloadURL"/>
+    <part type="xsd:string" name="NewX_AVM-DE_InfoURL"/>
+    <part type="xsd:string" name="NewX_AVM-DE_UpdateState"/>
+    <part type="xsd:string" name="NewX_AVM-DE_LaborVersion"/>
+  </message>
+  <message name="X_AVM-DE_CheckUpdateRequest">
+    <part type="xsd:string" name="NewX_AVM-DE_LaborVersion"/>
+  </message>
+  <message name="X_AVM-DE_CheckUpdateResponse"/>
+  <message name="X_AVM-DE_DoUpdateRequest"/>
+  <message name="X_AVM-DE_DoUpdateResponse">
+    <part name="NewUpgradeAvailable"/>
+    <part type="xsd:string" name="NewX_AVM-DE_UpdateState"/>
+  </message>
+  <message name="X_AVM-DE_DoPrepareCGIRequest"/>
+  <message name="X_AVM-DE_DoPrepareCGIResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_CGI"/>
+    <part type="xsd:string" name="NewX_AVM-DE_SessionID"/>
+  </message>
+  <message name="X_AVM-DE_DoManualUpdateRequest">
+    <part name="NewX_AVM-DE_AllowDowngrade"/>
+    <part type="xsd:string" name="NewX_AVM-DE_DownloadURL"/>
+  </message>
+  <message name="X_AVM-DE_DoManualUpdateResponse"/>
+  <message name="X_AVM-DE_GetInternationalConfigRequest"/>
+  <message name="X_AVM-DE_GetInternationalConfigResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_Language"/>
+    <part type="xsd:string" name="NewX_AVM-DE_Country"/>
+    <part type="xsd:string" name="NewX_AVM-DE_Annex"/>
+    <part type="xsd:string" name="NewX_AVM-DE_LanguageList"/>
+    <part type="xsd:string" name="NewX_AVM-DE_CountryList"/>
+    <part type="xsd:string" name="NewX_AVM-DE_AnnexList"/>
+  </message>
+  <message name="X_AVM-DE_SetInternationalConfigRequest">
+    <part type="xsd:string" name="NewX_AVM-DE_Language"/>
+    <part type="xsd:string" name="NewX_AVM-DE_Country"/>
+    <part type="xsd:string" name="NewX_AVM-DE_Annex"/>
+  </message>
+  <message name="X_AVM-DE_SetInternationalConfigResponse"/>
+  <message name="X_AVM-DE_GetInfoRequest"/>
+  <message name="X_AVM-DE_GetInfoResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_AutoUpdateMode"/>
+    <part name="NewX_AVM-DE_UpdateTime"/>
+    <part type="xsd:string" name="NewX_AVM-DE_LastFwVersion"/>
+    <part type="xsd:string" name="NewX_AVM-DE_LastInfoUrl"/>
+    <part type="xsd:string" name="NewX_AVM-DE_CurrentFwVersion"/>
+    <part type="xsd:string" name="NewX_AVM-DE_UpdateSuccessful"/>
+  </message>
+  <message name="X_AVM-DE_SetConfigRequest">
+    <part type="xsd:string" name="NewX_AVM-DE_AutoUpdateMode"/>
+  </message>
+  <message name="X_AVM-DE_SetConfigResponse"/>
+</definitions>

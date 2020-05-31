@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="X_AVM-DE_WebDAVClient">
+    <port binding="X_AVM-DE_WebDAVClient" name="GetInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_webdav"/>
+    </port>
+    <port binding="X_AVM-DE_WebDAVClient" name="SetConfig">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_webdav"/>
+    </port>
+  </service>
+  <binding name="X_AVM-DE_WebDAVClient" type="X_AVM-DE_WebDAVClient">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="GetInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_WebDAVClient:1#GetInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_WebDAVClient:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_WebDAVClient:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_WebDAVClient:1#SetConfig"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_WebDAVClient:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_WebDAVClient:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <portType name="X_AVM-DE_WebDAVClient">
+    <operation name="GetInfo">
+      <input message="GetInfoRequest"/>
+      <output message="GetInfoResponse"/>
+    </operation>
+    <operation name="SetConfig">
+      <input message="SetConfigRequest"/>
+      <output message="SetConfigResponse"/>
+    </operation>
+  </portType>
+  <message name="GetInfoRequest"/>
+  <message name="GetInfoResponse">
+    <part name="NewEnable"/>
+    <part type="xsd:string" name="NewHostURL"/>
+    <part type="xsd:string" name="NewUsername"/>
+    <part type="xsd:string" name="NewMountpointName"/>
+  </message>
+  <message name="SetConfigRequest">
+    <part name="NewEnable"/>
+    <part type="xsd:string" name="NewHostURL"/>
+    <part type="xsd:string" name="NewUsername"/>
+    <part type="xsd:string" name="NewPassword"/>
+    <part type="xsd:string" name="NewMountpointName"/>
+  </message>
+  <message name="SetConfigResponse"/>
+</definitions>

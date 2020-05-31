@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="X_AVM-DE_Filelinks">
+    <port binding="X_AVM-DE_Filelinks" name="GetNumberOfFilelinkEntries">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_filelinks"/>
+    </port>
+    <port binding="X_AVM-DE_Filelinks" name="GetGenericFilelinkEntry">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_filelinks"/>
+    </port>
+    <port binding="X_AVM-DE_Filelinks" name="GetSpecificFilelinkEntry">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_filelinks"/>
+    </port>
+    <port binding="X_AVM-DE_Filelinks" name="NewFilelinkEntry">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_filelinks"/>
+    </port>
+    <port binding="X_AVM-DE_Filelinks" name="SetFilelinkEntry">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_filelinks"/>
+    </port>
+    <port binding="X_AVM-DE_Filelinks" name="DeleteFilelinkEntry">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_filelinks"/>
+    </port>
+    <port binding="X_AVM-DE_Filelinks" name="GetFilelinkListPath">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_filelinks"/>
+    </port>
+  </service>
+  <binding name="X_AVM-DE_Filelinks" type="X_AVM-DE_Filelinks">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="GetNumberOfFilelinkEntries">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Filelinks:1#GetNumberOfFilelinkEntries"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Filelinks:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Filelinks:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetGenericFilelinkEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Filelinks:1#GetGenericFilelinkEntry"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Filelinks:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Filelinks:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetSpecificFilelinkEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Filelinks:1#GetSpecificFilelinkEntry"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Filelinks:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Filelinks:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="NewFilelinkEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Filelinks:1#NewFilelinkEntry"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Filelinks:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Filelinks:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetFilelinkEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Filelinks:1#SetFilelinkEntry"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Filelinks:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Filelinks:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="DeleteFilelinkEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Filelinks:1#DeleteFilelinkEntry"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Filelinks:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Filelinks:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetFilelinkListPath">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Filelinks:1#GetFilelinkListPath"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Filelinks:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Filelinks:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <portType name="X_AVM-DE_Filelinks">
+    <operation name="GetNumberOfFilelinkEntries">
+      <input message="GetNumberOfFilelinkEntriesRequest"/>
+      <output message="GetNumberOfFilelinkEntriesResponse"/>
+    </operation>
+    <operation name="GetGenericFilelinkEntry">
+      <input message="GetGenericFilelinkEntryRequest"/>
+      <output message="GetGenericFilelinkEntryResponse"/>
+    </operation>
+    <operation name="GetSpecificFilelinkEntry">
+      <input message="GetSpecificFilelinkEntryRequest"/>
+      <output message="GetSpecificFilelinkEntryResponse"/>
+    </operation>
+    <operation name="NewFilelinkEntry">
+      <input message="NewFilelinkEntryRequest"/>
+      <output message="NewFilelinkEntryResponse"/>
+    </operation>
+    <operation name="SetFilelinkEntry">
+      <input message="SetFilelinkEntryRequest"/>
+      <output message="SetFilelinkEntryResponse"/>
+    </operation>
+    <operation name="DeleteFilelinkEntry">
+      <input message="DeleteFilelinkEntryRequest"/>
+      <output message="DeleteFilelinkEntryResponse"/>
+    </operation>
+    <operation name="GetFilelinkListPath">
+      <input message="GetFilelinkListPathRequest"/>
+      <output message="GetFilelinkListPathResponse"/>
+    </operation>
+  </portType>
+  <message name="GetNumberOfFilelinkEntriesRequest"/>
+  <message name="GetNumberOfFilelinkEntriesResponse">
+    <part type="xsd:unsignedShort" name="NewNumberOfEntries"/>
+  </message>
+  <message name="GetGenericFilelinkEntryRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+  </message>
+  <message name="GetGenericFilelinkEntryResponse">
+    <part type="xsd:string" name="NewID"/>
+    <part name="NewValid"/>
+    <part type="xsd:string" name="NewPath"/>
+    <part name="NewIsDirectory"/>
+    <part type="xsd:string" name="NewUrl"/>
+    <part type="xsd:string" name="NewUsername"/>
+    <part type="xsd:unsignedShort" name="NewAccessCountLimit"/>
+    <part type="xsd:unsignedShort" name="NewAccessCount"/>
+    <part type="xsd:unsignedShort" name="NewExpire"/>
+    <part name="NewExpireDate"/>
+  </message>
+  <message name="GetSpecificFilelinkEntryRequest">
+    <part type="xsd:string" name="NewID"/>
+  </message>
+  <message name="GetSpecificFilelinkEntryResponse">
+    <part name="NewValid"/>
+    <part type="xsd:string" name="NewPath"/>
+    <part name="NewIsDirectory"/>
+    <part type="xsd:string" name="NewUrl"/>
+    <part type="xsd:string" name="NewUsername"/>
+    <part type="xsd:unsignedShort" name="NewAccessCountLimit"/>
+    <part type="xsd:unsignedShort" name="NewAccessCount"/>
+    <part type="xsd:unsignedShort" name="NewExpire"/>
+    <part name="NewExpireDate"/>
+  </message>
+  <message name="NewFilelinkEntryRequest">
+    <part type="xsd:string" name="NewPath"/>
+    <part type="xsd:unsignedShort" name="NewAccessCountLimit"/>
+    <part type="xsd:unsignedShort" name="NewExpire"/>
+  </message>
+  <message name="NewFilelinkEntryResponse">
+    <part type="xsd:string" name="NewID"/>
+  </message>
+  <message name="SetFilelinkEntryRequest">
+    <part type="xsd:string" name="NewID"/>
+    <part type="xsd:unsignedShort" name="NewAccessCountLimit"/>
+    <part type="xsd:unsignedShort" name="NewExpire"/>
+  </message>
+  <message name="SetFilelinkEntryResponse"/>
+  <message name="DeleteFilelinkEntryRequest">
+    <part type="xsd:string" name="NewID"/>
+  </message>
+  <message name="DeleteFilelinkEntryResponse"/>
+  <message name="GetFilelinkListPathRequest"/>
+  <message name="GetFilelinkListPathResponse">
+    <part type="xsd:string" name="NewFilelinkListPath"/>
+  </message>
+</definitions>

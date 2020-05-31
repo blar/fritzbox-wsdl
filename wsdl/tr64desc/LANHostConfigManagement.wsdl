@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="LANHostConfigManagement">
+    <port binding="LANHostConfigManagement" name="GetInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/lanhostconfigmgm"/>
+    </port>
+    <port binding="LANHostConfigManagement" name="SetDHCPServerEnable">
+      <soap:address location="http://fritz.box:49000/upnp/control/lanhostconfigmgm"/>
+    </port>
+    <port binding="LANHostConfigManagement" name="SetIPInterface">
+      <soap:address location="http://fritz.box:49000/upnp/control/lanhostconfigmgm"/>
+    </port>
+    <port binding="LANHostConfigManagement" name="GetAddressRange">
+      <soap:address location="http://fritz.box:49000/upnp/control/lanhostconfigmgm"/>
+    </port>
+    <port binding="LANHostConfigManagement" name="SetAddressRange">
+      <soap:address location="http://fritz.box:49000/upnp/control/lanhostconfigmgm"/>
+    </port>
+    <port binding="LANHostConfigManagement" name="GetIPRoutersList">
+      <soap:address location="http://fritz.box:49000/upnp/control/lanhostconfigmgm"/>
+    </port>
+    <port binding="LANHostConfigManagement" name="SetIPRouter">
+      <soap:address location="http://fritz.box:49000/upnp/control/lanhostconfigmgm"/>
+    </port>
+    <port binding="LANHostConfigManagement" name="GetSubnetMask">
+      <soap:address location="http://fritz.box:49000/upnp/control/lanhostconfigmgm"/>
+    </port>
+    <port binding="LANHostConfigManagement" name="SetSubnetMask">
+      <soap:address location="http://fritz.box:49000/upnp/control/lanhostconfigmgm"/>
+    </port>
+    <port binding="LANHostConfigManagement" name="GetDNSServers">
+      <soap:address location="http://fritz.box:49000/upnp/control/lanhostconfigmgm"/>
+    </port>
+    <port binding="LANHostConfigManagement" name="GetIPInterfaceNumberOfEntries">
+      <soap:address location="http://fritz.box:49000/upnp/control/lanhostconfigmgm"/>
+    </port>
+  </service>
+  <binding name="LANHostConfigManagement" type="LANHostConfigManagement">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="GetInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#GetInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetDHCPServerEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#SetDHCPServerEnable"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetIPInterface">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#SetIPInterface"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetAddressRange">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#GetAddressRange"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetAddressRange">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#SetAddressRange"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetIPRoutersList">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#GetIPRoutersList"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetIPRouter">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#SetIPRouter"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetSubnetMask">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#GetSubnetMask"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetSubnetMask">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#SetSubnetMask"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetDNSServers">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#GetDNSServers"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetIPInterfaceNumberOfEntries">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#GetIPInterfaceNumberOfEntries"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANHostConfigManagement:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <portType name="LANHostConfigManagement">
+    <operation name="GetInfo">
+      <input message="GetInfoRequest"/>
+      <output message="GetInfoResponse"/>
+    </operation>
+    <operation name="SetDHCPServerEnable">
+      <input message="SetDHCPServerEnableRequest"/>
+      <output message="SetDHCPServerEnableResponse"/>
+    </operation>
+    <operation name="SetIPInterface">
+      <input message="SetIPInterfaceRequest"/>
+      <output message="SetIPInterfaceResponse"/>
+    </operation>
+    <operation name="GetAddressRange">
+      <input message="GetAddressRangeRequest"/>
+      <output message="GetAddressRangeResponse"/>
+    </operation>
+    <operation name="SetAddressRange">
+      <input message="SetAddressRangeRequest"/>
+      <output message="SetAddressRangeResponse"/>
+    </operation>
+    <operation name="GetIPRoutersList">
+      <input message="GetIPRoutersListRequest"/>
+      <output message="GetIPRoutersListResponse"/>
+    </operation>
+    <operation name="SetIPRouter">
+      <input message="SetIPRouterRequest"/>
+      <output message="SetIPRouterResponse"/>
+    </operation>
+    <operation name="GetSubnetMask">
+      <input message="GetSubnetMaskRequest"/>
+      <output message="GetSubnetMaskResponse"/>
+    </operation>
+    <operation name="SetSubnetMask">
+      <input message="SetSubnetMaskRequest"/>
+      <output message="SetSubnetMaskResponse"/>
+    </operation>
+    <operation name="GetDNSServers">
+      <input message="GetDNSServersRequest"/>
+      <output message="GetDNSServersResponse"/>
+    </operation>
+    <operation name="GetIPInterfaceNumberOfEntries">
+      <input message="GetIPInterfaceNumberOfEntriesRequest"/>
+      <output message="GetIPInterfaceNumberOfEntriesResponse"/>
+    </operation>
+  </portType>
+  <message name="GetInfoRequest"/>
+  <message name="GetInfoResponse">
+    <part name="NewDHCPServerConfigurable"/>
+    <part name="NewDHCPRelay"/>
+    <part type="xsd:string" name="NewMinAddress"/>
+    <part type="xsd:string" name="NewMaxAddress"/>
+    <part type="xsd:string" name="NewReservedAddresses"/>
+    <part name="NewDHCPServerEnable"/>
+    <part type="xsd:string" name="NewDNSServers"/>
+    <part type="xsd:string" name="NewDomainName"/>
+    <part type="xsd:string" name="NewIPRouters"/>
+    <part type="xsd:string" name="NewSubnetMask"/>
+  </message>
+  <message name="SetDHCPServerEnableRequest">
+    <part name="NewDHCPServerEnable"/>
+  </message>
+  <message name="SetDHCPServerEnableResponse"/>
+  <message name="SetIPInterfaceRequest">
+    <part name="NewEnable"/>
+    <part type="xsd:string" name="NewIPAddress"/>
+    <part type="xsd:string" name="NewSubnetMask"/>
+    <part type="xsd:string" name="NewIPAddressingType"/>
+  </message>
+  <message name="SetIPInterfaceResponse"/>
+  <message name="GetAddressRangeRequest"/>
+  <message name="GetAddressRangeResponse">
+    <part type="xsd:string" name="NewMinAddress"/>
+    <part type="xsd:string" name="NewMaxAddress"/>
+  </message>
+  <message name="SetAddressRangeRequest">
+    <part type="xsd:string" name="NewMinAddress"/>
+    <part type="xsd:string" name="NewMaxAddress"/>
+  </message>
+  <message name="SetAddressRangeResponse"/>
+  <message name="GetIPRoutersListRequest"/>
+  <message name="GetIPRoutersListResponse">
+    <part type="xsd:string" name="NewIPRouters"/>
+  </message>
+  <message name="SetIPRouterRequest">
+    <part type="xsd:string" name="NewIPRouters"/>
+  </message>
+  <message name="SetIPRouterResponse"/>
+  <message name="GetSubnetMaskRequest"/>
+  <message name="GetSubnetMaskResponse">
+    <part type="xsd:string" name="NewSubnetMask"/>
+  </message>
+  <message name="SetSubnetMaskRequest">
+    <part type="xsd:string" name="NewSubnetMask"/>
+  </message>
+  <message name="SetSubnetMaskResponse"/>
+  <message name="GetDNSServersRequest"/>
+  <message name="GetDNSServersResponse">
+    <part type="xsd:string" name="NewDNSServers"/>
+  </message>
+  <message name="GetIPInterfaceNumberOfEntriesRequest"/>
+  <message name="GetIPInterfaceNumberOfEntriesResponse">
+    <part type="xsd:unsignedShort" name="NewIPInterfaceNumberOfEntries"/>
+  </message>
+</definitions>

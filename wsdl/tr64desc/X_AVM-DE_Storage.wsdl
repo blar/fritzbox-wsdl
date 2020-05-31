@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="X_AVM-DE_Storage">
+    <port binding="X_AVM-DE_Storage" name="GetInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_storage"/>
+    </port>
+    <port binding="X_AVM-DE_Storage" name="RequestFTPServerWAN">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_storage"/>
+    </port>
+    <port binding="X_AVM-DE_Storage" name="SetFTPServer">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_storage"/>
+    </port>
+    <port binding="X_AVM-DE_Storage" name="SetFTPServerWAN">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_storage"/>
+    </port>
+    <port binding="X_AVM-DE_Storage" name="SetSMBServer">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_storage"/>
+    </port>
+    <port binding="X_AVM-DE_Storage" name="GetUserInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_storage"/>
+    </port>
+    <port binding="X_AVM-DE_Storage" name="SetUserConfig">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_storage"/>
+    </port>
+  </service>
+  <binding name="X_AVM-DE_Storage" type="X_AVM-DE_Storage">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="GetInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Storage:1#GetInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Storage:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Storage:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="RequestFTPServerWAN">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Storage:1#RequestFTPServerWAN"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Storage:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Storage:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetFTPServer">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Storage:1#SetFTPServer"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Storage:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Storage:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetFTPServerWAN">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Storage:1#SetFTPServerWAN"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Storage:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Storage:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetSMBServer">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Storage:1#SetSMBServer"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Storage:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Storage:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetUserInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Storage:1#GetUserInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Storage:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Storage:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetUserConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Storage:1#SetUserConfig"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Storage:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Storage:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <portType name="X_AVM-DE_Storage">
+    <operation name="GetInfo">
+      <input message="GetInfoRequest"/>
+      <output message="GetInfoResponse"/>
+    </operation>
+    <operation name="RequestFTPServerWAN">
+      <input message="RequestFTPServerWANRequest"/>
+      <output message="RequestFTPServerWANResponse"/>
+    </operation>
+    <operation name="SetFTPServer">
+      <input message="SetFTPServerRequest"/>
+      <output message="SetFTPServerResponse"/>
+    </operation>
+    <operation name="SetFTPServerWAN">
+      <input message="SetFTPServerWANRequest"/>
+      <output message="SetFTPServerWANResponse"/>
+    </operation>
+    <operation name="SetSMBServer">
+      <input message="SetSMBServerRequest"/>
+      <output message="SetSMBServerResponse"/>
+    </operation>
+    <operation name="GetUserInfo">
+      <input message="GetUserInfoRequest"/>
+      <output message="GetUserInfoResponse"/>
+    </operation>
+    <operation name="SetUserConfig">
+      <input message="SetUserConfigRequest"/>
+      <output message="SetUserConfigResponse"/>
+    </operation>
+  </portType>
+  <message name="GetInfoRequest"/>
+  <message name="GetInfoResponse">
+    <part name="NewFTPEnable"/>
+    <part type="xsd:string" name="NewFTPStatus"/>
+    <part name="NewSMBEnable"/>
+    <part name="NewFTPWANEnable"/>
+    <part name="NewFTPWANSSLOnly"/>
+    <part type="xsd:unsignedShort" name="NewFTPWANPort"/>
+  </message>
+  <message name="RequestFTPServerWANRequest"/>
+  <message name="RequestFTPServerWANResponse">
+    <part type="xsd:unsignedShort" name="NewFTPWANPort"/>
+    <part type="xsd:unsignedInt" name="NewFTPWANLifetime"/>
+  </message>
+  <message name="SetFTPServerRequest">
+    <part name="NewFTPEnable"/>
+  </message>
+  <message name="SetFTPServerResponse"/>
+  <message name="SetFTPServerWANRequest">
+    <part name="NewFTPWANEnable"/>
+    <part name="NewFTPWANSSLOnly"/>
+  </message>
+  <message name="SetFTPServerWANResponse"/>
+  <message name="SetSMBServerRequest">
+    <part name="NewSMBEnable"/>
+  </message>
+  <message name="SetSMBServerResponse"/>
+  <message name="GetUserInfoRequest"/>
+  <message name="GetUserInfoResponse">
+    <part name="NewEnable"/>
+    <part type="xsd:string" name="NewUsername"/>
+    <part name="NewX_AVM-DE_NetworkAccessReadOnly"/>
+  </message>
+  <message name="SetUserConfigRequest">
+    <part name="NewEnable"/>
+    <part type="xsd:string" name="NewPassword"/>
+    <part name="NewX_AVM-DE_NetworkAccessReadOnly"/>
+  </message>
+  <message name="SetUserConfigResponse"/>
+</definitions>

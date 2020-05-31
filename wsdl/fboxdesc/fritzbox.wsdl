@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="fritzbox">
+    <port binding="fritzbox" name="SetLogParam">
+      <soap:address location="http://fritz.box:49000/upnp/control/fritzbox"/>
+    </port>
+    <port binding="fritzbox" name="GetMaclist">
+      <soap:address location="http://fritz.box:49000/upnp/control/fritzbox"/>
+    </port>
+  </service>
+  <binding name="fritzbox" type="fritzbox">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="SetLogParam">
+      <soap:operation soapAction="urn:schemas-any-com:service:fritzbox:1#SetLogParam"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-any-com:service:fritzbox:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-any-com:service:fritzbox:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetMaclist">
+      <soap:operation soapAction="urn:schemas-any-com:service:fritzbox:1#GetMaclist"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-any-com:service:fritzbox:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-any-com:service:fritzbox:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <portType name="fritzbox">
+    <operation name="SetLogParam">
+      <input message="SetLogParamRequest"/>
+      <output message="SetLogParamResponse"/>
+    </operation>
+    <operation name="GetMaclist">
+      <input message="GetMaclistRequest"/>
+      <output message="GetMaclistResponse"/>
+    </operation>
+  </portType>
+  <message name="SetLogParamRequest">
+    <part type="xsd:unsignedShort" name="NewLogPort"/>
+    <part type="xsd:string" name="NewLogLevel"/>
+  </message>
+  <message name="SetLogParamResponse"/>
+  <message name="GetMaclistRequest"/>
+  <message name="GetMaclistResponse">
+    <part type="xsd:string" name="NewMaclist"/>
+    <part type="xsd:unsignedShort" name="NewMaclistChangeCounter"/>
+  </message>
+</definitions>

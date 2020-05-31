@@ -1,0 +1,404 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="WANIPConnection">
+    <port binding="WANIPConnection" name="SetConnectionType">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANIPConn1"/>
+    </port>
+    <port binding="WANIPConnection" name="GetConnectionTypeInfo">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANIPConn1"/>
+    </port>
+    <port binding="WANIPConnection" name="GetAutoDisconnectTime">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANIPConn1"/>
+    </port>
+    <port binding="WANIPConnection" name="GetIdleDisconnectTime">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANIPConn1"/>
+    </port>
+    <port binding="WANIPConnection" name="RequestConnection">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANIPConn1"/>
+    </port>
+    <port binding="WANIPConnection" name="RequestTermination">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANIPConn1"/>
+    </port>
+    <port binding="WANIPConnection" name="ForceTermination">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANIPConn1"/>
+    </port>
+    <port binding="WANIPConnection" name="GetStatusInfo">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANIPConn1"/>
+    </port>
+    <port binding="WANIPConnection" name="GetNATRSIPStatus">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANIPConn1"/>
+    </port>
+    <port binding="WANIPConnection" name="GetGenericPortMappingEntry">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANIPConn1"/>
+    </port>
+    <port binding="WANIPConnection" name="GetSpecificPortMappingEntry">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANIPConn1"/>
+    </port>
+    <port binding="WANIPConnection" name="AddPortMapping">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANIPConn1"/>
+    </port>
+    <port binding="WANIPConnection" name="DeletePortMapping">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANIPConn1"/>
+    </port>
+    <port binding="WANIPConnection" name="GetExternalIPAddress">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANIPConn1"/>
+    </port>
+    <port binding="WANIPConnection" name="X_AVM_DE_GetExternalIPv6Address">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANIPConn1"/>
+    </port>
+    <port binding="WANIPConnection" name="X_AVM_DE_GetIPv6Prefix">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANIPConn1"/>
+    </port>
+    <port binding="WANIPConnection" name="X_AVM_DE_GetDNSServer">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANIPConn1"/>
+    </port>
+    <port binding="WANIPConnection" name="X_AVM_DE_GetIPv6DNSServer">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANIPConn1"/>
+    </port>
+  </service>
+  <binding name="WANIPConnection" type="WANIPConnection">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="SetConnectionType">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#SetConnectionType"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetConnectionTypeInfo">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#GetConnectionTypeInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetAutoDisconnectTime">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#GetAutoDisconnectTime"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetIdleDisconnectTime">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#GetIdleDisconnectTime"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="RequestConnection">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#RequestConnection"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="RequestTermination">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#RequestTermination"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="ForceTermination">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#ForceTermination"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetStatusInfo">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#GetStatusInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetNATRSIPStatus">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#GetNATRSIPStatus"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetGenericPortMappingEntry">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetSpecificPortMappingEntry">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#GetSpecificPortMappingEntry"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="AddPortMapping">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="DeletePortMapping">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetExternalIPAddress">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#GetExternalIPAddress"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM_DE_GetExternalIPv6Address">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#X_AVM_DE_GetExternalIPv6Address"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM_DE_GetIPv6Prefix">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#X_AVM_DE_GetIPv6Prefix"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM_DE_GetDNSServer">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#X_AVM_DE_GetDNSServer"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM_DE_GetIPv6DNSServer">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#X_AVM_DE_GetIPv6DNSServer"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANIPConnection:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <portType name="WANIPConnection">
+    <operation name="SetConnectionType">
+      <input message="SetConnectionTypeRequest"/>
+      <output message="SetConnectionTypeResponse"/>
+    </operation>
+    <operation name="GetConnectionTypeInfo">
+      <input message="GetConnectionTypeInfoRequest"/>
+      <output message="GetConnectionTypeInfoResponse"/>
+    </operation>
+    <operation name="GetAutoDisconnectTime">
+      <input message="GetAutoDisconnectTimeRequest"/>
+      <output message="GetAutoDisconnectTimeResponse"/>
+    </operation>
+    <operation name="GetIdleDisconnectTime">
+      <input message="GetIdleDisconnectTimeRequest"/>
+      <output message="GetIdleDisconnectTimeResponse"/>
+    </operation>
+    <operation name="RequestConnection">
+      <input message="RequestConnectionRequest"/>
+      <output message="RequestConnectionResponse"/>
+    </operation>
+    <operation name="RequestTermination">
+      <input message="RequestTerminationRequest"/>
+      <output message="RequestTerminationResponse"/>
+    </operation>
+    <operation name="ForceTermination">
+      <input message="ForceTerminationRequest"/>
+      <output message="ForceTerminationResponse"/>
+    </operation>
+    <operation name="GetStatusInfo">
+      <input message="GetStatusInfoRequest"/>
+      <output message="GetStatusInfoResponse"/>
+    </operation>
+    <operation name="GetNATRSIPStatus">
+      <input message="GetNATRSIPStatusRequest"/>
+      <output message="GetNATRSIPStatusResponse"/>
+    </operation>
+    <operation name="GetGenericPortMappingEntry">
+      <input message="GetGenericPortMappingEntryRequest"/>
+      <output message="GetGenericPortMappingEntryResponse"/>
+    </operation>
+    <operation name="GetSpecificPortMappingEntry">
+      <input message="GetSpecificPortMappingEntryRequest"/>
+      <output message="GetSpecificPortMappingEntryResponse"/>
+    </operation>
+    <operation name="AddPortMapping">
+      <input message="AddPortMappingRequest"/>
+      <output message="AddPortMappingResponse"/>
+    </operation>
+    <operation name="DeletePortMapping">
+      <input message="DeletePortMappingRequest"/>
+      <output message="DeletePortMappingResponse"/>
+    </operation>
+    <operation name="GetExternalIPAddress">
+      <input message="GetExternalIPAddressRequest"/>
+      <output message="GetExternalIPAddressResponse"/>
+    </operation>
+    <operation name="X_AVM_DE_GetExternalIPv6Address">
+      <input message="X_AVM_DE_GetExternalIPv6AddressRequest"/>
+      <output message="X_AVM_DE_GetExternalIPv6AddressResponse"/>
+    </operation>
+    <operation name="X_AVM_DE_GetIPv6Prefix">
+      <input message="X_AVM_DE_GetIPv6PrefixRequest"/>
+      <output message="X_AVM_DE_GetIPv6PrefixResponse"/>
+    </operation>
+    <operation name="X_AVM_DE_GetDNSServer">
+      <input message="X_AVM_DE_GetDNSServerRequest"/>
+      <output message="X_AVM_DE_GetDNSServerResponse"/>
+    </operation>
+    <operation name="X_AVM_DE_GetIPv6DNSServer">
+      <input message="X_AVM_DE_GetIPv6DNSServerRequest"/>
+      <output message="X_AVM_DE_GetIPv6DNSServerResponse"/>
+    </operation>
+  </portType>
+  <message name="SetConnectionTypeRequest">
+    <part type="xsd:string" name="NewConnectionType"/>
+  </message>
+  <message name="SetConnectionTypeResponse"/>
+  <message name="GetConnectionTypeInfoRequest"/>
+  <message name="GetConnectionTypeInfoResponse">
+    <part type="xsd:string" name="NewConnectionType"/>
+    <part type="xsd:string" name="NewPossibleConnectionTypes"/>
+  </message>
+  <message name="GetAutoDisconnectTimeRequest"/>
+  <message name="GetAutoDisconnectTimeResponse">
+    <part type="xsd:unsignedInt" name="NewAutoDisconnectTime"/>
+  </message>
+  <message name="GetIdleDisconnectTimeRequest"/>
+  <message name="GetIdleDisconnectTimeResponse">
+    <part type="xsd:unsignedInt" name="NewIdleDisconnectTime"/>
+  </message>
+  <message name="RequestConnectionRequest"/>
+  <message name="RequestConnectionResponse"/>
+  <message name="RequestTerminationRequest"/>
+  <message name="RequestTerminationResponse"/>
+  <message name="ForceTerminationRequest"/>
+  <message name="ForceTerminationResponse"/>
+  <message name="GetStatusInfoRequest"/>
+  <message name="GetStatusInfoResponse">
+    <part type="xsd:string" name="NewConnectionStatus"/>
+    <part type="xsd:string" name="NewLastConnectionError"/>
+    <part type="xsd:unsignedInt" name="NewUptime"/>
+  </message>
+  <message name="GetNATRSIPStatusRequest"/>
+  <message name="GetNATRSIPStatusResponse">
+    <part name="NewRSIPAvailable"/>
+    <part name="NewNATEnabled"/>
+  </message>
+  <message name="GetGenericPortMappingEntryRequest">
+    <part type="xsd:unsignedShort" name="NewPortMappingIndex"/>
+  </message>
+  <message name="GetGenericPortMappingEntryResponse">
+    <part type="xsd:string" name="NewRemoteHost"/>
+    <part type="xsd:unsignedShort" name="NewExternalPort"/>
+    <part type="xsd:string" name="NewProtocol"/>
+    <part type="xsd:unsignedShort" name="NewInternalPort"/>
+    <part type="xsd:string" name="NewInternalClient"/>
+    <part name="NewEnabled"/>
+    <part type="xsd:string" name="NewPortMappingDescription"/>
+    <part type="xsd:unsignedInt" name="NewLeaseDuration"/>
+  </message>
+  <message name="GetSpecificPortMappingEntryRequest">
+    <part type="xsd:string" name="NewRemoteHost"/>
+    <part type="xsd:unsignedShort" name="NewExternalPort"/>
+    <part type="xsd:string" name="NewProtocol"/>
+  </message>
+  <message name="GetSpecificPortMappingEntryResponse">
+    <part type="xsd:unsignedShort" name="NewInternalPort"/>
+    <part type="xsd:string" name="NewInternalClient"/>
+    <part name="NewEnabled"/>
+    <part type="xsd:string" name="NewPortMappingDescription"/>
+    <part type="xsd:unsignedInt" name="NewLeaseDuration"/>
+  </message>
+  <message name="AddPortMappingRequest">
+    <part type="xsd:string" name="NewRemoteHost"/>
+    <part type="xsd:unsignedShort" name="NewExternalPort"/>
+    <part type="xsd:string" name="NewProtocol"/>
+    <part type="xsd:unsignedShort" name="NewInternalPort"/>
+    <part type="xsd:string" name="NewInternalClient"/>
+    <part name="NewEnabled"/>
+    <part type="xsd:string" name="NewPortMappingDescription"/>
+    <part type="xsd:unsignedInt" name="NewLeaseDuration"/>
+  </message>
+  <message name="AddPortMappingResponse"/>
+  <message name="DeletePortMappingRequest">
+    <part type="xsd:string" name="NewRemoteHost"/>
+    <part type="xsd:unsignedShort" name="NewExternalPort"/>
+    <part type="xsd:string" name="NewProtocol"/>
+  </message>
+  <message name="DeletePortMappingResponse"/>
+  <message name="GetExternalIPAddressRequest"/>
+  <message name="GetExternalIPAddressResponse">
+    <part type="xsd:string" name="NewExternalIPAddress"/>
+  </message>
+  <message name="X_AVM_DE_GetExternalIPv6AddressRequest"/>
+  <message name="X_AVM_DE_GetExternalIPv6AddressResponse">
+    <part type="xsd:string" name="NewExternalIPv6Address"/>
+    <part type="xsd:unsignedShort" name="NewPrefixLength"/>
+    <part type="xsd:unsignedInt" name="NewValidLifetime"/>
+    <part type="xsd:unsignedInt" name="NewPreferedLifetime"/>
+  </message>
+  <message name="X_AVM_DE_GetIPv6PrefixRequest"/>
+  <message name="X_AVM_DE_GetIPv6PrefixResponse">
+    <part type="xsd:string" name="NewIPv6Prefix"/>
+    <part type="xsd:unsignedShort" name="NewPrefixLength"/>
+    <part type="xsd:unsignedInt" name="NewValidLifetime"/>
+    <part type="xsd:unsignedInt" name="NewPreferedLifetime"/>
+  </message>
+  <message name="X_AVM_DE_GetDNSServerRequest"/>
+  <message name="X_AVM_DE_GetDNSServerResponse">
+    <part type="xsd:string" name="NewIPv4DNSServer1"/>
+    <part type="xsd:string" name="NewIPv4DNSServer2"/>
+  </message>
+  <message name="X_AVM_DE_GetIPv6DNSServerRequest"/>
+  <message name="X_AVM_DE_GetIPv6DNSServerResponse">
+    <part type="xsd:string" name="NewIPv6DNSServer1"/>
+    <part type="xsd:unsignedInt" name="NewValidLifetime1"/>
+    <part type="xsd:string" name="NewIPv6DNSServer2"/>
+    <part type="xsd:unsignedInt" name="NewValidLifetime"/>
+  </message>
+</definitions>

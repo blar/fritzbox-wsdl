@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="X_AVM-DE_Homeplug">
+    <port binding="X_AVM-DE_Homeplug" name="GetNumberOfDeviceEntries">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_homeplug"/>
+    </port>
+    <port binding="X_AVM-DE_Homeplug" name="GetGenericDeviceEntry">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_homeplug"/>
+    </port>
+    <port binding="X_AVM-DE_Homeplug" name="GetSpecificDeviceEntry">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_homeplug"/>
+    </port>
+    <port binding="X_AVM-DE_Homeplug" name="DeviceDoUpdate">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_homeplug"/>
+    </port>
+  </service>
+  <binding name="X_AVM-DE_Homeplug" type="X_AVM-DE_Homeplug">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="GetNumberOfDeviceEntries">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Homeplug:1#GetNumberOfDeviceEntries"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Homeplug:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Homeplug:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetGenericDeviceEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Homeplug:1#GetGenericDeviceEntry"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Homeplug:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Homeplug:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetSpecificDeviceEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Homeplug:1#GetSpecificDeviceEntry"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Homeplug:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Homeplug:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="DeviceDoUpdate">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Homeplug:1#DeviceDoUpdate"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Homeplug:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Homeplug:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <portType name="X_AVM-DE_Homeplug">
+    <operation name="GetNumberOfDeviceEntries">
+      <input message="GetNumberOfDeviceEntriesRequest"/>
+      <output message="GetNumberOfDeviceEntriesResponse"/>
+    </operation>
+    <operation name="GetGenericDeviceEntry">
+      <input message="GetGenericDeviceEntryRequest"/>
+      <output message="GetGenericDeviceEntryResponse"/>
+    </operation>
+    <operation name="GetSpecificDeviceEntry">
+      <input message="GetSpecificDeviceEntryRequest"/>
+      <output message="GetSpecificDeviceEntryResponse"/>
+    </operation>
+    <operation name="DeviceDoUpdate">
+      <input message="DeviceDoUpdateRequest"/>
+      <output message="DeviceDoUpdateResponse"/>
+    </operation>
+  </portType>
+  <message name="GetNumberOfDeviceEntriesRequest"/>
+  <message name="GetNumberOfDeviceEntriesResponse">
+    <part type="xsd:unsignedShort" name="NewNumberOfEntries"/>
+  </message>
+  <message name="GetGenericDeviceEntryRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+  </message>
+  <message name="GetGenericDeviceEntryResponse">
+    <part type="xsd:string" name="NewMACAddress"/>
+    <part name="NewActive"/>
+    <part type="xsd:string" name="NewName"/>
+    <part type="xsd:string" name="NewModel"/>
+    <part name="NewUpdateAvailable"/>
+    <part type="xsd:string" name="NewUpdateSuccessful"/>
+  </message>
+  <message name="GetSpecificDeviceEntryRequest">
+    <part type="xsd:string" name="NewMACAddress"/>
+  </message>
+  <message name="GetSpecificDeviceEntryResponse">
+    <part name="NewActive"/>
+    <part type="xsd:string" name="NewName"/>
+    <part type="xsd:string" name="NewModel"/>
+    <part name="NewUpdateAvailable"/>
+    <part type="xsd:string" name="NewUpdateSuccessful"/>
+  </message>
+  <message name="DeviceDoUpdateRequest">
+    <part type="xsd:string" name="NewMACAddress"/>
+  </message>
+  <message name="DeviceDoUpdateResponse"/>
+</definitions>

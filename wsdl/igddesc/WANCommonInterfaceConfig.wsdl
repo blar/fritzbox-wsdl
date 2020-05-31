@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="WANCommonInterfaceConfig">
+    <port binding="WANCommonInterfaceConfig" name="GetCommonLinkProperties">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANCommonIFC1"/>
+    </port>
+    <port binding="WANCommonInterfaceConfig" name="GetTotalBytesSent">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANCommonIFC1"/>
+    </port>
+    <port binding="WANCommonInterfaceConfig" name="GetTotalBytesReceived">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANCommonIFC1"/>
+    </port>
+    <port binding="WANCommonInterfaceConfig" name="GetTotalPacketsSent">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANCommonIFC1"/>
+    </port>
+    <port binding="WANCommonInterfaceConfig" name="GetTotalPacketsReceived">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANCommonIFC1"/>
+    </port>
+    <port binding="WANCommonInterfaceConfig" name="GetAddonInfos">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANCommonIFC1"/>
+    </port>
+    <port binding="WANCommonInterfaceConfig" name="X_AVM_DE_GetDsliteStatus">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANCommonIFC1"/>
+    </port>
+    <port binding="WANCommonInterfaceConfig" name="X_AVM_DE_GetIPTVInfos">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANCommonIFC1"/>
+    </port>
+  </service>
+  <binding name="WANCommonInterfaceConfig" type="WANCommonInterfaceConfig">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="GetCommonLinkProperties">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1#GetCommonLinkProperties"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetTotalBytesSent">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1#GetTotalBytesSent"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetTotalBytesReceived">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1#GetTotalBytesReceived"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetTotalPacketsSent">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1#GetTotalPacketsSent"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetTotalPacketsReceived">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1#GetTotalPacketsReceived"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetAddonInfos">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1#GetAddonInfos"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM_DE_GetDsliteStatus">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1#X_AVM_DE_GetDsliteStatus"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM_DE_GetIPTVInfos">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1#X_AVM_DE_GetIPTVInfos"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <portType name="WANCommonInterfaceConfig">
+    <operation name="GetCommonLinkProperties">
+      <input message="GetCommonLinkPropertiesRequest"/>
+      <output message="GetCommonLinkPropertiesResponse"/>
+    </operation>
+    <operation name="GetTotalBytesSent">
+      <input message="GetTotalBytesSentRequest"/>
+      <output message="GetTotalBytesSentResponse"/>
+    </operation>
+    <operation name="GetTotalBytesReceived">
+      <input message="GetTotalBytesReceivedRequest"/>
+      <output message="GetTotalBytesReceivedResponse"/>
+    </operation>
+    <operation name="GetTotalPacketsSent">
+      <input message="GetTotalPacketsSentRequest"/>
+      <output message="GetTotalPacketsSentResponse"/>
+    </operation>
+    <operation name="GetTotalPacketsReceived">
+      <input message="GetTotalPacketsReceivedRequest"/>
+      <output message="GetTotalPacketsReceivedResponse"/>
+    </operation>
+    <operation name="GetAddonInfos">
+      <input message="GetAddonInfosRequest"/>
+      <output message="GetAddonInfosResponse"/>
+    </operation>
+    <operation name="X_AVM_DE_GetDsliteStatus">
+      <input message="X_AVM_DE_GetDsliteStatusRequest"/>
+      <output message="X_AVM_DE_GetDsliteStatusResponse"/>
+    </operation>
+    <operation name="X_AVM_DE_GetIPTVInfos">
+      <input message="X_AVM_DE_GetIPTVInfosRequest"/>
+      <output message="X_AVM_DE_GetIPTVInfosResponse"/>
+    </operation>
+  </portType>
+  <message name="GetCommonLinkPropertiesRequest"/>
+  <message name="GetCommonLinkPropertiesResponse">
+    <part type="xsd:string" name="NewWANAccessType"/>
+    <part type="xsd:unsignedInt" name="NewLayer1UpstreamMaxBitRate"/>
+    <part type="xsd:unsignedInt" name="NewLayer1DownstreamMaxBitRate"/>
+    <part type="xsd:string" name="NewPhysicalLinkStatus"/>
+  </message>
+  <message name="GetTotalBytesSentRequest"/>
+  <message name="GetTotalBytesSentResponse">
+    <part type="xsd:unsignedInt" name="NewTotalBytesSent"/>
+  </message>
+  <message name="GetTotalBytesReceivedRequest"/>
+  <message name="GetTotalBytesReceivedResponse">
+    <part type="xsd:unsignedInt" name="NewTotalBytesReceived"/>
+  </message>
+  <message name="GetTotalPacketsSentRequest"/>
+  <message name="GetTotalPacketsSentResponse">
+    <part type="xsd:unsignedInt" name="NewTotalPacketsSent"/>
+  </message>
+  <message name="GetTotalPacketsReceivedRequest"/>
+  <message name="GetTotalPacketsReceivedResponse">
+    <part type="xsd:unsignedInt" name="NewTotalPacketsReceived"/>
+  </message>
+  <message name="GetAddonInfosRequest"/>
+  <message name="GetAddonInfosResponse">
+    <part type="xsd:unsignedInt" name="NewByteSendRate"/>
+    <part type="xsd:unsignedInt" name="NewByteReceiveRate"/>
+    <part type="xsd:unsignedInt" name="NewPacketSendRate"/>
+    <part type="xsd:unsignedInt" name="NewPacketReceiveRate"/>
+    <part type="xsd:unsignedInt" name="NewTotalBytesSent"/>
+    <part type="xsd:unsignedInt" name="NewTotalBytesReceived"/>
+    <part type="xsd:unsignedInt" name="NewAutoDisconnectTime"/>
+    <part type="xsd:unsignedInt" name="NewIdleDisconnectTime"/>
+    <part type="xsd:string" name="NewDNSServer1"/>
+    <part type="xsd:string" name="NewDNSServer2"/>
+    <part type="xsd:string" name="NewVoipDNSServer1"/>
+    <part type="xsd:string" name="NewVoipDNSServer2"/>
+    <part name="NewUpnpControlEnabled"/>
+    <part type="xsd:unsignedShort" name="NewRoutedBridgedModeBoth"/>
+    <part type="xsd:string" name="NewX_AVM_DE_TotalBytesSent64"/>
+    <part type="xsd:string" name="NewX_AVM_DE_TotalBytesReceived64"/>
+    <part type="xsd:string" name="NewX_AVM_DE_WANAccessType"/>
+  </message>
+  <message name="X_AVM_DE_GetDsliteStatusRequest"/>
+  <message name="X_AVM_DE_GetDsliteStatusResponse">
+    <part name="NewX_AVM_DE_DsliteStatus"/>
+  </message>
+  <message name="X_AVM_DE_GetIPTVInfosRequest"/>
+  <message name="X_AVM_DE_GetIPTVInfosResponse">
+    <part name="NewX_AVM_DE_IPTV_Enabled"/>
+    <part type="xsd:string" name="NewX_AVM_DE_IPTV_Provider"/>
+    <part type="xsd:string" name="NewX_AVM_DE_IPTV_URL"/>
+  </message>
+</definitions>
