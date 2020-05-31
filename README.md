@@ -1,6 +1,6 @@
 # WSDL-Dateien für SOAP-Schnittstelle der Fritzbox
 
-Für die Beispiele werden die [SOAP-Klasse](http://php.net/soap) von PHP verwendet.
+Für die Beispiele werden die [SOAP-Klasse](http://php.net/soap) von PHP verwendet. [Dokumentation von AVM](https://avm.de/service/schnittstellen/)
 
 ## Informationen zur Fritzbox auslesen
 
