@@ -70,7 +70,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetChangeCounter">
+    <operation name="X_AVM_DE_GetChangeCounter">
       <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_GetChangeCounter"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -79,7 +79,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_SetHostNameByMACAddress">
+    <operation name="X_AVM_DE_SetHostNameByMACAddress">
       <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_SetHostNameByMACAddress"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -88,7 +88,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetAutoWakeOnLANByMACAddress">
+    <operation name="X_AVM_DE_GetAutoWakeOnLANByMACAddress">
       <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_GetAutoWakeOnLANByMACAddress"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -97,7 +97,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_SetAutoWakeOnLANByMACAddress">
+    <operation name="X_AVM_DE_SetAutoWakeOnLANByMACAddress">
       <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_SetAutoWakeOnLANByMACAddress"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -106,7 +106,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_WakeOnLANByMACAddress">
+    <operation name="X_AVM_DE_WakeOnLANByMACAddress">
       <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_WakeOnLANByMACAddress"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -115,7 +115,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetSpecificHostEntryByIP">
+    <operation name="X_AVM_DE_GetSpecificHostEntryByIP">
       <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_GetSpecificHostEntryByIP"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -124,7 +124,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_HostsCheckUpdate">
+    <operation name="X_AVM_DE_HostsCheckUpdate">
       <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_HostsCheckUpdate"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -133,7 +133,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_HostDoUpdate">
+    <operation name="X_AVM_DE_HostDoUpdate">
       <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_HostDoUpdate"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -142,7 +142,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetHostListPath">
+    <operation name="X_AVM_DE_GetHostListPath">
       <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_GetHostListPath"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -151,7 +151,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetMeshListPath">
+    <operation name="X_AVM_DE_GetMeshListPath">
       <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_GetMeshListPath"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:Hosts:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -174,43 +174,43 @@
       <input message="GetGenericHostEntryRequest"/>
       <output message="GetGenericHostEntryResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetChangeCounter">
+    <operation name="X_AVM_DE_GetChangeCounter">
       <input message="X_AVM-DE_GetChangeCounterRequest"/>
       <output message="X_AVM-DE_GetChangeCounterResponse"/>
     </operation>
-    <operation name="X_AVM-DE_SetHostNameByMACAddress">
+    <operation name="X_AVM_DE_SetHostNameByMACAddress">
       <input message="X_AVM-DE_SetHostNameByMACAddressRequest"/>
       <output message="X_AVM-DE_SetHostNameByMACAddressResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetAutoWakeOnLANByMACAddress">
+    <operation name="X_AVM_DE_GetAutoWakeOnLANByMACAddress">
       <input message="X_AVM-DE_GetAutoWakeOnLANByMACAddressRequest"/>
       <output message="X_AVM-DE_GetAutoWakeOnLANByMACAddressResponse"/>
     </operation>
-    <operation name="X_AVM-DE_SetAutoWakeOnLANByMACAddress">
+    <operation name="X_AVM_DE_SetAutoWakeOnLANByMACAddress">
       <input message="X_AVM-DE_SetAutoWakeOnLANByMACAddressRequest"/>
       <output message="X_AVM-DE_SetAutoWakeOnLANByMACAddressResponse"/>
     </operation>
-    <operation name="X_AVM-DE_WakeOnLANByMACAddress">
+    <operation name="X_AVM_DE_WakeOnLANByMACAddress">
       <input message="X_AVM-DE_WakeOnLANByMACAddressRequest"/>
       <output message="X_AVM-DE_WakeOnLANByMACAddressResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetSpecificHostEntryByIP">
+    <operation name="X_AVM_DE_GetSpecificHostEntryByIP">
       <input message="X_AVM-DE_GetSpecificHostEntryByIPRequest"/>
       <output message="X_AVM-DE_GetSpecificHostEntryByIPResponse"/>
     </operation>
-    <operation name="X_AVM-DE_HostsCheckUpdate">
+    <operation name="X_AVM_DE_HostsCheckUpdate">
       <input message="X_AVM-DE_HostsCheckUpdateRequest"/>
       <output message="X_AVM-DE_HostsCheckUpdateResponse"/>
     </operation>
-    <operation name="X_AVM-DE_HostDoUpdate">
+    <operation name="X_AVM_DE_HostDoUpdate">
       <input message="X_AVM-DE_HostDoUpdateRequest"/>
       <output message="X_AVM-DE_HostDoUpdateResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetHostListPath">
+    <operation name="X_AVM_DE_GetHostListPath">
       <input message="X_AVM-DE_GetHostListPathRequest"/>
       <output message="X_AVM-DE_GetHostListPathResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetMeshListPath">
+    <operation name="X_AVM_DE_GetMeshListPath">
       <input message="X_AVM-DE_GetMeshListPathRequest"/>
       <output message="X_AVM-DE_GetMeshListPathResponse"/>
     </operation>

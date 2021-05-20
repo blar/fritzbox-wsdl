@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="l2tpv3">
+    <port binding="l2tpv3" name="GetInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/l2tpv3"/>
+    </port>
+  </service>
+  <binding name="l2tpv3" type="l2tpv3">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="GetInfo">
+      <soap:operation soapAction="urn:schemas-any-com:service:l2tpv3:1#GetInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:schemas-any-com:service:l2tpv3:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:schemas-any-com:service:l2tpv3:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <portType name="l2tpv3">
+    <operation name="GetInfo">
+      <input message="GetInfoRequest"/>
+      <output message="GetInfoResponse"/>
+    </operation>
+  </portType>
+  <message name="GetInfoRequest"/>
+  <message name="GetInfoResponse">
+    <part type="xsd:string" name="ServerIP"/>
+    <part type="xsd:string" name="ServerInstanceId"/>
+    <part type="xsd:string" name="RemoteEndIds"/>
+  </message>
+</definitions>

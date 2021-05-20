@@ -113,6 +113,9 @@
     <part type="xsd:unsignedShort" name="NewStick"/>
     <part type="xsd:unsignedShort" name="NewStatus"/>
     <part type="xsd:unsignedInt" name="NewCapacity"/>
+    <part type="xsd:string" name="NewMode"/>
+    <part type="xsd:unsignedShort" name="NewRingSeconds"/>
+    <part type="xsd:string" name="NewPhoneNumbers"/>
   </message>
   <message name="SetEnableRequest">
     <part type="xsd:unsignedShort" name="NewIndex"/>

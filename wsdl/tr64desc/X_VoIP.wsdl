@@ -118,6 +118,15 @@
     <port binding="X_VoIP" name="SetVoIPEnableAreaCode">
       <soap:address location="http://fritz.box:49000/upnp/control/x_voip"/>
     </port>
+    <port binding="X_VoIP" name="X_AVM-DE_GetAlarmClock">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_voip"/>
+    </port>
+    <port binding="X_VoIP" name="X_AVM-DE_SetAlarmClockEnable">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_voip"/>
+    </port>
+    <port binding="X_VoIP" name="X_AVM-DE_GetNumberOfAlarmClocks">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_voip"/>
+    </port>
   </service>
   <binding name="X_VoIP" type="X_VoIP">
     <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -130,7 +139,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_AddVoIPAccount">
+    <operation name="X_AVM_DE_AddVoIPAccount">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_AddVoIPAccount"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -139,7 +148,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetVoIPAccount">
+    <operation name="X_AVM_DE_GetVoIPAccount">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetVoIPAccount"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -148,7 +157,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_DelVoIPAccount">
+    <operation name="X_AVM_DE_DelVoIPAccount">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_DelVoIPAccount"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -193,7 +202,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetNumberOfClients">
+    <operation name="X_AVM_DE_GetNumberOfClients">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetNumberOfClients"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -202,7 +211,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetClient">
+    <operation name="X_AVM_DE_GetClient">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetClient"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -211,7 +220,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetClient2">
+    <operation name="X_AVM_DE_GetClient2">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetClient2"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -220,7 +229,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_SetClient">
+    <operation name="X_AVM_DE_SetClient">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_SetClient"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -229,7 +238,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_SetClient2">
+    <operation name="X_AVM_DE_SetClient2">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_SetClient2"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -238,7 +247,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetClient3">
+    <operation name="X_AVM_DE_GetClient3">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetClient3"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -247,7 +256,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetClientByClientId">
+    <operation name="X_AVM_DE_GetClientByClientId">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetClientByClientId"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -256,7 +265,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_SetClient3">
+    <operation name="X_AVM_DE_SetClient3">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_SetClient3"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -265,7 +274,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_SetClient4">
+    <operation name="X_AVM_DE_SetClient4">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_SetClient4"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -274,7 +283,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetClients">
+    <operation name="X_AVM_DE_GetClients">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetClients"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -283,7 +292,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetNumberOfNumbers">
+    <operation name="X_AVM_DE_GetNumberOfNumbers">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetNumberOfNumbers"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -292,7 +301,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetNumbers">
+    <operation name="X_AVM_DE_GetNumbers">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetNumbers"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -301,7 +310,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_DeleteClient">
+    <operation name="X_AVM_DE_DeleteClient">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_DeleteClient"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -310,7 +319,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_DialGetConfig">
+    <operation name="X_AVM_DE_DialGetConfig">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_DialGetConfig"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -319,7 +328,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_DialSetConfig">
+    <operation name="X_AVM_DE_DialSetConfig">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_DialSetConfig"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -328,7 +337,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_DialNumber">
+    <operation name="X_AVM_DE_DialNumber">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_DialNumber"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -337,7 +346,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_DialHangup">
+    <operation name="X_AVM_DE_DialHangup">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_DialHangup"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -346,7 +355,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetPhonePort">
+    <operation name="X_AVM_DE_GetPhonePort">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetPhonePort"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -355,7 +364,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_SetDelayedCallNotification">
+    <operation name="X_AVM_DE_SetDelayedCallNotification">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_SetDelayedCallNotification"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -373,7 +382,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetVoIPCommonCountryCode">
+    <operation name="X_AVM_DE_GetVoIPCommonCountryCode">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetVoIPCommonCountryCode"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -391,7 +400,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_SetVoIPCommonCountryCode">
+    <operation name="X_AVM_DE_SetVoIPCommonCountryCode">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_SetVoIPCommonCountryCode"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -427,7 +436,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetVoIPCommonAreaCode">
+    <operation name="X_AVM_DE_GetVoIPCommonAreaCode">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetVoIPCommonAreaCode"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -445,7 +454,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_SetVoIPCommonAreaCode">
+    <operation name="X_AVM_DE_SetVoIPCommonAreaCode">
       <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_SetVoIPCommonAreaCode"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -472,21 +481,48 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
+    <operation name="X_AVM_DE_GetAlarmClock">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetAlarmClock"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM_DE_SetAlarmClockEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_SetAlarmClockEnable"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM_DE_GetNumberOfAlarmClocks">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetNumberOfAlarmClocks"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_VoIP:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
   </binding>
   <portType name="X_VoIP">
     <operation name="GetInfoEx">
       <input message="GetInfoExRequest"/>
       <output message="GetInfoExResponse"/>
     </operation>
-    <operation name="X_AVM-DE_AddVoIPAccount">
+    <operation name="X_AVM_DE_AddVoIPAccount">
       <input message="X_AVM-DE_AddVoIPAccountRequest"/>
       <output message="X_AVM-DE_AddVoIPAccountResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetVoIPAccount">
+    <operation name="X_AVM_DE_GetVoIPAccount">
       <input message="X_AVM-DE_GetVoIPAccountRequest"/>
       <output message="X_AVM-DE_GetVoIPAccountResponse"/>
     </operation>
-    <operation name="X_AVM-DE_DelVoIPAccount">
+    <operation name="X_AVM_DE_DelVoIPAccount">
       <input message="X_AVM-DE_DelVoIPAccountRequest"/>
       <output message="X_AVM-DE_DelVoIPAccountResponse"/>
     </operation>
@@ -506,79 +542,79 @@
       <input message="GetExistingVoIPNumbersRequest"/>
       <output message="GetExistingVoIPNumbersResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetNumberOfClients">
+    <operation name="X_AVM_DE_GetNumberOfClients">
       <input message="X_AVM-DE_GetNumberOfClientsRequest"/>
       <output message="X_AVM-DE_GetNumberOfClientsResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetClient">
+    <operation name="X_AVM_DE_GetClient">
       <input message="X_AVM-DE_GetClientRequest"/>
       <output message="X_AVM-DE_GetClientResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetClient2">
+    <operation name="X_AVM_DE_GetClient2">
       <input message="X_AVM-DE_GetClient2Request"/>
       <output message="X_AVM-DE_GetClient2Response"/>
     </operation>
-    <operation name="X_AVM-DE_SetClient">
+    <operation name="X_AVM_DE_SetClient">
       <input message="X_AVM-DE_SetClientRequest"/>
       <output message="X_AVM-DE_SetClientResponse"/>
     </operation>
-    <operation name="X_AVM-DE_SetClient2">
+    <operation name="X_AVM_DE_SetClient2">
       <input message="X_AVM-DE_SetClient2Request"/>
       <output message="X_AVM-DE_SetClient2Response"/>
     </operation>
-    <operation name="X_AVM-DE_GetClient3">
+    <operation name="X_AVM_DE_GetClient3">
       <input message="X_AVM-DE_GetClient3Request"/>
       <output message="X_AVM-DE_GetClient3Response"/>
     </operation>
-    <operation name="X_AVM-DE_GetClientByClientId">
+    <operation name="X_AVM_DE_GetClientByClientId">
       <input message="X_AVM-DE_GetClientByClientIdRequest"/>
       <output message="X_AVM-DE_GetClientByClientIdResponse"/>
     </operation>
-    <operation name="X_AVM-DE_SetClient3">
+    <operation name="X_AVM_DE_SetClient3">
       <input message="X_AVM-DE_SetClient3Request"/>
       <output message="X_AVM-DE_SetClient3Response"/>
     </operation>
-    <operation name="X_AVM-DE_SetClient4">
+    <operation name="X_AVM_DE_SetClient4">
       <input message="X_AVM-DE_SetClient4Request"/>
       <output message="X_AVM-DE_SetClient4Response"/>
     </operation>
-    <operation name="X_AVM-DE_GetClients">
+    <operation name="X_AVM_DE_GetClients">
       <input message="X_AVM-DE_GetClientsRequest"/>
       <output message="X_AVM-DE_GetClientsResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetNumberOfNumbers">
+    <operation name="X_AVM_DE_GetNumberOfNumbers">
       <input message="X_AVM-DE_GetNumberOfNumbersRequest"/>
       <output message="X_AVM-DE_GetNumberOfNumbersResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetNumbers">
+    <operation name="X_AVM_DE_GetNumbers">
       <input message="X_AVM-DE_GetNumbersRequest"/>
       <output message="X_AVM-DE_GetNumbersResponse"/>
     </operation>
-    <operation name="X_AVM-DE_DeleteClient">
+    <operation name="X_AVM_DE_DeleteClient">
       <input message="X_AVM-DE_DeleteClientRequest"/>
       <output message="X_AVM-DE_DeleteClientResponse"/>
     </operation>
-    <operation name="X_AVM-DE_DialGetConfig">
+    <operation name="X_AVM_DE_DialGetConfig">
       <input message="X_AVM-DE_DialGetConfigRequest"/>
       <output message="X_AVM-DE_DialGetConfigResponse"/>
     </operation>
-    <operation name="X_AVM-DE_DialSetConfig">
+    <operation name="X_AVM_DE_DialSetConfig">
       <input message="X_AVM-DE_DialSetConfigRequest"/>
       <output message="X_AVM-DE_DialSetConfigResponse"/>
     </operation>
-    <operation name="X_AVM-DE_DialNumber">
+    <operation name="X_AVM_DE_DialNumber">
       <input message="X_AVM-DE_DialNumberRequest"/>
       <output message="X_AVM-DE_DialNumberResponse"/>
     </operation>
-    <operation name="X_AVM-DE_DialHangup">
+    <operation name="X_AVM_DE_DialHangup">
       <input message="X_AVM-DE_DialHangupRequest"/>
       <output message="X_AVM-DE_DialHangupResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetPhonePort">
+    <operation name="X_AVM_DE_GetPhonePort">
       <input message="X_AVM-DE_GetPhonePortRequest"/>
       <output message="X_AVM-DE_GetPhonePortResponse"/>
     </operation>
-    <operation name="X_AVM-DE_SetDelayedCallNotification">
+    <operation name="X_AVM_DE_SetDelayedCallNotification">
       <input message="X_AVM-DE_SetDelayedCallNotificationRequest"/>
       <output message="X_AVM-DE_SetDelayedCallNotificationResponse"/>
     </operation>
@@ -586,7 +622,7 @@
       <input message="GetVoIPCommonCountryCodeRequest"/>
       <output message="GetVoIPCommonCountryCodeResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetVoIPCommonCountryCode">
+    <operation name="X_AVM_DE_GetVoIPCommonCountryCode">
       <input message="X_AVM-DE_GetVoIPCommonCountryCodeRequest"/>
       <output message="X_AVM-DE_GetVoIPCommonCountryCodeResponse"/>
     </operation>
@@ -594,7 +630,7 @@
       <input message="SetVoIPCommonCountryCodeRequest"/>
       <output message="SetVoIPCommonCountryCodeResponse"/>
     </operation>
-    <operation name="X_AVM-DE_SetVoIPCommonCountryCode">
+    <operation name="X_AVM_DE_SetVoIPCommonCountryCode">
       <input message="X_AVM-DE_SetVoIPCommonCountryCodeRequest"/>
       <output message="X_AVM-DE_SetVoIPCommonCountryCodeResponse"/>
     </operation>
@@ -610,7 +646,7 @@
       <input message="GetVoIPCommonAreaCodeRequest"/>
       <output message="GetVoIPCommonAreaCodeResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetVoIPCommonAreaCode">
+    <operation name="X_AVM_DE_GetVoIPCommonAreaCode">
       <input message="X_AVM-DE_GetVoIPCommonAreaCodeRequest"/>
       <output message="X_AVM-DE_GetVoIPCommonAreaCodeResponse"/>
     </operation>
@@ -618,7 +654,7 @@
       <input message="SetVoIPCommonAreaCodeRequest"/>
       <output message="SetVoIPCommonAreaCodeResponse"/>
     </operation>
-    <operation name="X_AVM-DE_SetVoIPCommonAreaCode">
+    <operation name="X_AVM_DE_SetVoIPCommonAreaCode">
       <input message="X_AVM-DE_SetVoIPCommonAreaCodeRequest"/>
       <output message="X_AVM-DE_SetVoIPCommonAreaCodeResponse"/>
     </operation>
@@ -629,6 +665,18 @@
     <operation name="SetVoIPEnableAreaCode">
       <input message="SetVoIPEnableAreaCodeRequest"/>
       <output message="SetVoIPEnableAreaCodeResponse"/>
+    </operation>
+    <operation name="X_AVM_DE_GetAlarmClock">
+      <input message="X_AVM-DE_GetAlarmClockRequest"/>
+      <output message="X_AVM-DE_GetAlarmClockResponse"/>
+    </operation>
+    <operation name="X_AVM_DE_SetAlarmClockEnable">
+      <input message="X_AVM-DE_SetAlarmClockEnableRequest"/>
+      <output message="X_AVM-DE_SetAlarmClockEnableResponse"/>
+    </operation>
+    <operation name="X_AVM_DE_GetNumberOfAlarmClocks">
+      <input message="X_AVM-DE_GetNumberOfAlarmClocksRequest"/>
+      <output message="X_AVM-DE_GetNumberOfAlarmClocksResponse"/>
     </operation>
   </portType>
   <message name="GetInfoExRequest"/>
@@ -891,4 +939,23 @@
     <part name="NewVoIPEnableAreaCode"/>
   </message>
   <message name="SetVoIPEnableAreaCodeResponse"/>
+  <message name="X_AVM-DE_GetAlarmClockRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+  </message>
+  <message name="X_AVM-DE_GetAlarmClockResponse">
+    <part name="NewX_AVM-DE_AlarmClockEnable"/>
+    <part type="xsd:string" name="NewX_AVM-DE_AlarmClockName"/>
+    <part type="xsd:string" name="NewX_AVM-DE_AlarmClockTime"/>
+    <part type="xsd:string" name="NewX_AVM-DE_AlarmClockWeekdays"/>
+    <part type="xsd:string" name="NewX_AVM-DE_AlarmClockPhoneName"/>
+  </message>
+  <message name="X_AVM-DE_SetAlarmClockEnableRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+    <part name="NewX_AVM-DE_AlarmClockEnable"/>
+  </message>
+  <message name="X_AVM-DE_SetAlarmClockEnableResponse"/>
+  <message name="X_AVM-DE_GetNumberOfAlarmClocksRequest"/>
+  <message name="X_AVM-DE_GetNumberOfAlarmClocksResponse">
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_NumberOfAlarmClocks"/>
+  </message>
 </definitions>

@@ -106,7 +106,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetTR069FirmwareDownloadEnabled">
+    <operation name="X_AVM_DE_GetTR069FirmwareDownloadEnabled">
       <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#X_AVM-DE_GetTR069FirmwareDownloadEnabled"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -115,7 +115,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_SetTR069FirmwareDownloadEnabled">
+    <operation name="X_AVM_DE_SetTR069FirmwareDownloadEnabled">
       <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#X_AVM-DE_SetTR069FirmwareDownloadEnabled"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:ManagementServer:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -158,11 +158,11 @@
       <input message="X_SetTR069EnableRequest"/>
       <output message="X_SetTR069EnableResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetTR069FirmwareDownloadEnabled">
+    <operation name="X_AVM_DE_GetTR069FirmwareDownloadEnabled">
       <input message="X_AVM-DE_GetTR069FirmwareDownloadEnabledRequest"/>
       <output message="X_AVM-DE_GetTR069FirmwareDownloadEnabledResponse"/>
     </operation>
-    <operation name="X_AVM-DE_SetTR069FirmwareDownloadEnabled">
+    <operation name="X_AVM_DE_SetTR069FirmwareDownloadEnabled">
       <input message="X_AVM-DE_SetTR069FirmwareDownloadEnabledRequest"/>
       <output message="X_AVM-DE_SetTR069FirmwareDownloadEnabledResponse"/>
     </operation>

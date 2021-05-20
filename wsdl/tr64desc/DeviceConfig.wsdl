@@ -31,6 +31,12 @@
     <port binding="DeviceConfig" name="X_AVM-DE_CreateUrlSID">
       <soap:address location="http://fritz.box:49000/upnp/control/deviceconfig"/>
     </port>
+    <port binding="DeviceConfig" name="X_AVM-DE_SendSupportData">
+      <soap:address location="http://fritz.box:49000/upnp/control/deviceconfig"/>
+    </port>
+    <port binding="DeviceConfig" name="X_AVM-DE_GetSupportDataInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/deviceconfig"/>
+    </port>
   </service>
   <binding name="DeviceConfig" type="DeviceConfig">
     <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -97,7 +103,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetConfigFile">
+    <operation name="X_AVM_DE_GetConfigFile">
       <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#X_AVM-DE_GetConfigFile"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -106,7 +112,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_SetConfigFile">
+    <operation name="X_AVM_DE_SetConfigFile">
       <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#X_AVM-DE_SetConfigFile"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -115,8 +121,26 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_CreateUrlSID">
+    <operation name="X_AVM_DE_CreateUrlSID">
       <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#X_AVM-DE_CreateUrlSID"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM_DE_SendSupportData">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#X_AVM-DE_SendSupportData"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM_DE_GetSupportDataInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#X_AVM-DE_GetSupportDataInfo"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:DeviceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </input>
@@ -154,17 +178,25 @@
       <input message="X_GenerateUUIDRequest"/>
       <output message="X_GenerateUUIDResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetConfigFile">
+    <operation name="X_AVM_DE_GetConfigFile">
       <input message="X_AVM-DE_GetConfigFileRequest"/>
       <output message="X_AVM-DE_GetConfigFileResponse"/>
     </operation>
-    <operation name="X_AVM-DE_SetConfigFile">
+    <operation name="X_AVM_DE_SetConfigFile">
       <input message="X_AVM-DE_SetConfigFileRequest"/>
       <output message="X_AVM-DE_SetConfigFileResponse"/>
     </operation>
-    <operation name="X_AVM-DE_CreateUrlSID">
+    <operation name="X_AVM_DE_CreateUrlSID">
       <input message="X_AVM-DE_CreateUrlSIDRequest"/>
       <output message="X_AVM-DE_CreateUrlSIDResponse"/>
+    </operation>
+    <operation name="X_AVM_DE_SendSupportData">
+      <input message="X_AVM-DE_SendSupportDataRequest"/>
+      <output message="X_AVM-DE_SendSupportDataResponse"/>
+    </operation>
+    <operation name="X_AVM_DE_GetSupportDataInfo">
+      <input message="X_AVM-DE_GetSupportDataInfoRequest"/>
+      <output message="X_AVM-DE_GetSupportDataInfoResponse"/>
     </operation>
   </portType>
   <message name="GetPersistentDataRequest"/>
@@ -205,5 +237,16 @@
   <message name="X_AVM-DE_CreateUrlSIDRequest"/>
   <message name="X_AVM-DE_CreateUrlSIDResponse">
     <part type="xsd:string" name="NewX_AVM-DE_UrlSID"/>
+  </message>
+  <message name="X_AVM-DE_SendSupportDataRequest">
+    <part type="xsd:string" name="NewX_AVM-DE_SupportDataMode"/>
+  </message>
+  <message name="X_AVM-DE_SendSupportDataResponse"/>
+  <message name="X_AVM-DE_GetSupportDataInfoRequest"/>
+  <message name="X_AVM-DE_GetSupportDataInfoResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_SupportDataMode"/>
+    <part type="xsd:string" name="NewX_AVM-DE_SupportDataID"/>
+    <part name="NewX_AVM-DE_SupportDataTimestamp"/>
+    <part type="xsd:string" name="NewX_AVM-DE_SupportDataStatus"/>
   </message>
 </definitions>

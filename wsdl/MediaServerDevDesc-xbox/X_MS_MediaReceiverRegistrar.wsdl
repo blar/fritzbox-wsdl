@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="X_MS_MediaReceiverRegistrar">
+    <port binding="X_MS_MediaReceiverRegistrar" name="IsAuthorized">
+      <soap:address location="http://fritz.box:49000/MediaServer/MediaReceiverRegistrar/Control"/>
+    </port>
+    <port binding="X_MS_MediaReceiverRegistrar" name="IsValidated">
+      <soap:address location="http://fritz.box:49000/MediaServer/MediaReceiverRegistrar/Control"/>
+    </port>
+  </service>
+  <binding name="X_MS_MediaReceiverRegistrar" type="X_MS_MediaReceiverRegistrar">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="IsAuthorized">
+      <soap:operation soapAction="urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1#IsAuthorized"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="IsValidated">
+      <soap:operation soapAction="urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1#IsValidated"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <portType name="X_MS_MediaReceiverRegistrar">
+    <operation name="IsAuthorized">
+      <input message="IsAuthorizedRequest"/>
+      <output message="IsAuthorizedResponse"/>
+    </operation>
+    <operation name="IsValidated">
+      <input message="IsValidatedRequest"/>
+      <output message="IsValidatedResponse"/>
+    </operation>
+  </portType>
+  <message name="IsAuthorizedRequest">
+    <part type="xsd:string" name="DeviceID"/>
+  </message>
+  <message name="IsAuthorizedResponse">
+    <part name="Result"/>
+  </message>
+  <message name="IsValidatedRequest">
+    <part type="xsd:string" name="DeviceID"/>
+  </message>
+  <message name="IsValidatedResponse">
+    <part name="Result"/>
+  </message>
+</definitions>

@@ -10,6 +10,9 @@
     <port binding="WANDSLInterfaceConfig" name="X_AVM-DE_GetDSLDiagnoseInfo">
       <soap:address location="http://fritz.box:49000/upnp/control/wandslifconfig1"/>
     </port>
+    <port binding="WANDSLInterfaceConfig" name="X_AVM-DE_GetDSLInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/wandslifconfig1"/>
+    </port>
   </service>
   <binding name="WANDSLInterfaceConfig" type="WANDSLInterfaceConfig">
     <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -31,8 +34,17 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetDSLDiagnoseInfo">
+    <operation name="X_AVM_DE_GetDSLDiagnoseInfo">
       <soap:operation soapAction="urn:dslforum-org:service:WANDSLInterfaceConfig:1#X_AVM-DE_GetDSLDiagnoseInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM_DE_GetDSLInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLInterfaceConfig:1#X_AVM-DE_GetDSLInfo"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLInterfaceConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </input>
@@ -50,9 +62,13 @@
       <input message="GetStatisticsTotalRequest"/>
       <output message="GetStatisticsTotalResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetDSLDiagnoseInfo">
+    <operation name="X_AVM_DE_GetDSLDiagnoseInfo">
       <input message="X_AVM-DE_GetDSLDiagnoseInfoRequest"/>
       <output message="X_AVM-DE_GetDSLDiagnoseInfoResponse"/>
+    </operation>
+    <operation name="X_AVM_DE_GetDSLInfo">
+      <input message="X_AVM-DE_GetDSLInfoRequest"/>
+      <output message="X_AVM-DE_GetDSLInfoResponse"/>
     </operation>
   </portType>
   <message name="GetInfoRequest"/>
@@ -99,5 +115,33 @@
     <part type="xsd:unsignedInt" name="NewX_AVM-DE_DSLSignalLossTime"/>
     <part name="NewX_AVM-DE_DSLActive"/>
     <part name="NewX_AVM-DE_DSLSync"/>
+  </message>
+  <message name="X_AVM-DE_GetDSLInfoRequest"/>
+  <message name="X_AVM-DE_GetDSLInfoResponse">
+    <part type="xsd:unsignedInt" name="NewSNRGds"/>
+    <part type="xsd:unsignedInt" name="NewSNRGus"/>
+    <part type="xsd:string" name="NewSNRpsds"/>
+    <part type="xsd:string" name="NewSNRpsus"/>
+    <part type="xsd:unsignedInt" name="NewSNRMTds"/>
+    <part type="xsd:unsignedInt" name="NewSNRMTus"/>
+    <part type="xsd:string" name="NewLATNds"/>
+    <part type="xsd:string" name="NewLATNus"/>
+    <part type="xsd:unsignedInt" name="NewFECErrors"/>
+    <part type="xsd:unsignedInt" name="NewCRCErrors"/>
+    <part type="xsd:string" name="NewLinkStatus"/>
+    <part type="xsd:string" name="NewModulationType"/>
+    <part type="xsd:string" name="NewCurrentProfile"/>
+    <part name="NewUpstreamCurrRate"/>
+    <part type="xsd:unsignedInt" name="NewDownstreamCurrRate"/>
+    <part type="xsd:unsignedInt" name="NewUpstreamMaxRate"/>
+    <part type="xsd:unsignedInt" name="NewDownstreamMaxRate"/>
+    <part type="xsd:unsignedInt" name="NewUpstreamNoiseMargin"/>
+    <part type="xsd:unsignedInt" name="NewDownstreamNoiseMargin"/>
+    <part type="xsd:unsignedInt" name="NewUpstreamAttenuation"/>
+    <part type="xsd:unsignedInt" name="NewDownstreamAttenuation"/>
+    <part type="xsd:string" name="NewATURVendor"/>
+    <part type="xsd:string" name="NewATURCountry"/>
+    <part type="xsd:unsignedShort" name="NewUpstreamPower"/>
+    <part type="xsd:unsignedShort" name="NewDownstreamPower"/>
   </message>
 </definitions>

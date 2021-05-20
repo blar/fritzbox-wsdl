@@ -103,7 +103,13 @@
     <port binding="WLANConfiguration" name="X_AVM-DE_SetWPSConfig">
       <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
     </port>
+    <port binding="WLANConfiguration" name="X_AVM-DE_SetWPSEnable">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
     <port binding="WLANConfiguration" name="X_AVM-DE_SetWLANGlobalEnable">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
+    </port>
+    <port binding="WLANConfiguration" name="X_AVM-DE_GetWLANConnectionInfo">
       <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig3"/>
     </port>
   </service>
@@ -316,7 +322,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetSpecificAssociatedDeviceInfoByIp">
+    <operation name="X_AVM_DE_GetSpecificAssociatedDeviceInfoByIp">
       <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_GetSpecificAssociatedDeviceInfoByIp"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -325,7 +331,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetWLANDeviceListPath">
+    <operation name="X_AVM_DE_GetWLANDeviceListPath">
       <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_GetWLANDeviceListPath"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -334,7 +340,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_SetStickSurfEnable">
+    <operation name="X_AVM_DE_SetStickSurfEnable">
       <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_SetStickSurfEnable"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -343,7 +349,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetIPTVOptimized">
+    <operation name="X_AVM_DE_GetIPTVOptimized">
       <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_GetIPTVOptimized"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -352,7 +358,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_SetIPTVOptimized">
+    <operation name="X_AVM_DE_SetIPTVOptimized">
       <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_SetIPTVOptimized"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -361,7 +367,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetNightControl">
+    <operation name="X_AVM_DE_GetNightControl">
       <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_GetNightControl"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -370,7 +376,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetWLANHybridMode">
+    <operation name="X_AVM_DE_GetWLANHybridMode">
       <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_GetWLANHybridMode"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -379,7 +385,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_SetWLANHybridMode">
+    <operation name="X_AVM_DE_SetWLANHybridMode">
       <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_SetWLANHybridMode"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -388,7 +394,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetWLANExtInfo">
+    <operation name="X_AVM_DE_GetWLANExtInfo">
       <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_GetWLANExtInfo"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -397,7 +403,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetWPSInfo">
+    <operation name="X_AVM_DE_GetWPSInfo">
       <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_GetWPSInfo"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -406,7 +412,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_SetWPSConfig">
+    <operation name="X_AVM_DE_SetWPSConfig">
       <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_SetWPSConfig"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -415,8 +421,26 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_SetWLANGlobalEnable">
+    <operation name="X_AVM_DE_SetWPSEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_SetWPSEnable"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM_DE_SetWLANGlobalEnable">
       <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_SetWLANGlobalEnable"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="X_AVM_DE_GetWLANConnectionInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:3#X_AVM-DE_GetWLANConnectionInfo"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:WLANConfiguration:3" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </input>
@@ -518,53 +542,61 @@
       <input message="GetSpecificAssociatedDeviceInfoRequest"/>
       <output message="GetSpecificAssociatedDeviceInfoResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetSpecificAssociatedDeviceInfoByIp">
+    <operation name="X_AVM_DE_GetSpecificAssociatedDeviceInfoByIp">
       <input message="X_AVM-DE_GetSpecificAssociatedDeviceInfoByIpRequest"/>
       <output message="X_AVM-DE_GetSpecificAssociatedDeviceInfoByIpResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetWLANDeviceListPath">
+    <operation name="X_AVM_DE_GetWLANDeviceListPath">
       <input message="X_AVM-DE_GetWLANDeviceListPathRequest"/>
       <output message="X_AVM-DE_GetWLANDeviceListPathResponse"/>
     </operation>
-    <operation name="X_AVM-DE_SetStickSurfEnable">
+    <operation name="X_AVM_DE_SetStickSurfEnable">
       <input message="X_AVM-DE_SetStickSurfEnableRequest"/>
       <output message="X_AVM-DE_SetStickSurfEnableResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetIPTVOptimized">
+    <operation name="X_AVM_DE_GetIPTVOptimized">
       <input message="X_AVM-DE_GetIPTVOptimizedRequest"/>
       <output message="X_AVM-DE_GetIPTVOptimizedResponse"/>
     </operation>
-    <operation name="X_AVM-DE_SetIPTVOptimized">
+    <operation name="X_AVM_DE_SetIPTVOptimized">
       <input message="X_AVM-DE_SetIPTVOptimizedRequest"/>
       <output message="X_AVM-DE_SetIPTVOptimizedResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetNightControl">
+    <operation name="X_AVM_DE_GetNightControl">
       <input message="X_AVM-DE_GetNightControlRequest"/>
       <output message="X_AVM-DE_GetNightControlResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetWLANHybridMode">
+    <operation name="X_AVM_DE_GetWLANHybridMode">
       <input message="X_AVM-DE_GetWLANHybridModeRequest"/>
       <output message="X_AVM-DE_GetWLANHybridModeResponse"/>
     </operation>
-    <operation name="X_AVM-DE_SetWLANHybridMode">
+    <operation name="X_AVM_DE_SetWLANHybridMode">
       <input message="X_AVM-DE_SetWLANHybridModeRequest"/>
       <output message="X_AVM-DE_SetWLANHybridModeResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetWLANExtInfo">
+    <operation name="X_AVM_DE_GetWLANExtInfo">
       <input message="X_AVM-DE_GetWLANExtInfoRequest"/>
       <output message="X_AVM-DE_GetWLANExtInfoResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetWPSInfo">
+    <operation name="X_AVM_DE_GetWPSInfo">
       <input message="X_AVM-DE_GetWPSInfoRequest"/>
       <output message="X_AVM-DE_GetWPSInfoResponse"/>
     </operation>
-    <operation name="X_AVM-DE_SetWPSConfig">
+    <operation name="X_AVM_DE_SetWPSConfig">
       <input message="X_AVM-DE_SetWPSConfigRequest"/>
       <output message="X_AVM-DE_SetWPSConfigResponse"/>
     </operation>
-    <operation name="X_AVM-DE_SetWLANGlobalEnable">
+    <operation name="X_AVM_DE_SetWPSEnable">
+      <input message="X_AVM-DE_SetWPSEnableRequest"/>
+      <output message="X_AVM-DE_SetWPSEnableResponse"/>
+    </operation>
+    <operation name="X_AVM_DE_SetWLANGlobalEnable">
       <input message="X_AVM-DE_SetWLANGlobalEnableRequest"/>
       <output message="X_AVM-DE_SetWLANGlobalEnableResponse"/>
+    </operation>
+    <operation name="X_AVM_DE_GetWLANConnectionInfo">
+      <input message="X_AVM-DE_GetWLANConnectionInfoRequest"/>
+      <output message="X_AVM-DE_GetWLANConnectionInfoResponse"/>
     </operation>
   </portType>
   <message name="SetEnableRequest">
@@ -579,6 +611,7 @@
     <part type="xsd:unsignedShort" name="NewChannel"/>
     <part type="xsd:string" name="NewSSID"/>
     <part type="xsd:string" name="NewBeaconType"/>
+    <part type="xsd:string" name="NewX_AVM-DE_PossibleBeaconTypes"/>
     <part name="NewMACAddressControlEnabled"/>
     <part type="xsd:string" name="NewStandard"/>
     <part type="xsd:string" name="NewBSSID"/>
@@ -662,6 +695,7 @@
   <message name="GetBeaconTypeRequest"/>
   <message name="GetBeaconTypeResponse">
     <part type="xsd:string" name="NewBeaconType"/>
+    <part type="xsd:string" name="NewX_AVM-DE_PossibleBeaconTypes"/>
   </message>
   <message name="SetBeaconTypeRequest">
     <part type="xsd:string" name="NewBeaconType"/>
@@ -780,14 +814,30 @@
   </message>
   <message name="X_AVM-DE_SetWPSConfigRequest">
     <part type="xsd:string" name="NewX_AVM-DE_WPSMode"/>
-    <part type="xsd:string" name="NewX_AVM-DE_WPSClientPIN"/>
   </message>
   <message name="X_AVM-DE_SetWPSConfigResponse">
-    <part type="xsd:string" name="NewX_AVM-DE_WPSAPPIN"/>
     <part type="xsd:string" name="NewX_AVM-DE_WPSStatus"/>
   </message>
+  <message name="X_AVM-DE_SetWPSEnableRequest">
+    <part name="NewX_AVM-DE_WPSEnable"/>
+  </message>
+  <message name="X_AVM-DE_SetWPSEnableResponse"/>
   <message name="X_AVM-DE_SetWLANGlobalEnableRequest">
     <part name="NewX_AVM-DE_WLANGlobalEnable"/>
   </message>
   <message name="X_AVM-DE_SetWLANGlobalEnableResponse"/>
+  <message name="X_AVM-DE_GetWLANConnectionInfoRequest"/>
+  <message name="X_AVM-DE_GetWLANConnectionInfoResponse">
+    <part type="xsd:string" name="NewAssociatedDeviceMACAddress"/>
+    <part type="xsd:string" name="NewSSID"/>
+    <part type="xsd:string" name="NewBSSID"/>
+    <part type="xsd:string" name="NewBeaconType"/>
+    <part type="xsd:unsignedShort" name="NewChannel"/>
+    <part type="xsd:string" name="NewStandard"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_SignalStrength"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_Speed"/>
+    <part type="xsd:unsignedInt" name="NewX_AVM-DE_SpeedRX"/>
+    <part type="xsd:unsignedInt" name="NewX_AVM-DE_SpeedMax"/>
+    <part type="xsd:unsignedInt" name="NewX_AVM-DE_SpeedRXMax"/>
+  </message>
 </definitions>

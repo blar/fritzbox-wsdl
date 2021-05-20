@@ -40,7 +40,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_CheckUpdate">
+    <operation name="X_AVM_DE_CheckUpdate">
       <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_CheckUpdate"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -49,7 +49,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_DoUpdate">
+    <operation name="X_AVM_DE_DoUpdate">
       <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_DoUpdate"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -58,7 +58,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_DoPrepareCGI">
+    <operation name="X_AVM_DE_DoPrepareCGI">
       <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_DoPrepareCGI"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -67,7 +67,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_DoManualUpdate">
+    <operation name="X_AVM_DE_DoManualUpdate">
       <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_DoManualUpdate"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -76,7 +76,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetInternationalConfig">
+    <operation name="X_AVM_DE_GetInternationalConfig">
       <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_GetInternationalConfig"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -85,7 +85,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_SetInternationalConfig">
+    <operation name="X_AVM_DE_SetInternationalConfig">
       <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_SetInternationalConfig"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -94,7 +94,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetInfo">
+    <operation name="X_AVM_DE_GetInfo">
       <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_GetInfo"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -103,7 +103,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_SetConfig">
+    <operation name="X_AVM_DE_SetConfig">
       <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_SetConfig"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:UserInterface:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -118,35 +118,35 @@
       <input message="GetInfoRequest"/>
       <output message="GetInfoResponse"/>
     </operation>
-    <operation name="X_AVM-DE_CheckUpdate">
+    <operation name="X_AVM_DE_CheckUpdate">
       <input message="X_AVM-DE_CheckUpdateRequest"/>
       <output message="X_AVM-DE_CheckUpdateResponse"/>
     </operation>
-    <operation name="X_AVM-DE_DoUpdate">
+    <operation name="X_AVM_DE_DoUpdate">
       <input message="X_AVM-DE_DoUpdateRequest"/>
       <output message="X_AVM-DE_DoUpdateResponse"/>
     </operation>
-    <operation name="X_AVM-DE_DoPrepareCGI">
+    <operation name="X_AVM_DE_DoPrepareCGI">
       <input message="X_AVM-DE_DoPrepareCGIRequest"/>
       <output message="X_AVM-DE_DoPrepareCGIResponse"/>
     </operation>
-    <operation name="X_AVM-DE_DoManualUpdate">
+    <operation name="X_AVM_DE_DoManualUpdate">
       <input message="X_AVM-DE_DoManualUpdateRequest"/>
       <output message="X_AVM-DE_DoManualUpdateResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetInternationalConfig">
+    <operation name="X_AVM_DE_GetInternationalConfig">
       <input message="X_AVM-DE_GetInternationalConfigRequest"/>
       <output message="X_AVM-DE_GetInternationalConfigResponse"/>
     </operation>
-    <operation name="X_AVM-DE_SetInternationalConfig">
+    <operation name="X_AVM_DE_SetInternationalConfig">
       <input message="X_AVM-DE_SetInternationalConfigRequest"/>
       <output message="X_AVM-DE_SetInternationalConfigResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetInfo">
+    <operation name="X_AVM_DE_GetInfo">
       <input message="X_AVM-DE_GetInfoRequest"/>
       <output message="X_AVM-DE_GetInfoResponse"/>
     </operation>
-    <operation name="X_AVM-DE_SetConfig">
+    <operation name="X_AVM_DE_SetConfig">
       <input message="X_AVM-DE_SetConfigRequest"/>
       <output message="X_AVM-DE_SetConfigResponse"/>
     </operation>

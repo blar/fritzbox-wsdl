@@ -13,6 +13,9 @@
     <port binding="LANConfigSecurity" name="SetConfigPassword">
       <soap:address location="http://fritz.box:49000/upnp/control/lanconfigsecurity"/>
     </port>
+    <port binding="LANConfigSecurity" name="X_AVM-DE_GetUserList">
+      <soap:address location="http://fritz.box:49000/upnp/control/lanconfigsecurity"/>
+    </port>
   </service>
   <binding name="LANConfigSecurity" type="LANConfigSecurity">
     <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -25,7 +28,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:LANConfigSecurity:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetCurrentUser">
+    <operation name="X_AVM_DE_GetCurrentUser">
       <soap:operation soapAction="urn:dslforum-org:service:LANConfigSecurity:1#X_AVM-DE_GetCurrentUser"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:LANConfigSecurity:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -34,7 +37,7 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:LANConfigSecurity:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
-    <operation name="X_AVM-DE_GetAnonymousLogin">
+    <operation name="X_AVM_DE_GetAnonymousLogin">
       <soap:operation soapAction="urn:dslforum-org:service:LANConfigSecurity:1#X_AVM-DE_GetAnonymousLogin"/>
       <input>
         <soap:body use="encoded" namespace="urn:dslforum-org:service:LANConfigSecurity:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -52,23 +55,36 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:LANConfigSecurity:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
+    <operation name="X_AVM_DE_GetUserList">
+      <soap:operation soapAction="urn:dslforum-org:service:LANConfigSecurity:1#X_AVM-DE_GetUserList"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANConfigSecurity:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:LANConfigSecurity:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
   </binding>
   <portType name="LANConfigSecurity">
     <operation name="GetInfo">
       <input message="GetInfoRequest"/>
       <output message="GetInfoResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetCurrentUser">
+    <operation name="X_AVM_DE_GetCurrentUser">
       <input message="X_AVM-DE_GetCurrentUserRequest"/>
       <output message="X_AVM-DE_GetCurrentUserResponse"/>
     </operation>
-    <operation name="X_AVM-DE_GetAnonymousLogin">
+    <operation name="X_AVM_DE_GetAnonymousLogin">
       <input message="X_AVM-DE_GetAnonymousLoginRequest"/>
       <output message="X_AVM-DE_GetAnonymousLoginResponse"/>
     </operation>
     <operation name="SetConfigPassword">
       <input message="SetConfigPasswordRequest"/>
       <output message="SetConfigPasswordResponse"/>
+    </operation>
+    <operation name="X_AVM_DE_GetUserList">
+      <input message="X_AVM-DE_GetUserListRequest"/>
+      <output message="X_AVM-DE_GetUserListResponse"/>
     </operation>
   </portType>
   <message name="GetInfoRequest"/>
@@ -91,4 +107,8 @@
     <part type="xsd:string" name="NewPassword"/>
   </message>
   <message name="SetConfigPasswordResponse"/>
+  <message name="X_AVM-DE_GetUserListRequest"/>
+  <message name="X_AVM-DE_GetUserListResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_UserList"/>
+  </message>
 </definitions>

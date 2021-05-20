@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="WANDSLLinkConfig">
+    <port binding="WANDSLLinkConfig" name="GetInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/wandsllinkconfig1"/>
+    </port>
+    <port binding="WANDSLLinkConfig" name="SetEnable">
+      <soap:address location="http://fritz.box:49000/upnp/control/wandsllinkconfig1"/>
+    </port>
+    <port binding="WANDSLLinkConfig" name="GetAutoConfig">
+      <soap:address location="http://fritz.box:49000/upnp/control/wandsllinkconfig1"/>
+    </port>
+    <port binding="WANDSLLinkConfig" name="SetDSLLinkType">
+      <soap:address location="http://fritz.box:49000/upnp/control/wandsllinkconfig1"/>
+    </port>
+    <port binding="WANDSLLinkConfig" name="GetDSLLinkInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/wandsllinkconfig1"/>
+    </port>
+    <port binding="WANDSLLinkConfig" name="SetDestinationAddress">
+      <soap:address location="http://fritz.box:49000/upnp/control/wandsllinkconfig1"/>
+    </port>
+    <port binding="WANDSLLinkConfig" name="GetDestinationAddress">
+      <soap:address location="http://fritz.box:49000/upnp/control/wandsllinkconfig1"/>
+    </port>
+    <port binding="WANDSLLinkConfig" name="SetATMEncapsulation">
+      <soap:address location="http://fritz.box:49000/upnp/control/wandsllinkconfig1"/>
+    </port>
+    <port binding="WANDSLLinkConfig" name="GetATMEncapsulation">
+      <soap:address location="http://fritz.box:49000/upnp/control/wandsllinkconfig1"/>
+    </port>
+    <port binding="WANDSLLinkConfig" name="GetStatistics">
+      <soap:address location="http://fritz.box:49000/upnp/control/wandsllinkconfig1"/>
+    </port>
+  </service>
+  <binding name="WANDSLLinkConfig" type="WANDSLLinkConfig">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="GetInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLLinkConfig:1#GetInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLLinkConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLLinkConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLLinkConfig:1#SetEnable"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLLinkConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLLinkConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetAutoConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLLinkConfig:1#GetAutoConfig"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLLinkConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLLinkConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetDSLLinkType">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLLinkConfig:1#SetDSLLinkType"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLLinkConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLLinkConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetDSLLinkInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLLinkConfig:1#GetDSLLinkInfo"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLLinkConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLLinkConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetDestinationAddress">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLLinkConfig:1#SetDestinationAddress"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLLinkConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLLinkConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetDestinationAddress">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLLinkConfig:1#GetDestinationAddress"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLLinkConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLLinkConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetATMEncapsulation">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLLinkConfig:1#SetATMEncapsulation"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLLinkConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLLinkConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetATMEncapsulation">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLLinkConfig:1#GetATMEncapsulation"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLLinkConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLLinkConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetStatistics">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLLinkConfig:1#GetStatistics"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLLinkConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:WANDSLLinkConfig:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <portType name="WANDSLLinkConfig">
+    <operation name="GetInfo">
+      <input message="GetInfoRequest"/>
+      <output message="GetInfoResponse"/>
+    </operation>
+    <operation name="SetEnable">
+      <input message="SetEnableRequest"/>
+      <output message="SetEnableResponse"/>
+    </operation>
+    <operation name="GetAutoConfig">
+      <input message="GetAutoConfigRequest"/>
+      <output message="GetAutoConfigResponse"/>
+    </operation>
+    <operation name="SetDSLLinkType">
+      <input message="SetDSLLinkTypeRequest"/>
+      <output message="SetDSLLinkTypeResponse"/>
+    </operation>
+    <operation name="GetDSLLinkInfo">
+      <input message="GetDSLLinkInfoRequest"/>
+      <output message="GetDSLLinkInfoResponse"/>
+    </operation>
+    <operation name="SetDestinationAddress">
+      <input message="SetDestinationAddressRequest"/>
+      <output message="SetDestinationAddressResponse"/>
+    </operation>
+    <operation name="GetDestinationAddress">
+      <input message="GetDestinationAddressRequest"/>
+      <output message="GetDestinationAddressResponse"/>
+    </operation>
+    <operation name="SetATMEncapsulation">
+      <input message="SetATMEncapsulationRequest"/>
+      <output message="SetATMEncapsulationResponse"/>
+    </operation>
+    <operation name="GetATMEncapsulation">
+      <input message="GetATMEncapsulationRequest"/>
+      <output message="GetATMEncapsulationResponse"/>
+    </operation>
+    <operation name="GetStatistics">
+      <input message="GetStatisticsRequest"/>
+      <output message="GetStatisticsResponse"/>
+    </operation>
+  </portType>
+  <message name="GetInfoRequest"/>
+  <message name="GetInfoResponse">
+    <part name="NewEnable"/>
+    <part type="xsd:string" name="NewLinkStatus"/>
+    <part type="xsd:string" name="NewLinkType"/>
+    <part type="xsd:string" name="NewDestinationAddress"/>
+    <part type="xsd:string" name="NewATMEncapsulation"/>
+    <part name="NewAutoConfig"/>
+    <part type="xsd:string" name="NewATMQoS"/>
+    <part type="xsd:unsignedInt" name="NewATMPeakCellRate"/>
+    <part type="xsd:unsignedInt" name="NewATMSustainableCellRate"/>
+  </message>
+  <message name="SetEnableRequest">
+    <part name="NewEnable"/>
+  </message>
+  <message name="SetEnableResponse"/>
+  <message name="GetAutoConfigRequest"/>
+  <message name="GetAutoConfigResponse">
+    <part name="NewAutoConfig"/>
+  </message>
+  <message name="SetDSLLinkTypeRequest">
+    <part type="xsd:string" name="NewLinkType"/>
+  </message>
+  <message name="SetDSLLinkTypeResponse"/>
+  <message name="GetDSLLinkInfoRequest"/>
+  <message name="GetDSLLinkInfoResponse">
+    <part type="xsd:string" name="NewLinkType"/>
+    <part type="xsd:string" name="NewLinkStatus"/>
+  </message>
+  <message name="SetDestinationAddressRequest">
+    <part type="xsd:string" name="NewDestinationAddress"/>
+  </message>
+  <message name="SetDestinationAddressResponse"/>
+  <message name="GetDestinationAddressRequest"/>
+  <message name="GetDestinationAddressResponse">
+    <part type="xsd:string" name="NewDestinationAddress"/>
+  </message>
+  <message name="SetATMEncapsulationRequest">
+    <part type="xsd:string" name="NewATMEncapsulation"/>
+  </message>
+  <message name="SetATMEncapsulationResponse"/>
+  <message name="GetATMEncapsulationRequest"/>
+  <message name="GetATMEncapsulationResponse">
+    <part type="xsd:string" name="NewATMEncapsulation"/>
+  </message>
+  <message name="GetStatisticsRequest"/>
+  <message name="GetStatisticsResponse">
+    <part type="xsd:unsignedInt" name="NewATMTransmittedBlocks"/>
+    <part type="xsd:unsignedInt" name="NewATMReceivedBlocks"/>
+    <part type="xsd:unsignedInt" name="NewAAL5CRCErrors"/>
+    <part type="xsd:unsignedInt" name="NewATMCRCErrors"/>
+  </message>
+</definitions>

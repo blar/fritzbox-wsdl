@@ -58,6 +58,21 @@
     <port binding="X_AVM-DE_OnTel" name="DeletePhonebookEntryUID">
       <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
     </port>
+    <port binding="X_AVM-DE_OnTel" name="GetCallBarringEntry">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel" name="GetCallBarringEntryByNum">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel" name="GetCallBarringList">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel" name="SetCallBarringEntry">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+    <port binding="X_AVM-DE_OnTel" name="DeleteCallBarringEntryUID">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
     <port binding="X_AVM-DE_OnTel" name="GetDECTHandsetList">
       <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
     </port>
@@ -253,6 +268,51 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
+    <operation name="GetCallBarringEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetCallBarringEntry"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetCallBarringEntryByNum">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetCallBarringEntryByNum"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="GetCallBarringList">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetCallBarringList"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="SetCallBarringEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#SetCallBarringEntry"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="DeleteCallBarringEntryUID">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#DeleteCallBarringEntryUID"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_OnTel:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
     <operation name="GetDECTHandsetList">
       <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetDECTHandsetList"/>
       <input>
@@ -393,6 +453,26 @@
     <operation name="DeletePhonebookEntryUID">
       <input message="DeletePhonebookEntryUIDRequest"/>
       <output message="DeletePhonebookEntryUIDResponse"/>
+    </operation>
+    <operation name="GetCallBarringEntry">
+      <input message="GetCallBarringEntryRequest"/>
+      <output message="GetCallBarringEntryResponse"/>
+    </operation>
+    <operation name="GetCallBarringEntryByNum">
+      <input message="GetCallBarringEntryByNumRequest"/>
+      <output message="GetCallBarringEntryByNumResponse"/>
+    </operation>
+    <operation name="GetCallBarringList">
+      <input message="GetCallBarringListRequest"/>
+      <output message="GetCallBarringListResponse"/>
+    </operation>
+    <operation name="SetCallBarringEntry">
+      <input message="SetCallBarringEntryRequest"/>
+      <output message="SetCallBarringEntryResponse"/>
+    </operation>
+    <operation name="DeleteCallBarringEntryUID">
+      <input message="DeleteCallBarringEntryUIDRequest"/>
+      <output message="DeleteCallBarringEntryUIDResponse"/>
     </operation>
     <operation name="GetDECTHandsetList">
       <input message="GetDECTHandsetListRequest"/>
@@ -544,6 +624,32 @@
     <part type="xsd:unsignedInt" name="NewPhonebookEntryUniqueID"/>
   </message>
   <message name="DeletePhonebookEntryUIDResponse"/>
+  <message name="GetCallBarringEntryRequest">
+    <part type="xsd:unsignedInt" name="NewPhonebookEntryID"/>
+  </message>
+  <message name="GetCallBarringEntryResponse">
+    <part type="xsd:string" name="NewPhonebookEntryData"/>
+  </message>
+  <message name="GetCallBarringEntryByNumRequest">
+    <part type="xsd:string" name="NewNumber"/>
+  </message>
+  <message name="GetCallBarringEntryByNumResponse">
+    <part type="xsd:string" name="NewPhonebookEntryData"/>
+  </message>
+  <message name="GetCallBarringListRequest"/>
+  <message name="GetCallBarringListResponse">
+    <part type="xsd:string" name="NewPhonebookURL"/>
+  </message>
+  <message name="SetCallBarringEntryRequest">
+    <part type="xsd:string" name="NewPhonebookEntryData"/>
+  </message>
+  <message name="SetCallBarringEntryResponse">
+    <part type="xsd:unsignedInt" name="NewPhonebookEntryUniqueID"/>
+  </message>
+  <message name="DeleteCallBarringEntryUIDRequest">
+    <part type="xsd:unsignedInt" name="NewPhonebookEntryUniqueID"/>
+  </message>
+  <message name="DeleteCallBarringEntryUIDResponse"/>
   <message name="GetDECTHandsetListRequest"/>
   <message name="GetDECTHandsetListResponse">
     <part type="xsd:string" name="NewDectIDList"/>

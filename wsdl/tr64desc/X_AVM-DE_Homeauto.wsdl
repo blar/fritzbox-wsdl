@@ -10,6 +10,9 @@
     <port binding="X_AVM-DE_Homeauto" name="GetSpecificDeviceInfos">
       <soap:address location="http://fritz.box:49000/upnp/control/x_homeauto"/>
     </port>
+    <port binding="X_AVM-DE_Homeauto" name="SetDeviceName">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_homeauto"/>
+    </port>
     <port binding="X_AVM-DE_Homeauto" name="SetSwitch">
       <soap:address location="http://fritz.box:49000/upnp/control/x_homeauto"/>
     </port>
@@ -43,6 +46,15 @@
         <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Homeauto:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
+    <operation name="SetDeviceName">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Homeauto:1#SetDeviceName"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Homeauto:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:dslforum-org:service:X_AVM-DE_Homeauto:1" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
     <operation name="SetSwitch">
       <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Homeauto:1#SetSwitch"/>
       <input>
@@ -66,6 +78,10 @@
       <input message="GetSpecificDeviceInfosRequest"/>
       <output message="GetSpecificDeviceInfosResponse"/>
     </operation>
+    <operation name="SetDeviceName">
+      <input message="SetDeviceNameRequest"/>
+      <output message="SetDeviceNameResponse"/>
+    </operation>
     <operation name="SetSwitch">
       <input message="SetSwitchRequest"/>
       <output message="SetSwitchResponse"/>
@@ -74,6 +90,10 @@
   <message name="GetInfoRequest"/>
   <message name="GetInfoResponse">
     <part type="xsd:string" name="NewAllowedCharsAIN"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsAIN"/>
+    <part type="xsd:unsignedShort" name="NewMinCharsAIN"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsDeviceName"/>
+    <part type="xsd:unsignedShort" name="NewMinCharsDeviceName"/>
   </message>
   <message name="GetGenericDeviceInfosRequest">
     <part type="xsd:unsignedShort" name="NewIndex"/>
@@ -144,6 +164,11 @@
     <part type="xsd:string" name="NewHkrComfortVentilStatus"/>
     <part name="NewHkrComfortTemperature"/>
   </message>
+  <message name="SetDeviceNameRequest">
+    <part type="xsd:string" name="NewAIN"/>
+    <part type="xsd:string" name="NewDeviceName"/>
+  </message>
+  <message name="SetDeviceNameResponse"/>
   <message name="SetSwitchRequest">
     <part type="xsd:string" name="NewAIN"/>
     <part type="xsd:string" name="NewSwitchState"/>
