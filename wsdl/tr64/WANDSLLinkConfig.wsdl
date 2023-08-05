@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="WANDSLLinkConfig">
+    <port binding="WANDSLLinkConfig">
+      <soap:address location="http://fritz.box:49000/upnp/control/wandsllinkconfig1"/>
+    </port>
+  </service>
+  <binding name="WANDSLLinkConfig" type="WANDSLLinkConfig">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLLinkConfig:1#GetInfo"/>
+    </operation>
+    <operation name="setEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLLinkConfig:1#SetEnable"/>
+    </operation>
+    <operation name="getAutoConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLLinkConfig:1#GetAutoConfig"/>
+    </operation>
+    <operation name="setDSLLinkType">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLLinkConfig:1#SetDSLLinkType"/>
+    </operation>
+    <operation name="getDSLLinkInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLLinkConfig:1#GetDSLLinkInfo"/>
+    </operation>
+    <operation name="setDestinationAddress">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLLinkConfig:1#SetDestinationAddress"/>
+    </operation>
+    <operation name="getDestinationAddress">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLLinkConfig:1#GetDestinationAddress"/>
+    </operation>
+    <operation name="setATMEncapsulation">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLLinkConfig:1#SetATMEncapsulation"/>
+    </operation>
+    <operation name="getATMEncapsulation">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLLinkConfig:1#GetATMEncapsulation"/>
+    </operation>
+    <operation name="getStatistics">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLLinkConfig:1#GetStatistics"/>
+    </operation>
+  </binding>
+  <portType name="WANDSLLinkConfig">
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="setEnable">
+      <input message="setEnableRequest"/>
+    </operation>
+    <operation name="getAutoConfig">
+      <output message="getAutoConfigResponse"/>
+    </operation>
+    <operation name="setDSLLinkType">
+      <input message="setDSLLinkTypeRequest"/>
+    </operation>
+    <operation name="getDSLLinkInfo">
+      <output message="getDSLLinkInfoResponse"/>
+    </operation>
+    <operation name="setDestinationAddress">
+      <input message="setDestinationAddressRequest"/>
+    </operation>
+    <operation name="getDestinationAddress">
+      <output message="getDestinationAddressResponse"/>
+    </operation>
+    <operation name="setATMEncapsulation">
+      <input message="setATMEncapsulationRequest"/>
+    </operation>
+    <operation name="getATMEncapsulation">
+      <output message="getATMEncapsulationResponse"/>
+    </operation>
+    <operation name="getStatistics">
+      <output message="getStatisticsResponse"/>
+    </operation>
+  </portType>
+  <message name="getInfoResponse">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewLinkStatus"/>
+    <part type="xsd:string" name="NewLinkType"/>
+    <part type="xsd:string" name="NewDestinationAddress"/>
+    <part type="xsd:string" name="NewATMEncapsulation"/>
+    <part type="xsd:boolean" name="NewAutoConfig"/>
+    <part type="xsd:string" name="NewATMQoS"/>
+    <part type="xsd:unsignedInt" name="NewATMPeakCellRate"/>
+    <part type="xsd:unsignedInt" name="NewATMSustainableCellRate"/>
+  </message>
+  <message name="setEnableRequest">
+    <part type="xsd:boolean" name="NewEnable"/>
+  </message>
+  <message name="getAutoConfigResponse">
+    <part type="xsd:boolean" name="NewAutoConfig"/>
+  </message>
+  <message name="setDSLLinkTypeRequest">
+    <part type="xsd:string" name="NewLinkType"/>
+  </message>
+  <message name="getDSLLinkInfoResponse">
+    <part type="xsd:string" name="NewLinkType"/>
+    <part type="xsd:string" name="NewLinkStatus"/>
+  </message>
+  <message name="setDestinationAddressRequest">
+    <part type="xsd:string" name="NewDestinationAddress"/>
+  </message>
+  <message name="getDestinationAddressResponse">
+    <part type="xsd:string" name="NewDestinationAddress"/>
+  </message>
+  <message name="setATMEncapsulationRequest">
+    <part type="xsd:string" name="NewATMEncapsulation"/>
+  </message>
+  <message name="getATMEncapsulationResponse">
+    <part type="xsd:string" name="NewATMEncapsulation"/>
+  </message>
+  <message name="getStatisticsResponse">
+    <part type="xsd:unsignedInt" name="NewATMTransmittedBlocks"/>
+    <part type="xsd:unsignedInt" name="NewATMReceivedBlocks"/>
+    <part type="xsd:unsignedInt" name="NewAAL5CRCErrors"/>
+    <part type="xsd:unsignedInt" name="NewATMCRCErrors"/>
+  </message>
+</definitions>

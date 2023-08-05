@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="X_AVM-DE_MyFritz">
+    <port binding="X_AVM-DE_MyFritz">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_myfritz"/>
+    </port>
+  </service>
+  <binding name="X_AVM-DE_MyFritz" type="X_AVM-DE_MyFritz">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_MyFritz:1#GetInfo"/>
+    </operation>
+    <operation name="setMyFRITZ">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_MyFritz:1#SetMyFRITZ"/>
+    </operation>
+    <operation name="getNumberOfServices">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_MyFritz:1#GetNumberOfServices"/>
+    </operation>
+    <operation name="getServiceByIndex">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_MyFritz:1#GetServiceByIndex"/>
+    </operation>
+    <operation name="setServiceByIndex">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_MyFritz:1#SetServiceByIndex"/>
+    </operation>
+    <operation name="deleteServiceByIndex">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_MyFritz:1#DeleteServiceByIndex"/>
+    </operation>
+  </binding>
+  <portType name="X_AVM-DE_MyFritz">
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="setMyFRITZ">
+      <input message="setMyFRITZRequest"/>
+    </operation>
+    <operation name="getNumberOfServices">
+      <output message="getNumberOfServicesResponse"/>
+    </operation>
+    <operation name="getServiceByIndex">
+      <input message="getServiceByIndexRequest"/>
+      <output message="getServiceByIndexResponse"/>
+    </operation>
+    <operation name="setServiceByIndex">
+      <input message="setServiceByIndexRequest"/>
+    </operation>
+    <operation name="deleteServiceByIndex">
+      <input message="deleteServiceByIndexRequest"/>
+    </operation>
+  </portType>
+  <message name="getInfoResponse">
+    <part type="xsd:boolean" name="NewEnabled"/>
+    <part type="xsd:boolean" name="NewDeviceRegistered"/>
+    <part type="xsd:string" name="NewDynDNSName"/>
+    <part type="xsd:unsignedInt" name="NewPort"/>
+    <part type="xsd:string" name="NewState"/>
+    <part type="xsd:string" name="NewEmail"/>
+  </message>
+  <message name="setMyFRITZRequest">
+    <part type="xsd:boolean" name="NewEnabled"/>
+    <part type="xsd:string" name="NewEmail"/>
+  </message>
+  <message name="getNumberOfServicesResponse">
+    <part type="xsd:unsignedInt" name="NewNumberOfServices"/>
+  </message>
+  <message name="getServiceByIndexRequest">
+    <part type="xsd:unsignedInt" name="NewIndex"/>
+  </message>
+  <message name="getServiceByIndexResponse">
+    <part type="xsd:boolean" name="NewEnabled"/>
+    <part type="xsd:string" name="NewName"/>
+    <part type="xsd:string" name="NewScheme"/>
+    <part type="xsd:unsignedInt" name="NewPort"/>
+    <part type="xsd:string" name="NewURLPath"/>
+    <part type="xsd:string" name="NewType"/>
+    <part type="xsd:unsignedByte" name="NewIPv4ForwardingWarning"/>
+    <part type="xsd:string" name="NewIPv4Addresses"/>
+    <part type="xsd:string" name="NewIPv6Addresses"/>
+    <part type="xsd:string" name="NewIPv6InterfaceIDs"/>
+    <part type="xsd:string" name="NewMACAddress"/>
+    <part type="xsd:string" name="NewHostName"/>
+    <part type="xsd:string" name="NewDynDnsLabel"/>
+    <part type="xsd:unsignedInt" name="NewStatus"/>
+  </message>
+  <message name="setServiceByIndexRequest">
+    <part type="xsd:unsignedInt" name="NewIndex"/>
+    <part type="xsd:boolean" name="NewEnabled"/>
+    <part type="xsd:string" name="NewName"/>
+    <part type="xsd:string" name="NewScheme"/>
+    <part type="xsd:unsignedInt" name="NewPort"/>
+    <part type="xsd:string" name="NewURLPath"/>
+    <part type="xsd:string" name="NewType"/>
+    <part type="xsd:string" name="NewIPv4Address"/>
+    <part type="xsd:string" name="NewIPv6Address"/>
+    <part type="xsd:string" name="NewIPv6InterfaceID"/>
+    <part type="xsd:string" name="NewMACAddress"/>
+    <part type="xsd:string" name="NewHostName"/>
+  </message>
+  <message name="deleteServiceByIndexRequest">
+    <part type="xsd:unsignedInt" name="NewIndex"/>
+  </message>
+</definitions>

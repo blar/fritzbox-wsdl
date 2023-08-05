@@ -1,0 +1,542 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="X_VoIP">
+    <port binding="X_VoIP">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_voip"/>
+    </port>
+  </service>
+  <binding name="X_VoIP" type="X_VoIP">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getInfoEx">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#GetInfoEx"/>
+    </operation>
+    <operation name="addVoIPAccount">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_AddVoIPAccount"/>
+    </operation>
+    <operation name="getVoIPAccount">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetVoIPAccount"/>
+    </operation>
+    <operation name="delVoIPAccount">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_DelVoIPAccount"/>
+    </operation>
+    <operation name="getVoIPAccounts">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetVoIPAccounts"/>
+    </operation>
+    <operation name="getVoIPStatus">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetVoIPStatus"/>
+    </operation>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#GetInfo"/>
+    </operation>
+    <operation name="setConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#SetConfig"/>
+    </operation>
+    <operation name="getMaxVoIPNumbers">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#GetMaxVoIPNumbers"/>
+    </operation>
+    <operation name="getExistingVoIPNumbers">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#GetExistingVoIPNumbers"/>
+    </operation>
+    <operation name="getNumberOfClients">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetNumberOfClients"/>
+    </operation>
+    <operation name="getClient">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetClient"/>
+    </operation>
+    <operation name="getClient2">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetClient2"/>
+    </operation>
+    <operation name="setClient">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_SetClient"/>
+    </operation>
+    <operation name="setClient2">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_SetClient2"/>
+    </operation>
+    <operation name="getClient3">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetClient3"/>
+    </operation>
+    <operation name="getClientByClientId">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetClientByClientId"/>
+    </operation>
+    <operation name="setClient3">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_SetClient3"/>
+    </operation>
+    <operation name="setClient4">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_SetClient4"/>
+    </operation>
+    <operation name="getClients">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetClients"/>
+    </operation>
+    <operation name="getNumberOfNumbers">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetNumberOfNumbers"/>
+    </operation>
+    <operation name="getNumbers">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetNumbers"/>
+    </operation>
+    <operation name="deleteClient">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_DeleteClient"/>
+    </operation>
+    <operation name="dialGetConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_DialGetConfig"/>
+    </operation>
+    <operation name="dialSetConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_DialSetConfig"/>
+    </operation>
+    <operation name="dialNumber">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_DialNumber"/>
+    </operation>
+    <operation name="dialHangup">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_DialHangup"/>
+    </operation>
+    <operation name="getPhonePort">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetPhonePort"/>
+    </operation>
+    <operation name="setDelayedCallNotification">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_SetDelayedCallNotification"/>
+    </operation>
+    <operation name="getVoIPCommonCountryCode">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#GetVoIPCommonCountryCode"/>
+    </operation>
+    <operation name="getVoIPCommonCountryCode">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetVoIPCommonCountryCode"/>
+    </operation>
+    <operation name="setVoIPCommonCountryCode">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#SetVoIPCommonCountryCode"/>
+    </operation>
+    <operation name="setVoIPCommonCountryCode">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_SetVoIPCommonCountryCode"/>
+    </operation>
+    <operation name="getVoIPEnableCountryCode">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#GetVoIPEnableCountryCode"/>
+    </operation>
+    <operation name="setVoIPEnableCountryCode">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#SetVoIPEnableCountryCode"/>
+    </operation>
+    <operation name="getVoIPCommonAreaCode">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#GetVoIPCommonAreaCode"/>
+    </operation>
+    <operation name="getVoIPCommonAreaCode">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetVoIPCommonAreaCode"/>
+    </operation>
+    <operation name="setVoIPCommonAreaCode">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#SetVoIPCommonAreaCode"/>
+    </operation>
+    <operation name="setVoIPCommonAreaCode">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_SetVoIPCommonAreaCode"/>
+    </operation>
+    <operation name="getVoIPEnableAreaCode">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#GetVoIPEnableAreaCode"/>
+    </operation>
+    <operation name="setVoIPEnableAreaCode">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#SetVoIPEnableAreaCode"/>
+    </operation>
+    <operation name="getAlarmClock">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetAlarmClock"/>
+    </operation>
+    <operation name="setAlarmClockEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_SetAlarmClockEnable"/>
+    </operation>
+    <operation name="getNumberOfAlarmClocks">
+      <soap:operation soapAction="urn:dslforum-org:service:X_VoIP:1#X_AVM-DE_GetNumberOfAlarmClocks"/>
+    </operation>
+  </binding>
+  <portType name="X_VoIP">
+    <operation name="getInfoEx">
+      <output message="getInfoExResponse"/>
+    </operation>
+    <operation name="addVoIPAccount">
+      <input message="addVoIPAccountRequest"/>
+    </operation>
+    <operation name="getVoIPAccount">
+      <input message="getVoIPAccountRequest"/>
+      <output message="getVoIPAccountResponse"/>
+    </operation>
+    <operation name="delVoIPAccount">
+      <input message="delVoIPAccountRequest"/>
+    </operation>
+    <operation name="getVoIPAccounts">
+      <output message="getVoIPAccountsResponse"/>
+    </operation>
+    <operation name="getVoIPStatus">
+      <input message="getVoIPStatusRequest"/>
+      <output message="getVoIPStatusResponse"/>
+    </operation>
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="setConfig">
+      <input message="setConfigRequest"/>
+    </operation>
+    <operation name="getMaxVoIPNumbers">
+      <output message="getMaxVoIPNumbersResponse"/>
+    </operation>
+    <operation name="getExistingVoIPNumbers">
+      <output message="getExistingVoIPNumbersResponse"/>
+    </operation>
+    <operation name="getNumberOfClients">
+      <output message="getNumberOfClientsResponse"/>
+    </operation>
+    <operation name="getClient">
+      <input message="getClientRequest"/>
+      <output message="getClientResponse"/>
+    </operation>
+    <operation name="getClient2">
+      <input message="getClient2Request"/>
+      <output message="getClient2Response"/>
+    </operation>
+    <operation name="setClient">
+      <input message="setClientRequest"/>
+    </operation>
+    <operation name="setClient2">
+      <input message="setClient2Request"/>
+    </operation>
+    <operation name="getClient3">
+      <input message="getClient3Request"/>
+      <output message="getClient3Response"/>
+    </operation>
+    <operation name="getClientByClientId">
+      <input message="getClientByClientIdRequest"/>
+      <output message="getClientByClientIdResponse"/>
+    </operation>
+    <operation name="setClient3">
+      <input message="setClient3Request"/>
+    </operation>
+    <operation name="setClient4">
+      <input message="setClient4Request"/>
+      <output message="setClient4Response"/>
+    </operation>
+    <operation name="getClients">
+      <output message="getClientsResponse"/>
+    </operation>
+    <operation name="getNumberOfNumbers">
+      <output message="getNumberOfNumbersResponse"/>
+    </operation>
+    <operation name="getNumbers">
+      <output message="getNumbersResponse"/>
+    </operation>
+    <operation name="deleteClient">
+      <input message="deleteClientRequest"/>
+    </operation>
+    <operation name="dialGetConfig">
+      <output message="dialGetConfigResponse"/>
+    </operation>
+    <operation name="dialSetConfig">
+      <input message="dialSetConfigRequest"/>
+    </operation>
+    <operation name="dialNumber">
+      <input message="dialNumberRequest"/>
+    </operation>
+    <operation name="dialHangup"/>
+    <operation name="getPhonePort">
+      <input message="getPhonePortRequest"/>
+      <output message="getPhonePortResponse"/>
+    </operation>
+    <operation name="setDelayedCallNotification">
+      <input message="setDelayedCallNotificationRequest"/>
+    </operation>
+    <operation name="getVoIPCommonCountryCode">
+      <output message="getVoIPCommonCountryCodeResponse"/>
+    </operation>
+    <operation name="getVoIPCommonCountryCode">
+      <output message="getVoIPCommonCountryCodeResponse"/>
+    </operation>
+    <operation name="setVoIPCommonCountryCode">
+      <input message="setVoIPCommonCountryCodeRequest"/>
+    </operation>
+    <operation name="setVoIPCommonCountryCode">
+      <input message="setVoIPCommonCountryCodeRequest"/>
+    </operation>
+    <operation name="getVoIPEnableCountryCode">
+      <input message="getVoIPEnableCountryCodeRequest"/>
+      <output message="getVoIPEnableCountryCodeResponse"/>
+    </operation>
+    <operation name="setVoIPEnableCountryCode">
+      <input message="setVoIPEnableCountryCodeRequest"/>
+    </operation>
+    <operation name="getVoIPCommonAreaCode">
+      <output message="getVoIPCommonAreaCodeResponse"/>
+    </operation>
+    <operation name="getVoIPCommonAreaCode">
+      <output message="getVoIPCommonAreaCodeResponse"/>
+    </operation>
+    <operation name="setVoIPCommonAreaCode">
+      <input message="setVoIPCommonAreaCodeRequest"/>
+    </operation>
+    <operation name="setVoIPCommonAreaCode">
+      <input message="setVoIPCommonAreaCodeRequest"/>
+    </operation>
+    <operation name="getVoIPEnableAreaCode">
+      <input message="getVoIPEnableAreaCodeRequest"/>
+      <output message="getVoIPEnableAreaCodeResponse"/>
+    </operation>
+    <operation name="setVoIPEnableAreaCode">
+      <input message="setVoIPEnableAreaCodeRequest"/>
+    </operation>
+    <operation name="getAlarmClock">
+      <input message="getAlarmClockRequest"/>
+      <output message="getAlarmClockResponse"/>
+    </operation>
+    <operation name="setAlarmClockEnable">
+      <input message="setAlarmClockEnableRequest"/>
+    </operation>
+    <operation name="getNumberOfAlarmClocks">
+      <output message="getNumberOfAlarmClocksResponse"/>
+    </operation>
+  </portType>
+  <message name="getInfoExResponse">
+    <part type="xsd:unsignedShort" name="NewVoIPNumberMinChars"/>
+    <part type="xsd:unsignedShort" name="NewVoIPNumberMaxChars"/>
+    <part type="xsd:string" name="NewVoIPNumberAllowedChars"/>
+    <part type="xsd:unsignedShort" name="NewVoIPUsernameMinChars"/>
+    <part type="xsd:unsignedShort" name="NewVoIPUsernameMaxChars"/>
+    <part type="xsd:string" name="NewVoIPUsernameAllowedChars"/>
+    <part type="xsd:unsignedShort" name="NewVoIPPasswordMinChars"/>
+    <part type="xsd:unsignedShort" name="NewVoIPPasswordMaxChars"/>
+    <part type="xsd:string" name="NewVoIPPasswordAllowedChars"/>
+    <part type="xsd:unsignedShort" name="NewVoIPRegistrarMinChars"/>
+    <part type="xsd:unsignedShort" name="NewVoIPRegistrarMaxChars"/>
+    <part type="xsd:string" name="NewVoIPRegistrarAllowedChars"/>
+    <part type="xsd:unsignedShort" name="NewVoIPSTUNServerMinChars"/>
+    <part type="xsd:unsignedShort" name="NewVoIPSTUNServerMaxChars"/>
+    <part type="xsd:string" name="NewVoIPSTUNServerAllowedChars"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ClientUsernameMinChars"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ClientUsernameMaxChars"/>
+    <part type="xsd:string" name="NewX_AVM-DE_ClientUsernameAllowedChars"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ClientPasswordMinChars"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ClientPasswordMaxChars"/>
+    <part type="xsd:string" name="NewX_AVM-DE_ClientPasswordAllowedChars"/>
+  </message>
+  <message name="addVoIPAccountRequest">
+    <part type="xsd:unsignedShort" name="NewVoIPAccountIndex"/>
+    <part type="xsd:string" name="NewVoIPRegistrar"/>
+    <part type="xsd:string" name="NewVoIPNumber"/>
+    <part type="xsd:string" name="NewVoIPUsername"/>
+    <part type="xsd:string" name="NewVoIPPassword"/>
+    <part type="xsd:string" name="NewVoIPOutboundProxy"/>
+    <part type="xsd:string" name="NewVoIPSTUNServer"/>
+  </message>
+  <message name="getVoIPAccountRequest">
+    <part type="xsd:unsignedShort" name="NewVoIPAccountIndex"/>
+  </message>
+  <message name="getVoIPAccountResponse">
+    <part type="xsd:string" name="NewVoIPRegistrar"/>
+    <part type="xsd:string" name="NewVoIPNumber"/>
+    <part type="xsd:string" name="NewVoIPUsername"/>
+    <part type="xsd:string" name="NewVoIPPassword"/>
+    <part type="xsd:string" name="NewVoIPOutboundProxy"/>
+    <part type="xsd:string" name="NewVoIPSTUNServer"/>
+    <part type="xsd:string" name="NewX_AVM-DE_VoIPStatus"/>
+  </message>
+  <message name="delVoIPAccountRequest">
+    <part type="xsd:unsignedShort" name="NewVoIPAccountIndex"/>
+  </message>
+  <message name="getVoIPAccountsResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_VoIPAccountList"/>
+  </message>
+  <message name="getVoIPStatusRequest">
+    <part type="xsd:unsignedShort" name="NewVoIPAccountIndex"/>
+  </message>
+  <message name="getVoIPStatusResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_VoIPStatus"/>
+  </message>
+  <message name="getInfoResponse">
+    <part type="xsd:boolean" name="NewFaxT38Enable"/>
+    <part type="xsd:string" name="NewVoiceCoding"/>
+  </message>
+  <message name="setConfigRequest">
+    <part type="xsd:boolean" name="NewFaxT38Enable"/>
+    <part type="xsd:string" name="NewVoiceCoding"/>
+  </message>
+  <message name="getMaxVoIPNumbersResponse">
+    <part type="xsd:unsignedShort" name="NewMaxVoIPNumbers"/>
+  </message>
+  <message name="getExistingVoIPNumbersResponse">
+    <part type="xsd:unsignedShort" name="NewExistingVoIPNumbers"/>
+  </message>
+  <message name="getNumberOfClientsResponse">
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_NumberOfClients"/>
+  </message>
+  <message name="getClientRequest">
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ClientIndex"/>
+  </message>
+  <message name="getClientResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_ClientUsername"/>
+    <part type="xsd:string" name="NewX_AVM-DE_ClientRegistrar"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ClientRegistrarPort"/>
+    <part type="xsd:string" name="NewX_AVM-DE_PhoneName"/>
+    <part type="xsd:string" name="NewX_AVM-DE_OutGoingNumber"/>
+  </message>
+  <message name="getClient2Request">
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ClientIndex"/>
+  </message>
+  <message name="getClient2Response">
+    <part type="xsd:string" name="NewX_AVM-DE_ClientUsername"/>
+    <part type="xsd:string" name="NewX_AVM-DE_ClientRegistrar"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ClientRegistrarPort"/>
+    <part type="xsd:string" name="NewX_AVM-DE_PhoneName"/>
+    <part type="xsd:string" name="NewX_AVM-DE_ClientId"/>
+    <part type="xsd:string" name="NewX_AVM-DE_OutGoingNumber"/>
+    <part type="xsd:string" name="NewX_AVM-DE_InternalNumber"/>
+  </message>
+  <message name="setClientRequest">
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ClientIndex"/>
+    <part type="xsd:string" name="NewX_AVM-DE_ClientPassword"/>
+    <part type="xsd:string" name="NewX_AVM-DE_PhoneName"/>
+    <part type="xsd:string" name="NewX_AVM-DE_OutGoingNumber"/>
+  </message>
+  <message name="setClient2Request">
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ClientIndex"/>
+    <part type="xsd:string" name="NewX_AVM-DE_ClientPassword"/>
+    <part type="xsd:string" name="NewX_AVM-DE_ClientId"/>
+    <part type="xsd:string" name="NewX_AVM-DE_PhoneName"/>
+    <part type="xsd:string" name="NewX_AVM-DE_OutGoingNumber"/>
+  </message>
+  <message name="getClient3Request">
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ClientIndex"/>
+  </message>
+  <message name="getClient3Response">
+    <part type="xsd:string" name="NewX_AVM-DE_ClientUsername"/>
+    <part type="xsd:string" name="NewX_AVM-DE_ClientRegistrar"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ClientRegistrarPort"/>
+    <part type="xsd:string" name="NewX_AVM-DE_PhoneName"/>
+    <part type="xsd:string" name="NewX_AVM-DE_ClientId"/>
+    <part type="xsd:string" name="NewX_AVM-DE_OutGoingNumber"/>
+    <part type="xsd:string" name="NewX_AVM-DE_InComingNumbers"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_ExternalRegistration"/>
+    <part type="xsd:string" name="NewX_AVM-DE_InternalNumber"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_DelayedCallNotification"/>
+  </message>
+  <message name="getClientByClientIdRequest">
+    <part type="xsd:string" name="NewX_AVM-DE_ClientId"/>
+  </message>
+  <message name="getClientByClientIdResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_ClientId"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ClientIndex"/>
+    <part type="xsd:string" name="NewX_AVM-DE_ClientUsername"/>
+    <part type="xsd:string" name="NewX_AVM-DE_ClientRegistrar"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ClientRegistrarPort"/>
+    <part type="xsd:string" name="NewX_AVM-DE_PhoneName"/>
+    <part type="xsd:string" name="NewX_AVM-DE_OutGoingNumber"/>
+    <part type="xsd:string" name="NewX_AVM-DE_InComingNumbers"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_ExternalRegistration"/>
+    <part type="xsd:string" name="NewX_AVM-DE_InternalNumber"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_DelayedCallNotification"/>
+  </message>
+  <message name="setClient3Request">
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ClientIndex"/>
+    <part type="xsd:string" name="NewX_AVM-DE_ClientPassword"/>
+    <part type="xsd:string" name="NewX_AVM-DE_ClientId"/>
+    <part type="xsd:string" name="NewX_AVM-DE_PhoneName"/>
+    <part type="xsd:string" name="NewX_AVM-DE_OutGoingNumber"/>
+    <part type="xsd:string" name="NewX_AVM-DE_InComingNumbers"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_ExternalRegistration"/>
+  </message>
+  <message name="setClient4Request">
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ClientIndex"/>
+    <part type="xsd:string" name="NewX_AVM-DE_ClientPassword"/>
+    <part type="xsd:string" name="NewX_AVM-DE_ClientUsername"/>
+    <part type="xsd:string" name="NewX_AVM-DE_PhoneName"/>
+    <part type="xsd:string" name="NewX_AVM-DE_ClientId"/>
+    <part type="xsd:string" name="NewX_AVM-DE_OutGoingNumber"/>
+    <part type="xsd:string" name="NewX_AVM-DE_InComingNumbers"/>
+  </message>
+  <message name="setClient4Response">
+    <part type="xsd:string" name="NewX_AVM-DE_InternalNumber"/>
+  </message>
+  <message name="getClientsResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_ClientList"/>
+  </message>
+  <message name="getNumberOfNumbersResponse">
+    <part type="xsd:unsignedInt" name="NewNumberOfNumbers"/>
+  </message>
+  <message name="getNumbersResponse">
+    <part type="xsd:string" name="NewNumberList"/>
+  </message>
+  <message name="deleteClientRequest">
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ClientIndex"/>
+  </message>
+  <message name="dialGetConfigResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_PhoneName"/>
+  </message>
+  <message name="dialSetConfigRequest">
+    <part type="xsd:string" name="NewX_AVM-DE_PhoneName"/>
+  </message>
+  <message name="dialNumberRequest">
+    <part type="xsd:string" name="NewX_AVM-DE_PhoneNumber"/>
+  </message>
+  <message name="getPhonePortRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+  </message>
+  <message name="getPhonePortResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_PhoneName"/>
+  </message>
+  <message name="setDelayedCallNotificationRequest">
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ClientIndex"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_DelayedCallNotification"/>
+  </message>
+  <message name="getVoIPCommonCountryCodeResponse">
+    <part type="xsd:string" name="NewVoIPCountryCode"/>
+  </message>
+  <message name="getVoIPCommonCountryCodeResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_LKZ"/>
+    <part type="xsd:string" name="NewX_AVM-DE_LKZPrefix"/>
+  </message>
+  <message name="setVoIPCommonCountryCodeRequest">
+    <part type="xsd:string" name="NewVoIPCountryCode"/>
+  </message>
+  <message name="setVoIPCommonCountryCodeRequest">
+    <part type="xsd:string" name="NewX_AVM-DE_LKZ"/>
+    <part type="xsd:string" name="NewX_AVM-DE_LKZPrefix"/>
+  </message>
+  <message name="getVoIPEnableCountryCodeRequest">
+    <part type="xsd:unsignedShort" name="NewVoIPAccountIndex"/>
+  </message>
+  <message name="getVoIPEnableCountryCodeResponse">
+    <part type="xsd:boolean" name="NewVoIPEnableCountryCode"/>
+  </message>
+  <message name="setVoIPEnableCountryCodeRequest">
+    <part type="xsd:unsignedShort" name="NewVoIPAccountIndex"/>
+    <part type="xsd:boolean" name="NewVoIPEnableCountryCode"/>
+  </message>
+  <message name="getVoIPCommonAreaCodeResponse">
+    <part type="xsd:string" name="NewVoIPAreaCode"/>
+  </message>
+  <message name="getVoIPCommonAreaCodeResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_OKZ"/>
+    <part type="xsd:string" name="NewX_AVM-DE_OKZPrefix"/>
+  </message>
+  <message name="setVoIPCommonAreaCodeRequest">
+    <part type="xsd:string" name="NewVoIPAreaCode"/>
+  </message>
+  <message name="setVoIPCommonAreaCodeRequest">
+    <part type="xsd:string" name="NewX_AVM-DE_OKZ"/>
+    <part type="xsd:string" name="NewX_AVM-DE_OKZPrefix"/>
+  </message>
+  <message name="getVoIPEnableAreaCodeRequest">
+    <part type="xsd:unsignedShort" name="NewVoIPAccountIndex"/>
+  </message>
+  <message name="getVoIPEnableAreaCodeResponse">
+    <part type="xsd:boolean" name="NewVoIPEnableAreaCode"/>
+  </message>
+  <message name="setVoIPEnableAreaCodeRequest">
+    <part type="xsd:unsignedShort" name="NewVoIPAccountIndex"/>
+    <part type="xsd:boolean" name="NewVoIPEnableAreaCode"/>
+  </message>
+  <message name="getAlarmClockRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+  </message>
+  <message name="getAlarmClockResponse">
+    <part type="xsd:boolean" name="NewX_AVM-DE_AlarmClockEnable"/>
+    <part type="xsd:string" name="NewX_AVM-DE_AlarmClockName"/>
+    <part type="xsd:string" name="NewX_AVM-DE_AlarmClockTime"/>
+    <part type="xsd:string" name="NewX_AVM-DE_AlarmClockWeekdays"/>
+    <part type="xsd:string" name="NewX_AVM-DE_AlarmClockPhoneName"/>
+  </message>
+  <message name="setAlarmClockEnableRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_AlarmClockEnable"/>
+  </message>
+  <message name="getNumberOfAlarmClocksResponse">
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_NumberOfAlarmClocks"/>
+  </message>
+</definitions>

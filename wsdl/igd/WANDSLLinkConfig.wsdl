@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="WANDSLLinkConfig">
+    <port binding="WANDSLLinkConfig">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANDSLLinkC1"/>
+    </port>
+  </service>
+  <binding name="WANDSLLinkConfig" type="WANDSLLinkConfig">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="setDSLLinkType">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANDSLLinkConfig:1#SetDSLLinkType"/>
+    </operation>
+    <operation name="getDSLLinkInfo">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANDSLLinkConfig:1#GetDSLLinkInfo"/>
+    </operation>
+    <operation name="getAutoConfig">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANDSLLinkConfig:1#GetAutoConfig"/>
+    </operation>
+    <operation name="getModulationType">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANDSLLinkConfig:1#GetModulationType"/>
+    </operation>
+    <operation name="setDestinationAddress">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANDSLLinkConfig:1#SetDestinationAddress"/>
+    </operation>
+    <operation name="getDestinationAddress">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANDSLLinkConfig:1#GetDestinationAddress"/>
+    </operation>
+    <operation name="setATMEncapsulation">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANDSLLinkConfig:1#SetATMEncapsulation"/>
+    </operation>
+    <operation name="getATMEncapsulation">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANDSLLinkConfig:1#GetATMEncapsulation"/>
+    </operation>
+    <operation name="setFCSPreserved">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANDSLLinkConfig:1#SetFCSPreserved"/>
+    </operation>
+    <operation name="getFCSPreserved">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANDSLLinkConfig:1#GetFCSPreserved"/>
+    </operation>
+  </binding>
+  <portType name="WANDSLLinkConfig">
+    <operation name="setDSLLinkType">
+      <input message="setDSLLinkTypeRequest"/>
+    </operation>
+    <operation name="getDSLLinkInfo">
+      <output message="getDSLLinkInfoResponse"/>
+    </operation>
+    <operation name="getAutoConfig">
+      <output message="getAutoConfigResponse"/>
+    </operation>
+    <operation name="getModulationType">
+      <output message="getModulationTypeResponse"/>
+    </operation>
+    <operation name="setDestinationAddress">
+      <input message="setDestinationAddressRequest"/>
+    </operation>
+    <operation name="getDestinationAddress">
+      <output message="getDestinationAddressResponse"/>
+    </operation>
+    <operation name="setATMEncapsulation">
+      <input message="setATMEncapsulationRequest"/>
+    </operation>
+    <operation name="getATMEncapsulation">
+      <output message="getATMEncapsulationResponse"/>
+    </operation>
+    <operation name="setFCSPreserved">
+      <input message="setFCSPreservedRequest"/>
+    </operation>
+    <operation name="getFCSPreserved">
+      <output message="getFCSPreservedResponse"/>
+    </operation>
+  </portType>
+  <message name="setDSLLinkTypeRequest">
+    <part type="xsd:string" name="NewLinkType"/>
+  </message>
+  <message name="getDSLLinkInfoResponse">
+    <part type="xsd:string" name="NewLinkType"/>
+    <part type="xsd:string" name="NewLinkStatus"/>
+  </message>
+  <message name="getAutoConfigResponse">
+    <part type="xsd:boolean" name="NewAutoConfig"/>
+  </message>
+  <message name="getModulationTypeResponse">
+    <part type="xsd:string" name="NewModulationType"/>
+  </message>
+  <message name="setDestinationAddressRequest">
+    <part type="xsd:string" name="NewDestinationAddress"/>
+  </message>
+  <message name="getDestinationAddressResponse">
+    <part type="xsd:string" name="NewDestinationAddress"/>
+  </message>
+  <message name="setATMEncapsulationRequest">
+    <part type="xsd:string" name="NewATMEncapsulation"/>
+  </message>
+  <message name="getATMEncapsulationResponse">
+    <part type="xsd:string" name="NewATMEncapsulation"/>
+  </message>
+  <message name="setFCSPreservedRequest">
+    <part type="xsd:boolean" name="NewFCSPreserved"/>
+  </message>
+  <message name="getFCSPreservedResponse">
+    <part type="xsd:boolean" name="NewFCSPreserved"/>
+  </message>
+</definitions>

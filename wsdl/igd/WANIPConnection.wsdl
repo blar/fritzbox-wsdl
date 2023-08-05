@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="WANIPConnection">
+    <port binding="WANIPConnection">
+      <soap:address location="http://fritz.box:49000/igdupnp/control/WANIPConn1"/>
+    </port>
+  </service>
+  <binding name="WANIPConnection" type="WANIPConnection">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="setConnectionType">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#SetConnectionType"/>
+    </operation>
+    <operation name="getConnectionTypeInfo">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#GetConnectionTypeInfo"/>
+    </operation>
+    <operation name="getAutoDisconnectTime">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#GetAutoDisconnectTime"/>
+    </operation>
+    <operation name="getIdleDisconnectTime">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#GetIdleDisconnectTime"/>
+    </operation>
+    <operation name="requestConnection">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#RequestConnection"/>
+    </operation>
+    <operation name="requestTermination">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#RequestTermination"/>
+    </operation>
+    <operation name="forceTermination">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#ForceTermination"/>
+    </operation>
+    <operation name="getStatusInfo">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#GetStatusInfo"/>
+    </operation>
+    <operation name="getNATRSIPStatus">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#GetNATRSIPStatus"/>
+    </operation>
+    <operation name="getGenericPortMappingEntry">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#GetGenericPortMappingEntry"/>
+    </operation>
+    <operation name="getSpecificPortMappingEntry">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#GetSpecificPortMappingEntry"/>
+    </operation>
+    <operation name="addPortMapping">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping"/>
+    </operation>
+    <operation name="deletePortMapping">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#DeletePortMapping"/>
+    </operation>
+    <operation name="getExternalIPAddress">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#GetExternalIPAddress"/>
+    </operation>
+    <operation name="getExternalIPv6Address">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#X_AVM_DE_GetExternalIPv6Address"/>
+    </operation>
+    <operation name="getIPv6Prefix">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#X_AVM_DE_GetIPv6Prefix"/>
+    </operation>
+    <operation name="getDNSServer">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#X_AVM_DE_GetDNSServer"/>
+    </operation>
+    <operation name="getIPv6DNSServer">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPConnection:1#X_AVM_DE_GetIPv6DNSServer"/>
+    </operation>
+  </binding>
+  <portType name="WANIPConnection">
+    <operation name="setConnectionType">
+      <input message="setConnectionTypeRequest"/>
+    </operation>
+    <operation name="getConnectionTypeInfo">
+      <output message="getConnectionTypeInfoResponse"/>
+    </operation>
+    <operation name="getAutoDisconnectTime">
+      <output message="getAutoDisconnectTimeResponse"/>
+    </operation>
+    <operation name="getIdleDisconnectTime">
+      <output message="getIdleDisconnectTimeResponse"/>
+    </operation>
+    <operation name="requestConnection"/>
+    <operation name="requestTermination"/>
+    <operation name="forceTermination"/>
+    <operation name="getStatusInfo">
+      <output message="getStatusInfoResponse"/>
+    </operation>
+    <operation name="getNATRSIPStatus">
+      <output message="getNATRSIPStatusResponse"/>
+    </operation>
+    <operation name="getGenericPortMappingEntry">
+      <input message="getGenericPortMappingEntryRequest"/>
+      <output message="getGenericPortMappingEntryResponse"/>
+    </operation>
+    <operation name="getSpecificPortMappingEntry">
+      <input message="getSpecificPortMappingEntryRequest"/>
+      <output message="getSpecificPortMappingEntryResponse"/>
+    </operation>
+    <operation name="addPortMapping">
+      <input message="addPortMappingRequest"/>
+    </operation>
+    <operation name="deletePortMapping">
+      <input message="deletePortMappingRequest"/>
+    </operation>
+    <operation name="getExternalIPAddress">
+      <output message="getExternalIPAddressResponse"/>
+    </operation>
+    <operation name="getExternalIPv6Address">
+      <output message="getExternalIPv6AddressResponse"/>
+    </operation>
+    <operation name="getIPv6Prefix">
+      <output message="getIPv6PrefixResponse"/>
+    </operation>
+    <operation name="getDNSServer">
+      <output message="getDNSServerResponse"/>
+    </operation>
+    <operation name="getIPv6DNSServer">
+      <output message="getIPv6DNSServerResponse"/>
+    </operation>
+  </portType>
+  <message name="setConnectionTypeRequest">
+    <part type="xsd:string" name="NewConnectionType"/>
+  </message>
+  <message name="getConnectionTypeInfoResponse">
+    <part type="xsd:string" name="NewConnectionType"/>
+    <part type="xsd:string" name="NewPossibleConnectionTypes"/>
+  </message>
+  <message name="getAutoDisconnectTimeResponse">
+    <part type="xsd:unsignedInt" name="NewAutoDisconnectTime"/>
+  </message>
+  <message name="getIdleDisconnectTimeResponse">
+    <part type="xsd:unsignedInt" name="NewIdleDisconnectTime"/>
+  </message>
+  <message name="getStatusInfoResponse">
+    <part type="xsd:string" name="NewConnectionStatus"/>
+    <part type="xsd:string" name="NewLastConnectionError"/>
+    <part type="xsd:unsignedInt" name="NewUptime"/>
+  </message>
+  <message name="getNATRSIPStatusResponse">
+    <part type="xsd:boolean" name="NewRSIPAvailable"/>
+    <part type="xsd:boolean" name="NewNATEnabled"/>
+  </message>
+  <message name="getGenericPortMappingEntryRequest">
+    <part type="xsd:unsignedShort" name="NewPortMappingIndex"/>
+  </message>
+  <message name="getGenericPortMappingEntryResponse">
+    <part type="xsd:string" name="NewRemoteHost"/>
+    <part type="xsd:unsignedShort" name="NewExternalPort"/>
+    <part type="xsd:string" name="NewProtocol"/>
+    <part type="xsd:unsignedShort" name="NewInternalPort"/>
+    <part type="xsd:string" name="NewInternalClient"/>
+    <part type="xsd:boolean" name="NewEnabled"/>
+    <part type="xsd:string" name="NewPortMappingDescription"/>
+    <part type="xsd:unsignedInt" name="NewLeaseDuration"/>
+  </message>
+  <message name="getSpecificPortMappingEntryRequest">
+    <part type="xsd:string" name="NewRemoteHost"/>
+    <part type="xsd:unsignedShort" name="NewExternalPort"/>
+    <part type="xsd:string" name="NewProtocol"/>
+  </message>
+  <message name="getSpecificPortMappingEntryResponse">
+    <part type="xsd:unsignedShort" name="NewInternalPort"/>
+    <part type="xsd:string" name="NewInternalClient"/>
+    <part type="xsd:boolean" name="NewEnabled"/>
+    <part type="xsd:string" name="NewPortMappingDescription"/>
+    <part type="xsd:unsignedInt" name="NewLeaseDuration"/>
+  </message>
+  <message name="addPortMappingRequest">
+    <part type="xsd:string" name="NewRemoteHost"/>
+    <part type="xsd:unsignedShort" name="NewExternalPort"/>
+    <part type="xsd:string" name="NewProtocol"/>
+    <part type="xsd:unsignedShort" name="NewInternalPort"/>
+    <part type="xsd:string" name="NewInternalClient"/>
+    <part type="xsd:boolean" name="NewEnabled"/>
+    <part type="xsd:string" name="NewPortMappingDescription"/>
+    <part type="xsd:unsignedInt" name="NewLeaseDuration"/>
+  </message>
+  <message name="deletePortMappingRequest">
+    <part type="xsd:string" name="NewRemoteHost"/>
+    <part type="xsd:unsignedShort" name="NewExternalPort"/>
+    <part type="xsd:string" name="NewProtocol"/>
+  </message>
+  <message name="getExternalIPAddressResponse">
+    <part type="xsd:string" name="NewExternalIPAddress"/>
+  </message>
+  <message name="getExternalIPv6AddressResponse">
+    <part type="xsd:string" name="NewExternalIPv6Address"/>
+    <part type="xsd:unsignedByte" name="NewPrefixLength"/>
+    <part type="xsd:unsignedInt" name="NewValidLifetime"/>
+    <part type="xsd:unsignedInt" name="NewPreferedLifetime"/>
+  </message>
+  <message name="getIPv6PrefixResponse">
+    <part type="xsd:string" name="NewIPv6Prefix"/>
+    <part type="xsd:unsignedByte" name="NewPrefixLength"/>
+    <part type="xsd:unsignedInt" name="NewValidLifetime"/>
+    <part type="xsd:unsignedInt" name="NewPreferedLifetime"/>
+  </message>
+  <message name="getDNSServerResponse">
+    <part type="xsd:string" name="NewIPv4DNSServer1"/>
+    <part type="xsd:string" name="NewIPv4DNSServer2"/>
+  </message>
+  <message name="getIPv6DNSServerResponse">
+    <part type="xsd:string" name="NewIPv6DNSServer1"/>
+    <part type="xsd:unsignedInt" name="NewValidLifetime1"/>
+    <part type="xsd:string" name="NewIPv6DNSServer2"/>
+    <part type="xsd:unsignedInt" name="NewValidLifetime"/>
+  </message>
+</definitions>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="avmnexus">
+    <port binding="avmnexus">
+      <soap:address location="http://fritz.box:49000/upnp/control/avmnexus"/>
+    </port>
+  </service>
+  <binding name="avmnexus" type="avmnexus">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getNexusPort">
+      <soap:operation soapAction="urn:schemas-any-com:service:avmnexus:1#GetNexusPort"/>
+    </operation>
+  </binding>
+  <portType name="avmnexus">
+    <operation name="getNexusPort">
+      <output message="getNexusPortResponse"/>
+    </operation>
+  </portType>
+  <message name="getNexusPortResponse">
+    <part type="xsd:unsignedShort" name="NewNexusPort"/>
+  </message>
+</definitions>

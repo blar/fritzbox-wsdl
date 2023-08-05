@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="WANIPv6FirewallControl">
+    <port binding="WANIPv6FirewallControl">
+      <soap:address location="http://fritz.box:49000/igd2upnp/control/WANIPv6Firewall1"/>
+    </port>
+  </service>
+  <binding name="WANIPv6FirewallControl" type="WANIPv6FirewallControl">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getFirewallStatus">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPv6FirewallControl:1#GetFirewallStatus"/>
+    </operation>
+    <operation name="getOutboundPinholeTimeout">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPv6FirewallControl:1#GetOutboundPinholeTimeout"/>
+    </operation>
+    <operation name="addPinhole">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPv6FirewallControl:1#AddPinhole"/>
+    </operation>
+    <operation name="updatePinhole">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPv6FirewallControl:1#UpdatePinhole"/>
+    </operation>
+    <operation name="deletePinhole">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPv6FirewallControl:1#DeletePinhole"/>
+    </operation>
+    <operation name="getPinholePackets">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPv6FirewallControl:1#GetPinholePackets"/>
+    </operation>
+    <operation name="checkPinholeWorking">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANIPv6FirewallControl:1#CheckPinholeWorking"/>
+    </operation>
+  </binding>
+  <portType name="WANIPv6FirewallControl">
+    <operation name="getFirewallStatus">
+      <output message="getFirewallStatusResponse"/>
+    </operation>
+    <operation name="getOutboundPinholeTimeout">
+      <input message="getOutboundPinholeTimeoutRequest"/>
+      <output message="getOutboundPinholeTimeoutResponse"/>
+    </operation>
+    <operation name="addPinhole">
+      <input message="addPinholeRequest"/>
+      <output message="addPinholeResponse"/>
+    </operation>
+    <operation name="updatePinhole">
+      <input message="updatePinholeRequest"/>
+    </operation>
+    <operation name="deletePinhole">
+      <input message="deletePinholeRequest"/>
+    </operation>
+    <operation name="getPinholePackets">
+      <input message="getPinholePacketsRequest"/>
+      <output message="getPinholePacketsResponse"/>
+    </operation>
+    <operation name="checkPinholeWorking">
+      <input message="checkPinholeWorkingRequest"/>
+      <output message="checkPinholeWorkingResponse"/>
+    </operation>
+  </portType>
+  <message name="getFirewallStatusResponse">
+    <part type="xsd:boolean" name="FirewallEnabled"/>
+    <part type="xsd:boolean" name="InboundPinholeAllowed"/>
+  </message>
+  <message name="getOutboundPinholeTimeoutRequest">
+    <part type="xsd:string" name="RemoteHost"/>
+    <part type="xsd:unsignedShort" name="RemotePort"/>
+    <part type="xsd:string" name="InternalClient"/>
+    <part type="xsd:unsignedShort" name="InternalPort"/>
+    <part type="xsd:unsignedShort" name="Protocol"/>
+  </message>
+  <message name="getOutboundPinholeTimeoutResponse">
+    <part type="xsd:unsignedInt" name="OutboundPinholeTimeout"/>
+  </message>
+  <message name="addPinholeRequest">
+    <part type="xsd:string" name="RemoteHost"/>
+    <part type="xsd:unsignedShort" name="RemotePort"/>
+    <part type="xsd:string" name="InternalClient"/>
+    <part type="xsd:unsignedShort" name="InternalPort"/>
+    <part type="xsd:unsignedShort" name="Protocol"/>
+    <part type="xsd:unsignedInt" name="LeaseTime"/>
+  </message>
+  <message name="addPinholeResponse">
+    <part type="xsd:unsignedShort" name="UniqueID"/>
+  </message>
+  <message name="updatePinholeRequest">
+    <part type="xsd:unsignedShort" name="UniqueID"/>
+    <part type="xsd:unsignedInt" name="NewLeaseTime"/>
+  </message>
+  <message name="deletePinholeRequest">
+    <part type="xsd:unsignedShort" name="UniqueID"/>
+  </message>
+  <message name="getPinholePacketsRequest">
+    <part type="xsd:unsignedShort" name="UniqueID"/>
+  </message>
+  <message name="getPinholePacketsResponse">
+    <part type="xsd:unsignedInt" name="PinholePackets"/>
+  </message>
+  <message name="checkPinholeWorkingRequest">
+    <part type="xsd:unsignedShort" name="UniqueID"/>
+  </message>
+  <message name="checkPinholeWorkingResponse">
+    <part type="xsd:boolean" name="IsWorking"/>
+  </message>
+</definitions>

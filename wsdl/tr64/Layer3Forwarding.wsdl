@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="Layer3Forwarding">
+    <port binding="Layer3Forwarding">
+      <soap:address location="http://fritz.box:49000/upnp/control/layer3forwarding"/>
+    </port>
+  </service>
+  <binding name="Layer3Forwarding" type="Layer3Forwarding">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="setDefaultConnectionService">
+      <soap:operation soapAction="urn:dslforum-org:service:Layer3Forwarding:1#SetDefaultConnectionService"/>
+    </operation>
+    <operation name="getDefaultConnectionService">
+      <soap:operation soapAction="urn:dslforum-org:service:Layer3Forwarding:1#GetDefaultConnectionService"/>
+    </operation>
+    <operation name="getForwardNumberOfEntries">
+      <soap:operation soapAction="urn:dslforum-org:service:Layer3Forwarding:1#GetForwardNumberOfEntries"/>
+    </operation>
+    <operation name="addForwardingEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:Layer3Forwarding:1#AddForwardingEntry"/>
+    </operation>
+    <operation name="deleteForwardingEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:Layer3Forwarding:1#DeleteForwardingEntry"/>
+    </operation>
+    <operation name="getSpecificForwardingEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:Layer3Forwarding:1#GetSpecificForwardingEntry"/>
+    </operation>
+    <operation name="getGenericForwardingEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:Layer3Forwarding:1#GetGenericForwardingEntry"/>
+    </operation>
+    <operation name="setForwardingEntryEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:Layer3Forwarding:1#SetForwardingEntryEnable"/>
+    </operation>
+  </binding>
+  <portType name="Layer3Forwarding">
+    <operation name="setDefaultConnectionService">
+      <input message="setDefaultConnectionServiceRequest"/>
+    </operation>
+    <operation name="getDefaultConnectionService">
+      <output message="getDefaultConnectionServiceResponse"/>
+    </operation>
+    <operation name="getForwardNumberOfEntries">
+      <output message="getForwardNumberOfEntriesResponse"/>
+    </operation>
+    <operation name="addForwardingEntry">
+      <input message="addForwardingEntryRequest"/>
+    </operation>
+    <operation name="deleteForwardingEntry">
+      <input message="deleteForwardingEntryRequest"/>
+    </operation>
+    <operation name="getSpecificForwardingEntry">
+      <input message="getSpecificForwardingEntryRequest"/>
+      <output message="getSpecificForwardingEntryResponse"/>
+    </operation>
+    <operation name="getGenericForwardingEntry">
+      <input message="getGenericForwardingEntryRequest"/>
+      <output message="getGenericForwardingEntryResponse"/>
+    </operation>
+    <operation name="setForwardingEntryEnable">
+      <input message="setForwardingEntryEnableRequest"/>
+    </operation>
+  </portType>
+  <message name="setDefaultConnectionServiceRequest">
+    <part type="xsd:string" name="NewDefaultConnectionService"/>
+  </message>
+  <message name="getDefaultConnectionServiceResponse">
+    <part type="xsd:string" name="NewDefaultConnectionService"/>
+  </message>
+  <message name="getForwardNumberOfEntriesResponse">
+    <part type="xsd:unsignedShort" name="NewForwardNumberOfEntries"/>
+  </message>
+  <message name="addForwardingEntryRequest">
+    <part type="xsd:string" name="NewType"/>
+    <part type="xsd:string" name="NewDestIPAddress"/>
+    <part type="xsd:string" name="NewDestSubnetMask"/>
+    <part type="xsd:string" name="NewSourceIPAddress"/>
+    <part type="xsd:string" name="NewSourceSubnetMask"/>
+    <part type="xsd:string" name="NewGatewayIPAddress"/>
+    <part type="xsd:string" name="NewInterface"/>
+    <part type="xsd:int" name="NewForwardingMetric"/>
+  </message>
+  <message name="deleteForwardingEntryRequest">
+    <part type="xsd:string" name="NewDestIPAddress"/>
+    <part type="xsd:string" name="NewDestSubnetMask"/>
+    <part type="xsd:string" name="NewSourceIPAddress"/>
+    <part type="xsd:string" name="NewSourceSubnetMask"/>
+  </message>
+  <message name="getSpecificForwardingEntryRequest">
+    <part type="xsd:string" name="NewDestIPAddress"/>
+    <part type="xsd:string" name="NewDestSubnetMask"/>
+    <part type="xsd:string" name="NewSourceIPAddress"/>
+    <part type="xsd:string" name="NewSourceSubnetMask"/>
+  </message>
+  <message name="getSpecificForwardingEntryResponse">
+    <part type="xsd:string" name="NewGatewayIPAddress"/>
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewStatus"/>
+    <part type="xsd:string" name="NewType"/>
+    <part type="xsd:string" name="NewInterface"/>
+    <part type="xsd:int" name="NewForwardingMetric"/>
+  </message>
+  <message name="getGenericForwardingEntryRequest">
+    <part type="xsd:unsignedShort" name="NewForwardingIndex"/>
+  </message>
+  <message name="getGenericForwardingEntryResponse">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewStatus"/>
+    <part type="xsd:string" name="NewType"/>
+    <part type="xsd:string" name="NewDestIPAddress"/>
+    <part type="xsd:string" name="NewDestSubnetMask"/>
+    <part type="xsd:string" name="NewSourceIPAddress"/>
+    <part type="xsd:string" name="NewSourceSubnetMask"/>
+    <part type="xsd:string" name="NewGatewayIPAddress"/>
+    <part type="xsd:string" name="NewInterface"/>
+    <part type="xsd:int" name="NewForwardingMetric"/>
+  </message>
+  <message name="setForwardingEntryEnableRequest">
+    <part type="xsd:string" name="NewDestIPAddress"/>
+    <part type="xsd:string" name="NewDestSubnetMask"/>
+    <part type="xsd:string" name="NewSourceIPAddress"/>
+    <part type="xsd:string" name="NewSourceSubnetMask"/>
+    <part type="xsd:boolean" name="NewEnable"/>
+  </message>
+</definitions>

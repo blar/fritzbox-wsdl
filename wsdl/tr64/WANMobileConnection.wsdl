@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="X_AVM-DE_WANMobileConnection">
+    <port binding="X_AVM-DE_WANMobileConnection">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_wanmobileconn"/>
+    </port>
+  </service>
+  <binding name="X_AVM-DE_WANMobileConnection" type="X_AVM-DE_WANMobileConnection">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_WANMobileConnection:1#GetInfo"/>
+    </operation>
+    <operation name="getInfoEx">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_WANMobileConnection:1#GetInfoEx"/>
+    </operation>
+    <operation name="setPIN">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_WANMobileConnection:1#SetPIN"/>
+    </operation>
+    <operation name="setPUK">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_WANMobileConnection:1#SetPUK"/>
+    </operation>
+    <operation name="setAccessTechnology">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_WANMobileConnection:1#SetAccessTechnology"/>
+    </operation>
+    <operation name="getAccessTechnology">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_WANMobileConnection:1#GetAccessTechnology"/>
+    </operation>
+    <operation name="setPreferredAccessTechnology">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_WANMobileConnection:1#SetPreferredAccessTechnology"/>
+    </operation>
+    <operation name="getPreferredAccessTechnology">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_WANMobileConnection:1#GetPreferredAccessTechnology"/>
+    </operation>
+    <operation name="setEnabledBandCapabilities">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_WANMobileConnection:1#SetEnabledBandCapabilities"/>
+    </operation>
+    <operation name="getEnabledBandCapabilities">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_WANMobileConnection:1#GetEnabledBandCapabilities"/>
+    </operation>
+    <operation name="getBandCapabilities">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_WANMobileConnection:1#GetBandCapabilities"/>
+    </operation>
+  </binding>
+  <portType name="X_AVM-DE_WANMobileConnection">
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="getInfoEx">
+      <output message="getInfoExResponse"/>
+    </operation>
+    <operation name="setPIN">
+      <input message="setPINRequest"/>
+    </operation>
+    <operation name="setPUK">
+      <input message="setPUKRequest"/>
+    </operation>
+    <operation name="setAccessTechnology">
+      <input message="setAccessTechnologyRequest"/>
+    </operation>
+    <operation name="getAccessTechnology">
+      <output message="getAccessTechnologyResponse"/>
+    </operation>
+    <operation name="setPreferredAccessTechnology">
+      <input message="setPreferredAccessTechnologyRequest"/>
+    </operation>
+    <operation name="getPreferredAccessTechnology">
+      <output message="getPreferredAccessTechnologyResponse"/>
+    </operation>
+    <operation name="setEnabledBandCapabilities">
+      <input message="setEnabledBandCapabilitiesRequest"/>
+    </operation>
+    <operation name="getEnabledBandCapabilities">
+      <output message="getEnabledBandCapabilitiesResponse"/>
+    </operation>
+    <operation name="getBandCapabilities">
+      <output message="getBandCapabilitiesResponse"/>
+    </operation>
+  </portType>
+  <message name="getInfoResponse">
+    <part type="xsd:boolean" name="NewEnabled"/>
+    <part type="xsd:string" name="NewStatus"/>
+    <part type="xsd:unsignedShort" name="NewPINFailureCount"/>
+    <part type="xsd:unsignedShort" name="NewPUKFailureCount"/>
+  </message>
+  <message name="getInfoExResponse">
+    <part type="xsd:string" name="NewSerialNumber"/>
+    <part type="xsd:boolean" name="NewEnableVoIPPDN"/>
+    <part type="xsd:string" name="NewPPPUsername"/>
+    <part type="xsd:string" name="NewPPPUsernameVoIP"/>
+    <part type="xsd:string" name="NewSoftwareVersion"/>
+    <part type="xsd:unsignedInt" name="NewUptime"/>
+    <part type="xsd:unsignedInt" name="NewPDN1_MTU"/>
+    <part type="xsd:unsignedInt" name="NewPDN2_MTU"/>
+    <part type="xsd:string" name="NewIMSI"/>
+    <part type="xsd:string" name="NewAPN_VoIP"/>
+    <part type="xsd:string" name="NewAPN"/>
+    <part type="xsd:boolean" name="NewRoaming"/>
+    <part type="xsd:string" name="NewCurrentAccessTechnology"/>
+    <part type="xsd:int" name="NewSignalRSRP0"/>
+    <part type="xsd:int" name="NewSignalRSRP1"/>
+    <part type="xsd:string" name="NewCellList"/>
+  </message>
+  <message name="setPINRequest">
+    <part type="xsd:string" name="NewPIN"/>
+  </message>
+  <message name="setPUKRequest">
+    <part type="xsd:string" name="NewPIN"/>
+    <part type="xsd:string" name="NewPUK"/>
+  </message>
+  <message name="setAccessTechnologyRequest">
+    <part type="xsd:string" name="NewAccessTechnology"/>
+  </message>
+  <message name="getAccessTechnologyResponse">
+    <part type="xsd:string" name="NewAccessTechnology"/>
+    <part type="xsd:string" name="NewPossibleAccessTechnology"/>
+    <part type="xsd:string" name="NewCurrentAccessTechnology"/>
+  </message>
+  <message name="setPreferredAccessTechnologyRequest">
+    <part type="xsd:string" name="NewPreferredAccessTechnology"/>
+  </message>
+  <message name="getPreferredAccessTechnologyResponse">
+    <part type="xsd:string" name="NewPreferredAccessTechnology"/>
+    <part type="xsd:string" name="NewPossiblePreferredAccessTechnology"/>
+  </message>
+  <message name="setEnabledBandCapabilitiesRequest">
+    <part type="xsd:string" name="NewBandCapabilitiesLTE"/>
+    <part type="xsd:string" name="NewBandCapabilities5GNSA"/>
+    <part type="xsd:string" name="NewBandCapabilities5GSA"/>
+  </message>
+  <message name="getEnabledBandCapabilitiesResponse">
+    <part type="xsd:string" name="NewBandCapabilitiesLTE"/>
+    <part type="xsd:string" name="NewBandCapabilities5GNSA"/>
+    <part type="xsd:string" name="NewBandCapabilities5GSA"/>
+  </message>
+  <message name="getBandCapabilitiesResponse">
+    <part type="xsd:string" name="NewBandCapabilitiesLTE"/>
+    <part type="xsd:string" name="NewBandCapabilities5GNSA"/>
+    <part type="xsd:string" name="NewBandCapabilities5GSA"/>
+  </message>
+</definitions>

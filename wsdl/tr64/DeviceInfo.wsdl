@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="DeviceInfo">
+    <port binding="DeviceInfo">
+      <soap:address location="http://fritz.box:49000/upnp/control/deviceinfo"/>
+    </port>
+  </service>
+  <binding name="DeviceInfo" type="DeviceInfo">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceInfo:1#GetInfo"/>
+    </operation>
+    <operation name="setProvisioningCode">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceInfo:1#SetProvisioningCode"/>
+    </operation>
+    <operation name="getDeviceLog">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceInfo:1#GetDeviceLog"/>
+    </operation>
+    <operation name="getSecurityPort">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceInfo:1#GetSecurityPort"/>
+    </operation>
+  </binding>
+  <portType name="DeviceInfo">
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="setProvisioningCode">
+      <input message="setProvisioningCodeRequest"/>
+    </operation>
+    <operation name="getDeviceLog">
+      <output message="getDeviceLogResponse"/>
+    </operation>
+    <operation name="getSecurityPort">
+      <output message="getSecurityPortResponse"/>
+    </operation>
+  </portType>
+  <message name="getInfoResponse">
+    <part type="xsd:string" name="NewManufacturerName"/>
+    <part type="xsd:string" name="NewManufacturerOUI"/>
+    <part type="xsd:string" name="NewModelName"/>
+    <part type="xsd:string" name="NewDescription"/>
+    <part type="xsd:string" name="NewProductClass"/>
+    <part type="xsd:string" name="NewSerialNumber"/>
+    <part type="xsd:string" name="NewSoftwareVersion"/>
+    <part type="xsd:string" name="NewHardwareVersion"/>
+    <part type="xsd:string" name="NewSpecVersion"/>
+    <part type="xsd:string" name="NewProvisioningCode"/>
+    <part type="xsd:unsignedInt" name="NewUpTime"/>
+    <part type="xsd:string" name="NewDeviceLog"/>
+  </message>
+  <message name="setProvisioningCodeRequest">
+    <part type="xsd:string" name="NewProvisioningCode"/>
+  </message>
+  <message name="getDeviceLogResponse">
+    <part type="xsd:string" name="NewDeviceLog"/>
+  </message>
+  <message name="getSecurityPortResponse">
+    <part type="xsd:unsignedShort" name="NewSecurityPort"/>
+  </message>
+</definitions>

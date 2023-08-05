@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="WANDSLInterfaceConfig">
+    <port binding="WANDSLInterfaceConfig">
+      <soap:address location="http://fritz.box:49000/upnp/control/wandslifconfig1"/>
+    </port>
+  </service>
+  <binding name="WANDSLInterfaceConfig" type="WANDSLInterfaceConfig">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLInterfaceConfig:1#GetInfo"/>
+    </operation>
+    <operation name="getStatisticsTotal">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLInterfaceConfig:1#GetStatisticsTotal"/>
+    </operation>
+    <operation name="getDSLDiagnoseInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLInterfaceConfig:1#X_AVM-DE_GetDSLDiagnoseInfo"/>
+    </operation>
+    <operation name="getDSLInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WANDSLInterfaceConfig:1#X_AVM-DE_GetDSLInfo"/>
+    </operation>
+  </binding>
+  <portType name="WANDSLInterfaceConfig">
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="getStatisticsTotal">
+      <output message="getStatisticsTotalResponse"/>
+    </operation>
+    <operation name="getDSLDiagnoseInfo">
+      <output message="getDSLDiagnoseInfoResponse"/>
+    </operation>
+    <operation name="getDSLInfo">
+      <output message="getDSLInfoResponse"/>
+    </operation>
+  </portType>
+  <message name="getInfoResponse">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewStatus"/>
+    <part type="xsd:string" name="NewDataPath"/>
+    <part type="xsd:int" name="NewUpstreamCurrRate"/>
+    <part type="xsd:unsignedInt" name="NewDownstreamCurrRate"/>
+    <part type="xsd:unsignedInt" name="NewUpstreamMaxRate"/>
+    <part type="xsd:unsignedInt" name="NewDownstreamMaxRate"/>
+    <part type="xsd:unsignedInt" name="NewUpstreamNoiseMargin"/>
+    <part type="xsd:unsignedInt" name="NewDownstreamNoiseMargin"/>
+    <part type="xsd:unsignedInt" name="NewUpstreamAttenuation"/>
+    <part type="xsd:unsignedInt" name="NewDownstreamAttenuation"/>
+    <part type="xsd:string" name="NewATURVendor"/>
+    <part type="xsd:string" name="NewATURCountry"/>
+    <part type="xsd:unsignedShort" name="NewUpstreamPower"/>
+    <part type="xsd:unsignedShort" name="NewDownstreamPower"/>
+  </message>
+  <message name="getStatisticsTotalResponse">
+    <part type="xsd:unsignedInt" name="NewReceiveBlocks"/>
+    <part type="xsd:unsignedInt" name="NewTransmitBlocks"/>
+    <part type="xsd:unsignedInt" name="NewCellDelin"/>
+    <part type="xsd:unsignedInt" name="NewLinkRetrain"/>
+    <part type="xsd:unsignedInt" name="NewInitErrors"/>
+    <part type="xsd:unsignedInt" name="NewInitTimeouts"/>
+    <part type="xsd:unsignedInt" name="NewLossOfFraming"/>
+    <part type="xsd:unsignedInt" name="NewErroredSecs"/>
+    <part type="xsd:unsignedInt" name="NewSeverelyErroredSecs"/>
+    <part type="xsd:unsignedInt" name="NewFECErrors"/>
+    <part type="xsd:unsignedInt" name="NewATUCFECErrors"/>
+    <part type="xsd:unsignedInt" name="NewHECErrors"/>
+    <part type="xsd:unsignedInt" name="NewATUCHECErrors"/>
+    <part type="xsd:unsignedInt" name="NewCRCErrors"/>
+    <part type="xsd:unsignedInt" name="NewATUCCRCErrors"/>
+  </message>
+  <message name="getDSLDiagnoseInfoResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_DSLDiagnoseState"/>
+    <part type="xsd:int" name="NewX_AVM-DE_CableNokDistance"/>
+    <part type="xsd:unsignedInt" name="NewX_AVM-DE_DSLLastDiagnoseTime"/>
+    <part type="xsd:unsignedInt" name="NewX_AVM-DE_DSLSignalLossTime"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_DSLActive"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_DSLSync"/>
+  </message>
+  <message name="getDSLInfoResponse">
+    <part type="xsd:unsignedInt" name="NewSNRGds"/>
+    <part type="xsd:unsignedInt" name="NewSNRGus"/>
+    <part type="xsd:string" name="NewSNRpsds"/>
+    <part type="xsd:string" name="NewSNRpsus"/>
+    <part type="xsd:unsignedInt" name="NewSNRMTds"/>
+    <part type="xsd:unsignedInt" name="NewSNRMTus"/>
+    <part type="xsd:string" name="NewLATNds"/>
+    <part type="xsd:string" name="NewLATNus"/>
+    <part type="xsd:unsignedInt" name="NewFECErrors"/>
+    <part type="xsd:unsignedInt" name="NewCRCErrors"/>
+    <part type="xsd:string" name="NewLinkStatus"/>
+    <part type="xsd:string" name="NewModulationType"/>
+    <part type="xsd:string" name="NewCurrentProfile"/>
+    <part type="xsd:int" name="NewUpstreamCurrRate"/>
+    <part type="xsd:unsignedInt" name="NewDownstreamCurrRate"/>
+    <part type="xsd:unsignedInt" name="NewUpstreamMaxRate"/>
+    <part type="xsd:unsignedInt" name="NewDownstreamMaxRate"/>
+    <part type="xsd:unsignedInt" name="NewUpstreamNoiseMargin"/>
+    <part type="xsd:unsignedInt" name="NewDownstreamNoiseMargin"/>
+    <part type="xsd:unsignedInt" name="NewUpstreamAttenuation"/>
+    <part type="xsd:unsignedInt" name="NewDownstreamAttenuation"/>
+    <part type="xsd:string" name="NewATURVendor"/>
+    <part type="xsd:string" name="NewATURCountry"/>
+    <part type="xsd:unsignedShort" name="NewUpstreamPower"/>
+    <part type="xsd:unsignedShort" name="NewDownstreamPower"/>
+  </message>
+</definitions>

@@ -1,0 +1,458 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="WLANConfiguration2">
+    <port binding="WLANConfiguration2">
+      <soap:address location="http://fritz.box:49000/upnp/control/wlanconfig2"/>
+    </port>
+  </service>
+  <binding name="WLANConfiguration2" type="WLANConfiguration2">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="setEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#SetEnable"/>
+    </operation>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#GetInfo"/>
+    </operation>
+    <operation name="setConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#SetConfig"/>
+    </operation>
+    <operation name="setSecurityKeys">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#SetSecurityKeys"/>
+    </operation>
+    <operation name="getSecurityKeys">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#GetSecurityKeys"/>
+    </operation>
+    <operation name="setDefaultWEPKeyIndex">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#SetDefaultWEPKeyIndex"/>
+    </operation>
+    <operation name="getDefaultWEPKeyIndex">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#GetDefaultWEPKeyIndex"/>
+    </operation>
+    <operation name="setBasBeaconSecurityProperties">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#SetBasBeaconSecurityProperties"/>
+    </operation>
+    <operation name="getBasBeaconSecurityProperties">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#GetBasBeaconSecurityProperties"/>
+    </operation>
+    <operation name="getStatistics">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#GetStatistics"/>
+    </operation>
+    <operation name="getPacketStatistics">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#GetPacketStatistics"/>
+    </operation>
+    <operation name="getBSSID">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#GetBSSID"/>
+    </operation>
+    <operation name="getSSID">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#GetSSID"/>
+    </operation>
+    <operation name="setSSID">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#SetSSID"/>
+    </operation>
+    <operation name="getBeaconType">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#GetBeaconType"/>
+    </operation>
+    <operation name="setBeaconType">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#SetBeaconType"/>
+    </operation>
+    <operation name="getChannelInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#GetChannelInfo"/>
+    </operation>
+    <operation name="setChannel">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#SetChannel"/>
+    </operation>
+    <operation name="getBeaconAdvertisement">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#GetBeaconAdvertisement"/>
+    </operation>
+    <operation name="setBeaconAdvertisement">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#SetBeaconAdvertisement"/>
+    </operation>
+    <operation name="getTotalAssociations">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#GetTotalAssociations"/>
+    </operation>
+    <operation name="getGenericAssociatedDeviceInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#GetGenericAssociatedDeviceInfo"/>
+    </operation>
+    <operation name="getSpecificAssociatedDeviceInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#GetSpecificAssociatedDeviceInfo"/>
+    </operation>
+    <operation name="getSpecificAssociatedDeviceInfoByIp">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#X_AVM-DE_GetSpecificAssociatedDeviceInfoByIp"/>
+    </operation>
+    <operation name="getWLANDeviceListPath">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#X_AVM-DE_GetWLANDeviceListPath"/>
+    </operation>
+    <operation name="setStickSurfEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#X_AVM-DE_SetStickSurfEnable"/>
+    </operation>
+    <operation name="getIPTVOptimized">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#X_AVM-DE_GetIPTVOptimized"/>
+    </operation>
+    <operation name="setIPTVOptimized">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#X_AVM-DE_SetIPTVOptimized"/>
+    </operation>
+    <operation name="getNightControl">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#X_AVM-DE_GetNightControl"/>
+    </operation>
+    <operation name="getWLANHybridMode">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#X_AVM-DE_GetWLANHybridMode"/>
+    </operation>
+    <operation name="setWLANHybridMode">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#X_AVM-DE_SetWLANHybridMode"/>
+    </operation>
+    <operation name="getWLANExtInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#X_AVM-DE_GetWLANExtInfo"/>
+    </operation>
+    <operation name="getWPSInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#X_AVM-DE_GetWPSInfo"/>
+    </operation>
+    <operation name="setWPSConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#X_AVM-DE_SetWPSConfig"/>
+    </operation>
+    <operation name="setWPSEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#X_AVM-DE_SetWPSEnable"/>
+    </operation>
+    <operation name="setWLANGlobalEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#X_AVM-DE_SetWLANGlobalEnable"/>
+    </operation>
+    <operation name="getWLANConnectionInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WLANConfiguration:2#X_AVM-DE_GetWLANConnectionInfo"/>
+    </operation>
+  </binding>
+  <portType name="WLANConfiguration2">
+    <operation name="setEnable">
+      <input message="setEnableRequest"/>
+    </operation>
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="setConfig">
+      <input message="setConfigRequest"/>
+    </operation>
+    <operation name="setSecurityKeys">
+      <input message="setSecurityKeysRequest"/>
+    </operation>
+    <operation name="getSecurityKeys">
+      <output message="getSecurityKeysResponse"/>
+    </operation>
+    <operation name="setDefaultWEPKeyIndex">
+      <input message="setDefaultWEPKeyIndexRequest"/>
+    </operation>
+    <operation name="getDefaultWEPKeyIndex">
+      <output message="getDefaultWEPKeyIndexResponse"/>
+    </operation>
+    <operation name="setBasBeaconSecurityProperties">
+      <input message="setBasBeaconSecurityPropertiesRequest"/>
+    </operation>
+    <operation name="getBasBeaconSecurityProperties">
+      <output message="getBasBeaconSecurityPropertiesResponse"/>
+    </operation>
+    <operation name="getStatistics">
+      <output message="getStatisticsResponse"/>
+    </operation>
+    <operation name="getPacketStatistics">
+      <output message="getPacketStatisticsResponse"/>
+    </operation>
+    <operation name="getBSSID">
+      <output message="getBSSIDResponse"/>
+    </operation>
+    <operation name="getSSID">
+      <output message="getSSIDResponse"/>
+    </operation>
+    <operation name="setSSID">
+      <input message="setSSIDRequest"/>
+    </operation>
+    <operation name="getBeaconType">
+      <output message="getBeaconTypeResponse"/>
+    </operation>
+    <operation name="setBeaconType">
+      <input message="setBeaconTypeRequest"/>
+    </operation>
+    <operation name="getChannelInfo">
+      <output message="getChannelInfoResponse"/>
+    </operation>
+    <operation name="setChannel">
+      <input message="setChannelRequest"/>
+    </operation>
+    <operation name="getBeaconAdvertisement">
+      <output message="getBeaconAdvertisementResponse"/>
+    </operation>
+    <operation name="setBeaconAdvertisement">
+      <input message="setBeaconAdvertisementRequest"/>
+    </operation>
+    <operation name="getTotalAssociations">
+      <output message="getTotalAssociationsResponse"/>
+    </operation>
+    <operation name="getGenericAssociatedDeviceInfo">
+      <input message="getGenericAssociatedDeviceInfoRequest"/>
+      <output message="getGenericAssociatedDeviceInfoResponse"/>
+    </operation>
+    <operation name="getSpecificAssociatedDeviceInfo">
+      <input message="getSpecificAssociatedDeviceInfoRequest"/>
+      <output message="getSpecificAssociatedDeviceInfoResponse"/>
+    </operation>
+    <operation name="getSpecificAssociatedDeviceInfoByIp">
+      <input message="getSpecificAssociatedDeviceInfoByIpRequest"/>
+      <output message="getSpecificAssociatedDeviceInfoByIpResponse"/>
+    </operation>
+    <operation name="getWLANDeviceListPath">
+      <output message="getWLANDeviceListPathResponse"/>
+    </operation>
+    <operation name="setStickSurfEnable">
+      <input message="setStickSurfEnableRequest"/>
+    </operation>
+    <operation name="getIPTVOptimized">
+      <output message="getIPTVOptimizedResponse"/>
+    </operation>
+    <operation name="setIPTVOptimized">
+      <input message="setIPTVOptimizedRequest"/>
+    </operation>
+    <operation name="getNightControl">
+      <output message="getNightControlResponse"/>
+    </operation>
+    <operation name="getWLANHybridMode">
+      <output message="getWLANHybridModeResponse"/>
+    </operation>
+    <operation name="setWLANHybridMode">
+      <input message="setWLANHybridModeRequest"/>
+    </operation>
+    <operation name="getWLANExtInfo">
+      <output message="getWLANExtInfoResponse"/>
+    </operation>
+    <operation name="getWPSInfo">
+      <output message="getWPSInfoResponse"/>
+    </operation>
+    <operation name="setWPSConfig">
+      <input message="setWPSConfigRequest"/>
+      <output message="setWPSConfigResponse"/>
+    </operation>
+    <operation name="setWPSEnable">
+      <input message="setWPSEnableRequest"/>
+    </operation>
+    <operation name="setWLANGlobalEnable">
+      <input message="setWLANGlobalEnableRequest"/>
+    </operation>
+    <operation name="getWLANConnectionInfo">
+      <output message="getWLANConnectionInfoResponse"/>
+    </operation>
+  </portType>
+  <message name="setEnableRequest">
+    <part type="xsd:boolean" name="NewEnable"/>
+  </message>
+  <message name="getInfoResponse">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewStatus"/>
+    <part type="xsd:string" name="NewMaxBitRate"/>
+    <part type="xsd:unsignedByte" name="NewChannel"/>
+    <part type="xsd:string" name="NewSSID"/>
+    <part type="xsd:string" name="NewBeaconType"/>
+    <part type="xsd:string" name="NewX_AVM-DE_PossibleBeaconTypes"/>
+    <part type="xsd:boolean" name="NewMACAddressControlEnabled"/>
+    <part type="xsd:string" name="NewStandard"/>
+    <part type="xsd:string" name="NewBSSID"/>
+    <part type="xsd:string" name="NewBasicEncryptionModes"/>
+    <part type="xsd:string" name="NewBasicAuthenticationMode"/>
+    <part type="xsd:unsignedByte" name="NewMaxCharsSSID"/>
+    <part type="xsd:unsignedByte" name="NewMinCharsSSID"/>
+    <part type="xsd:string" name="NewAllowedCharsSSID"/>
+    <part type="xsd:unsignedByte" name="NewMinCharsPSK"/>
+    <part type="xsd:unsignedByte" name="NewMaxCharsPSK"/>
+    <part type="xsd:string" name="NewAllowedCharsPSK"/>
+    <part type="xsd:string" name="NewX_AVM-DE_FrequencyBand"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_WLANGlobalEnable"/>
+  </message>
+  <message name="setConfigRequest">
+    <part type="xsd:string" name="NewMaxBitRate"/>
+    <part type="xsd:unsignedByte" name="NewChannel"/>
+    <part type="xsd:string" name="NewSSID"/>
+    <part type="xsd:string" name="NewBeaconType"/>
+    <part type="xsd:boolean" name="NewMACAddressControlEnabled"/>
+    <part type="xsd:string" name="NewBasicEncryptionModes"/>
+    <part type="xsd:string" name="NewBasicAuthenticationMode"/>
+  </message>
+  <message name="setSecurityKeysRequest">
+    <part type="xsd:string" name="NewWEPKey0"/>
+    <part type="xsd:string" name="NewWEPKey1"/>
+    <part type="xsd:string" name="NewWEPKey2"/>
+    <part type="xsd:string" name="NewWEPKey3"/>
+    <part type="xsd:string" name="NewPreSharedKey"/>
+    <part type="xsd:string" name="NewKeyPassphrase"/>
+  </message>
+  <message name="getSecurityKeysResponse">
+    <part type="xsd:string" name="NewWEPKey0"/>
+    <part type="xsd:string" name="NewWEPKey1"/>
+    <part type="xsd:string" name="NewWEPKey2"/>
+    <part type="xsd:string" name="NewWEPKey3"/>
+    <part type="xsd:string" name="NewPreSharedKey"/>
+    <part type="xsd:string" name="NewKeyPassphrase"/>
+  </message>
+  <message name="setDefaultWEPKeyIndexRequest">
+    <part type="xsd:unsignedByte" name="NewDefaultWEPKeyIndex"/>
+  </message>
+  <message name="getDefaultWEPKeyIndexResponse">
+    <part type="xsd:unsignedByte" name="NewDefaultWEPKeyIndex"/>
+  </message>
+  <message name="setBasBeaconSecurityPropertiesRequest">
+    <part type="xsd:string" name="NewBasicEncryptionModes"/>
+    <part type="xsd:string" name="NewBasicAuthenticationMode"/>
+  </message>
+  <message name="getBasBeaconSecurityPropertiesResponse">
+    <part type="xsd:string" name="NewBasicEncryptionModes"/>
+    <part type="xsd:string" name="NewBasicAuthenticationMode"/>
+  </message>
+  <message name="getStatisticsResponse">
+    <part type="xsd:unsignedInt" name="NewTotalPacketsSent"/>
+    <part type="xsd:unsignedInt" name="NewTotalPacketsReceived"/>
+  </message>
+  <message name="getPacketStatisticsResponse">
+    <part type="xsd:unsignedInt" name="NewTotalPacketsSent"/>
+    <part type="xsd:unsignedInt" name="NewTotalPacketsReceived"/>
+  </message>
+  <message name="getBSSIDResponse">
+    <part type="xsd:string" name="NewBSSID"/>
+  </message>
+  <message name="getSSIDResponse">
+    <part type="xsd:string" name="NewSSID"/>
+  </message>
+  <message name="setSSIDRequest">
+    <part type="xsd:string" name="NewSSID"/>
+  </message>
+  <message name="getBeaconTypeResponse">
+    <part type="xsd:string" name="NewBeaconType"/>
+    <part type="xsd:string" name="NewX_AVM-DE_PossibleBeaconTypes"/>
+  </message>
+  <message name="setBeaconTypeRequest">
+    <part type="xsd:string" name="NewBeaconType"/>
+  </message>
+  <message name="getChannelInfoResponse">
+    <part type="xsd:unsignedByte" name="NewChannel"/>
+    <part type="xsd:string" name="NewPossibleChannels"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_AutoChannelEnabled"/>
+    <part type="xsd:string" name="NewX_AVM-DE_FrequencyBand"/>
+  </message>
+  <message name="setChannelRequest">
+    <part type="xsd:unsignedByte" name="NewChannel"/>
+  </message>
+  <message name="getBeaconAdvertisementResponse">
+    <part type="xsd:boolean" name="NewBeaconAdvertisementEnabled"/>
+  </message>
+  <message name="setBeaconAdvertisementRequest">
+    <part type="xsd:boolean" name="NewBeaconAdvertisementEnabled"/>
+  </message>
+  <message name="getTotalAssociationsResponse">
+    <part type="xsd:unsignedShort" name="NewTotalAssociations"/>
+  </message>
+  <message name="getGenericAssociatedDeviceInfoRequest">
+    <part type="xsd:unsignedShort" name="NewAssociatedDeviceIndex"/>
+  </message>
+  <message name="getGenericAssociatedDeviceInfoResponse">
+    <part type="xsd:string" name="NewAssociatedDeviceMACAddress"/>
+    <part type="xsd:string" name="NewAssociatedDeviceIPAddress"/>
+    <part type="xsd:boolean" name="NewAssociatedDeviceAuthState"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_Speed"/>
+    <part type="xsd:unsignedByte" name="NewX_AVM-DE_SignalStrength"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ChannelWidth"/>
+  </message>
+  <message name="getSpecificAssociatedDeviceInfoRequest">
+    <part type="xsd:string" name="NewAssociatedDeviceMACAddress"/>
+  </message>
+  <message name="getSpecificAssociatedDeviceInfoResponse">
+    <part type="xsd:string" name="NewAssociatedDeviceIPAddress"/>
+    <part type="xsd:boolean" name="NewAssociatedDeviceAuthState"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_Speed"/>
+    <part type="xsd:unsignedByte" name="NewX_AVM-DE_SignalStrength"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ChannelWidth"/>
+  </message>
+  <message name="getSpecificAssociatedDeviceInfoByIpRequest">
+    <part type="xsd:string" name="NewAssociatedDeviceIPAddress"/>
+  </message>
+  <message name="getSpecificAssociatedDeviceInfoByIpResponse">
+    <part type="xsd:string" name="NewAssociatedDeviceMACAddress"/>
+    <part type="xsd:boolean" name="NewAssociatedDeviceAuthState"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_Speed"/>
+    <part type="xsd:unsignedByte" name="NewX_AVM-DE_SignalStrength"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ChannelWidth"/>
+  </message>
+  <message name="getWLANDeviceListPathResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_WLANDeviceListPath"/>
+  </message>
+  <message name="setStickSurfEnableRequest">
+    <part type="xsd:boolean" name="NewStickSurfEnable"/>
+  </message>
+  <message name="getIPTVOptimizedResponse">
+    <part type="xsd:boolean" name="NewX_AVM-DE_IPTVoptimize"/>
+  </message>
+  <message name="setIPTVOptimizedRequest">
+    <part type="xsd:boolean" name="NewX_AVM-DE_IPTVoptimize"/>
+  </message>
+  <message name="getNightControlResponse">
+    <part type="xsd:string" name="NewNightControl"/>
+    <part type="xsd:boolean" name="NewNightTimeControlNoForcedOff"/>
+  </message>
+  <message name="getWLANHybridModeResponse">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewBeaconType"/>
+    <part type="xsd:string" name="NewKeyPassphrase"/>
+    <part type="xsd:string" name="NewSSID"/>
+    <part type="xsd:string" name="NewBSSID"/>
+    <part type="xsd:string" name="NewTrafficMode"/>
+    <part type="xsd:boolean" name="NewManualSpeed"/>
+    <part type="xsd:unsignedInt" name="NewMaxSpeedDS"/>
+    <part type="xsd:unsignedInt" name="NewMaxSpeedUS"/>
+  </message>
+  <message name="setWLANHybridModeRequest">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewBeaconType"/>
+    <part type="xsd:string" name="NewKeyPassphrase"/>
+    <part type="xsd:string" name="NewSSID"/>
+    <part type="xsd:string" name="NewBSSID"/>
+    <part type="xsd:string" name="NewTrafficMode"/>
+    <part type="xsd:boolean" name="NewManualSpeed"/>
+    <part type="xsd:unsignedInt" name="NewMaxSpeedDS"/>
+    <part type="xsd:unsignedInt" name="NewMaxSpeedUS"/>
+  </message>
+  <message name="getWLANExtInfoResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_APEnabled"/>
+    <part type="xsd:string" name="NewX_AVM-DE_APType"/>
+    <part type="xsd:string" name="NewX_AVM-DE_FrequencyBand"/>
+    <part type="xsd:string" name="NewX_AVM-DE_TimeoutActive"/>
+    <part type="xsd:string" name="NewX_AVM-DE_Timeout"/>
+    <part type="xsd:string" name="NewX_AVM-DE_TimeRemain"/>
+    <part type="xsd:string" name="NewX_AVM-DE_NoForcedOff"/>
+    <part type="xsd:string" name="NewX_AVM-DE_UserIsolation"/>
+    <part type="xsd:string" name="NewX_AVM-DE_EncryptionMode"/>
+    <part type="xsd:unsignedInt" name="NewX_AVM-DE_LastChangedStamp"/>
+  </message>
+  <message name="getWPSInfoResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_WPSMode"/>
+    <part type="xsd:string" name="NewX_AVM-DE_WPSStatus"/>
+  </message>
+  <message name="setWPSConfigRequest">
+    <part type="xsd:string" name="NewX_AVM-DE_WPSMode"/>
+  </message>
+  <message name="setWPSConfigResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_WPSStatus"/>
+  </message>
+  <message name="setWPSEnableRequest">
+    <part type="xsd:boolean" name="NewX_AVM-DE_WPSEnable"/>
+  </message>
+  <message name="setWLANGlobalEnableRequest">
+    <part type="xsd:boolean" name="NewX_AVM-DE_WLANGlobalEnable"/>
+  </message>
+  <message name="getWLANConnectionInfoResponse">
+    <part type="xsd:string" name="NewAssociatedDeviceMACAddress"/>
+    <part type="xsd:string" name="NewSSID"/>
+    <part type="xsd:string" name="NewBSSID"/>
+    <part type="xsd:string" name="NewBeaconType"/>
+    <part type="xsd:unsignedByte" name="NewChannel"/>
+    <part type="xsd:string" name="NewStandard"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_AutoChannelEnabled"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_ChannelWidth"/>
+    <part type="xsd:string" name="NewX_AVM-DE_FrequencyBand"/>
+    <part type="xsd:unsignedByte" name="NewX_AVM-DE_SignalStrength"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_Speed"/>
+    <part type="xsd:unsignedInt" name="NewX_AVM-DE_SpeedRX"/>
+    <part type="xsd:unsignedInt" name="NewX_AVM-DE_SpeedMax"/>
+    <part type="xsd:unsignedInt" name="NewX_AVM-DE_SpeedRXMax"/>
+  </message>
+</definitions>

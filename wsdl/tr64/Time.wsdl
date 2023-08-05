@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="Time">
+    <port binding="Time">
+      <soap:address location="http://fritz.box:49000/upnp/control/time"/>
+    </port>
+  </service>
+  <binding name="Time" type="Time">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:Time:1#GetInfo"/>
+    </operation>
+    <operation name="setNTPServers">
+      <soap:operation soapAction="urn:dslforum-org:service:Time:1#SetNTPServers"/>
+    </operation>
+  </binding>
+  <portType name="Time">
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="setNTPServers">
+      <input message="setNTPServersRequest"/>
+    </operation>
+  </portType>
+  <message name="getInfoResponse">
+    <part type="xsd:string" name="NewNTPServer1"/>
+    <part type="xsd:string" name="NewNTPServer2"/>
+    <part type="xsd:dateTime" name="NewCurrentLocalTime"/>
+    <part type="xsd:string" name="NewLocalTimeZone"/>
+    <part type="xsd:string" name="NewLocalTimeZoneName"/>
+    <part type="xsd:boolean" name="NewDaylightSavingsUsed"/>
+    <part type="xsd:dateTime" name="NewDaylightSavingsStart"/>
+    <part type="xsd:dateTime" name="NewDaylightSavingsEnd"/>
+  </message>
+  <message name="setNTPServersRequest">
+    <part type="xsd:string" name="NewNTPServer1"/>
+    <part type="xsd:string" name="NewNTPServer2"/>
+  </message>
+</definitions>

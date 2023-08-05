@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="UserInterface">
+    <port binding="UserInterface">
+      <soap:address location="http://fritz.box:49000/upnp/control/userif"/>
+    </port>
+  </service>
+  <binding name="UserInterface" type="UserInterface">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#GetInfo"/>
+    </operation>
+    <operation name="checkUpdate">
+      <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_CheckUpdate"/>
+    </operation>
+    <operation name="doUpdate">
+      <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_DoUpdate"/>
+    </operation>
+    <operation name="doPrepareCGI">
+      <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_DoPrepareCGI"/>
+    </operation>
+    <operation name="doManualUpdate">
+      <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_DoManualUpdate"/>
+    </operation>
+    <operation name="getInternationalConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_GetInternationalConfig"/>
+    </operation>
+    <operation name="setInternationalConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_SetInternationalConfig"/>
+    </operation>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_GetInfo"/>
+    </operation>
+    <operation name="setConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:UserInterface:1#X_AVM-DE_SetConfig"/>
+    </operation>
+  </binding>
+  <portType name="UserInterface">
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="checkUpdate"/>
+    <operation name="doUpdate">
+      <output message="doUpdateResponse"/>
+    </operation>
+    <operation name="doPrepareCGI">
+      <output message="doPrepareCGIResponse"/>
+    </operation>
+    <operation name="doManualUpdate">
+      <input message="doManualUpdateRequest"/>
+    </operation>
+    <operation name="getInternationalConfig">
+      <output message="getInternationalConfigResponse"/>
+    </operation>
+    <operation name="setInternationalConfig">
+      <input message="setInternationalConfigRequest"/>
+    </operation>
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="setConfig">
+      <input message="setConfigRequest"/>
+    </operation>
+  </portType>
+  <message name="getInfoResponse">
+    <part type="xsd:boolean" name="NewUpgradeAvailable"/>
+    <part type="xsd:boolean" name="NewPasswordRequired"/>
+    <part type="xsd:boolean" name="NewPasswordUserSelectable"/>
+    <part type="xsd:dateTime" name="NewWarrantyDate"/>
+    <part type="xsd:string" name="NewX_AVM-DE_Version"/>
+    <part type="xsd:string" name="NewX_AVM-DE_DownloadURL"/>
+    <part type="xsd:string" name="NewX_AVM-DE_InfoURL"/>
+    <part type="xsd:string" name="NewX_AVM-DE_UpdateState"/>
+    <part type="xsd:string" name="NewX_AVM-DE_BuildType"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_SetupAssistantStatus"/>
+  </message>
+  <message name="doUpdateResponse">
+    <part type="xsd:boolean" name="NewUpgradeAvailable"/>
+    <part type="xsd:string" name="NewX_AVM-DE_UpdateState"/>
+  </message>
+  <message name="doPrepareCGIResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_CGI"/>
+    <part type="xsd:string" name="NewX_AVM-DE_SessionID"/>
+  </message>
+  <message name="doManualUpdateRequest">
+    <part type="xsd:boolean" name="NewX_AVM-DE_AllowDowngrade"/>
+    <part type="xsd:string" name="NewX_AVM-DE_DownloadURL"/>
+  </message>
+  <message name="getInternationalConfigResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_Language"/>
+    <part type="xsd:string" name="NewX_AVM-DE_Country"/>
+    <part type="xsd:string" name="NewX_AVM-DE_Annex"/>
+    <part type="xsd:string" name="NewX_AVM-DE_LanguageList"/>
+    <part type="xsd:string" name="NewX_AVM-DE_CountryList"/>
+    <part type="xsd:string" name="NewX_AVM-DE_AnnexList"/>
+  </message>
+  <message name="setInternationalConfigRequest">
+    <part type="xsd:string" name="NewX_AVM-DE_Language"/>
+    <part type="xsd:string" name="NewX_AVM-DE_Country"/>
+    <part type="xsd:string" name="NewX_AVM-DE_Annex"/>
+  </message>
+  <message name="getInfoResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_AutoUpdateMode"/>
+    <part type="xsd:dateTime" name="NewX_AVM-DE_UpdateTime"/>
+    <part type="xsd:string" name="NewX_AVM-DE_LastFwVersion"/>
+    <part type="xsd:string" name="NewX_AVM-DE_LastInfoUrl"/>
+    <part type="xsd:string" name="NewX_AVM-DE_CurrentFwVersion"/>
+    <part type="xsd:string" name="NewX_AVM-DE_UpdateSuccessful"/>
+  </message>
+  <message name="setConfigRequest">
+    <part type="xsd:string" name="NewX_AVM-DE_AutoUpdateMode"/>
+  </message>
+</definitions>

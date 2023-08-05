@@ -4,11 +4,11 @@ Für die Beispiele werden die [SOAP-Klasse](http://php.net/soap) von PHP verwend
 
 ## Informationen zur Fritzbox auslesen
 
-    $client = new SoapClient('wsdl/DeviceInfo1.wsdl', [
+    $client = new SoapClient('wsdl/tr64/DeviceInfo.wsdl', [
         'login' => FRITZBOX_USERNAME,
         'password' => FRITZBOX_PASSWORD
     ]);
-    var_dump($client->GetInfo());
+    var_dump($client->getInfo());
 
     array(12) {
       'NewManufacturerName' =>
@@ -39,12 +39,12 @@ Für die Beispiele werden die [SOAP-Klasse](http://php.net/soap) von PHP verwend
 
 ## Status und Statistiken
 
-    $client = new SoapClient('wsdl/LANEthernetInterfaceConfig1.wsdl', [
+    $client = new SoapClient('wsdl/tr64/LANEthernetInterfaceConfig.wsdl', [
         'login' => FRITZBOX_USERNAME,
         'password' => FRITZBOX_PASSWORD
     ]);
 
-    var_dump($client->GetInfo());
+    var_dump($client->getInfo());
     array(5) {
       'NewEnable' =>
       bool(true)
@@ -58,7 +58,7 @@ Für die Beispiele werden die [SOAP-Klasse](http://php.net/soap) von PHP verwend
       string(4) "Auto"
     }
 
-    var_dump($client->GetStatistics());
+    var_dump($client->getStatistics());
     array(4) {
       'NewBytesSent' =>
       int(513252582)
@@ -72,11 +72,11 @@ Für die Beispiele werden die [SOAP-Klasse](http://php.net/soap) von PHP verwend
 
 ## Linkgeschwindigkeit
 
-    $client = new SoapClient('wsdl/WANCommonInterfaceConfig1.wsdl', [
+    $client = new SoapClient('wsdl/idg2/WANCommonInterfaceConfig.wsdl', [
         'login' => FRITZBOX_USERNAME,
         'password' => FRITZBOX_PASSWORD
     ]);
-    var_dump($client->GetCommonLinkProperties());
+    var_dump($client->getCommonLinkProperties());
 
     array(4) {
       'NewWANAccessType' =>
@@ -91,14 +91,14 @@ Für die Beispiele werden die [SOAP-Klasse](http://php.net/soap) von PHP verwend
 
 ## Hosts auslesen
 
-    $client = new SoapClient('wsdl/Hosts1.wsdl', [
+    $client = new SoapClient('wsdl/tr64/Hosts.wsdl', [
         'login' => FRITZBOX_USERNAME,
         'password' => FRITZBOX_PASSWORD
     ]);
 
-    $hostCount = $client->GetHostNumberOfEntries();
+    $hostCount = $client->getHostNumberOfEntries();
     for($i = 0; $i < $hostCount; $i++) {
-        var_dump($client->GetGenericHostEntry($i));
+        var_dump($client->getGenericHostEntry($i));
     }
 
     array(7) {

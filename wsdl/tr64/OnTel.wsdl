@@ -1,0 +1,376 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="X_AVM-DE_OnTel">
+    <port binding="X_AVM-DE_OnTel">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_contact"/>
+    </port>
+  </service>
+  <binding name="X_AVM-DE_OnTel" type="X_AVM-DE_OnTel">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetInfo"/>
+    </operation>
+    <operation name="setEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#SetEnable"/>
+    </operation>
+    <operation name="setConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#SetConfig"/>
+    </operation>
+    <operation name="getInfoByIndex">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetInfoByIndex"/>
+    </operation>
+    <operation name="setEnableByIndex">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#SetEnableByIndex"/>
+    </operation>
+    <operation name="setConfigByIndex">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#SetConfigByIndex"/>
+    </operation>
+    <operation name="deleteByIndex">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#DeleteByIndex"/>
+    </operation>
+    <operation name="getNumberOfEntries">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetNumberOfEntries"/>
+    </operation>
+    <operation name="getCallList">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetCallList"/>
+    </operation>
+    <operation name="getPhonebookList">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetPhonebookList"/>
+    </operation>
+    <operation name="getPhonebook">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetPhonebook"/>
+    </operation>
+    <operation name="addPhonebook">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#AddPhonebook"/>
+    </operation>
+    <operation name="deletePhonebook">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#DeletePhonebook"/>
+    </operation>
+    <operation name="getPhonebookEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetPhonebookEntry"/>
+    </operation>
+    <operation name="getPhonebookEntryUID">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetPhonebookEntryUID"/>
+    </operation>
+    <operation name="setPhonebookEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#SetPhonebookEntry"/>
+    </operation>
+    <operation name="setPhonebookEntryUID">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#SetPhonebookEntryUID"/>
+    </operation>
+    <operation name="deletePhonebookEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#DeletePhonebookEntry"/>
+    </operation>
+    <operation name="deletePhonebookEntryUID">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#DeletePhonebookEntryUID"/>
+    </operation>
+    <operation name="getCallBarringEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetCallBarringEntry"/>
+    </operation>
+    <operation name="getCallBarringEntryByNum">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetCallBarringEntryByNum"/>
+    </operation>
+    <operation name="getCallBarringList">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetCallBarringList"/>
+    </operation>
+    <operation name="setCallBarringEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#SetCallBarringEntry"/>
+    </operation>
+    <operation name="deleteCallBarringEntryUID">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#DeleteCallBarringEntryUID"/>
+    </operation>
+    <operation name="getDECTHandsetList">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetDECTHandsetList"/>
+    </operation>
+    <operation name="getDECTHandsetInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetDECTHandsetInfo"/>
+    </operation>
+    <operation name="setDECTHandsetPhonebook">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#SetDECTHandsetPhonebook"/>
+    </operation>
+    <operation name="getNumberOfDeflections">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetNumberOfDeflections"/>
+    </operation>
+    <operation name="getDeflection">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetDeflection"/>
+    </operation>
+    <operation name="getDeflections">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#GetDeflections"/>
+    </operation>
+    <operation name="setDeflectionEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_OnTel:1#SetDeflectionEnable"/>
+    </operation>
+  </binding>
+  <portType name="X_AVM-DE_OnTel">
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="setEnable">
+      <input message="setEnableRequest"/>
+    </operation>
+    <operation name="setConfig">
+      <input message="setConfigRequest"/>
+    </operation>
+    <operation name="getInfoByIndex">
+      <input message="getInfoByIndexRequest"/>
+      <output message="getInfoByIndexResponse"/>
+    </operation>
+    <operation name="setEnableByIndex">
+      <input message="setEnableByIndexRequest"/>
+    </operation>
+    <operation name="setConfigByIndex">
+      <input message="setConfigByIndexRequest"/>
+    </operation>
+    <operation name="deleteByIndex">
+      <input message="deleteByIndexRequest"/>
+    </operation>
+    <operation name="getNumberOfEntries">
+      <output message="getNumberOfEntriesResponse"/>
+    </operation>
+    <operation name="getCallList">
+      <output message="getCallListResponse"/>
+    </operation>
+    <operation name="getPhonebookList">
+      <output message="getPhonebookListResponse"/>
+    </operation>
+    <operation name="getPhonebook">
+      <input message="getPhonebookRequest"/>
+      <output message="getPhonebookResponse"/>
+    </operation>
+    <operation name="addPhonebook">
+      <input message="addPhonebookRequest"/>
+    </operation>
+    <operation name="deletePhonebook">
+      <input message="deletePhonebookRequest"/>
+    </operation>
+    <operation name="getPhonebookEntry">
+      <input message="getPhonebookEntryRequest"/>
+      <output message="getPhonebookEntryResponse"/>
+    </operation>
+    <operation name="getPhonebookEntryUID">
+      <input message="getPhonebookEntryUIDRequest"/>
+      <output message="getPhonebookEntryUIDResponse"/>
+    </operation>
+    <operation name="setPhonebookEntry">
+      <input message="setPhonebookEntryRequest"/>
+    </operation>
+    <operation name="setPhonebookEntryUID">
+      <input message="setPhonebookEntryUIDRequest"/>
+      <output message="setPhonebookEntryUIDResponse"/>
+    </operation>
+    <operation name="deletePhonebookEntry">
+      <input message="deletePhonebookEntryRequest"/>
+    </operation>
+    <operation name="deletePhonebookEntryUID">
+      <input message="deletePhonebookEntryUIDRequest"/>
+    </operation>
+    <operation name="getCallBarringEntry">
+      <input message="getCallBarringEntryRequest"/>
+      <output message="getCallBarringEntryResponse"/>
+    </operation>
+    <operation name="getCallBarringEntryByNum">
+      <input message="getCallBarringEntryByNumRequest"/>
+      <output message="getCallBarringEntryByNumResponse"/>
+    </operation>
+    <operation name="getCallBarringList">
+      <output message="getCallBarringListResponse"/>
+    </operation>
+    <operation name="setCallBarringEntry">
+      <input message="setCallBarringEntryRequest"/>
+      <output message="setCallBarringEntryResponse"/>
+    </operation>
+    <operation name="deleteCallBarringEntryUID">
+      <input message="deleteCallBarringEntryUIDRequest"/>
+    </operation>
+    <operation name="getDECTHandsetList">
+      <output message="getDECTHandsetListResponse"/>
+    </operation>
+    <operation name="getDECTHandsetInfo">
+      <input message="getDECTHandsetInfoRequest"/>
+      <output message="getDECTHandsetInfoResponse"/>
+    </operation>
+    <operation name="setDECTHandsetPhonebook">
+      <input message="setDECTHandsetPhonebookRequest"/>
+    </operation>
+    <operation name="getNumberOfDeflections">
+      <output message="getNumberOfDeflectionsResponse"/>
+    </operation>
+    <operation name="getDeflection">
+      <input message="getDeflectionRequest"/>
+      <output message="getDeflectionResponse"/>
+    </operation>
+    <operation name="getDeflections">
+      <output message="getDeflectionsResponse"/>
+    </operation>
+    <operation name="setDeflectionEnable">
+      <input message="setDeflectionEnableRequest"/>
+    </operation>
+  </portType>
+  <message name="getInfoResponse">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewStatus"/>
+    <part type="xsd:string" name="NewLastConnect"/>
+    <part type="xsd:string" name="NewUrl"/>
+    <part type="xsd:string" name="NewServiceId"/>
+    <part type="xsd:string" name="NewUsername"/>
+    <part type="xsd:string" name="NewName"/>
+  </message>
+  <message name="setEnableRequest">
+    <part type="xsd:boolean" name="NewEnable"/>
+  </message>
+  <message name="setConfigRequest">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewUrl"/>
+    <part type="xsd:string" name="NewServiceId"/>
+    <part type="xsd:string" name="NewUsername"/>
+    <part type="xsd:string" name="NewPassword"/>
+    <part type="xsd:string" name="NewName"/>
+  </message>
+  <message name="getInfoByIndexRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+  </message>
+  <message name="getInfoByIndexResponse">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewStatus"/>
+    <part type="xsd:string" name="NewLastConnect"/>
+    <part type="xsd:string" name="NewUrl"/>
+    <part type="xsd:string" name="NewServiceId"/>
+    <part type="xsd:string" name="NewUsername"/>
+    <part type="xsd:string" name="NewName"/>
+  </message>
+  <message name="setEnableByIndexRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+    <part type="xsd:boolean" name="NewEnable"/>
+  </message>
+  <message name="setConfigByIndexRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewUrl"/>
+    <part type="xsd:string" name="NewServiceId"/>
+    <part type="xsd:string" name="NewUsername"/>
+    <part type="xsd:string" name="NewPassword"/>
+    <part type="xsd:string" name="NewName"/>
+  </message>
+  <message name="deleteByIndexRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+  </message>
+  <message name="getNumberOfEntriesResponse">
+    <part type="xsd:unsignedShort" name="NewOnTelNumberOfEntries"/>
+  </message>
+  <message name="getCallListResponse">
+    <part type="xsd:string" name="NewCallListURL"/>
+  </message>
+  <message name="getPhonebookListResponse">
+    <part type="xsd:string" name="NewPhonebookList"/>
+  </message>
+  <message name="getPhonebookRequest">
+    <part type="xsd:unsignedShort" name="NewPhonebookID"/>
+  </message>
+  <message name="getPhonebookResponse">
+    <part type="xsd:string" name="NewPhonebookName"/>
+    <part type="xsd:string" name="NewPhonebookExtraID"/>
+    <part type="xsd:string" name="NewPhonebookURL"/>
+  </message>
+  <message name="addPhonebookRequest">
+    <part type="xsd:string" name="NewPhonebookExtraID"/>
+    <part type="xsd:string" name="NewPhonebookName"/>
+  </message>
+  <message name="deletePhonebookRequest">
+    <part type="xsd:unsignedShort" name="NewPhonebookID"/>
+    <part type="xsd:string" name="NewPhonebookExtraID"/>
+  </message>
+  <message name="getPhonebookEntryRequest">
+    <part type="xsd:unsignedShort" name="NewPhonebookID"/>
+    <part type="xsd:unsignedInt" name="NewPhonebookEntryID"/>
+  </message>
+  <message name="getPhonebookEntryResponse">
+    <part type="xsd:string" name="NewPhonebookEntryData"/>
+  </message>
+  <message name="getPhonebookEntryUIDRequest">
+    <part type="xsd:unsignedShort" name="NewPhonebookID"/>
+    <part type="xsd:unsignedInt" name="NewPhonebookEntryUniqueID"/>
+  </message>
+  <message name="getPhonebookEntryUIDResponse">
+    <part type="xsd:string" name="NewPhonebookEntryData"/>
+  </message>
+  <message name="setPhonebookEntryRequest">
+    <part type="xsd:unsignedShort" name="NewPhonebookID"/>
+    <part type="xsd:unsignedInt" name="NewPhonebookEntryID"/>
+    <part type="xsd:string" name="NewPhonebookEntryData"/>
+  </message>
+  <message name="setPhonebookEntryUIDRequest">
+    <part type="xsd:unsignedShort" name="NewPhonebookID"/>
+    <part type="xsd:string" name="NewPhonebookEntryData"/>
+  </message>
+  <message name="setPhonebookEntryUIDResponse">
+    <part type="xsd:unsignedInt" name="NewPhonebookEntryUniqueID"/>
+  </message>
+  <message name="deletePhonebookEntryRequest">
+    <part type="xsd:unsignedShort" name="NewPhonebookID"/>
+    <part type="xsd:unsignedInt" name="NewPhonebookEntryID"/>
+  </message>
+  <message name="deletePhonebookEntryUIDRequest">
+    <part type="xsd:unsignedShort" name="NewPhonebookID"/>
+    <part type="xsd:unsignedInt" name="NewPhonebookEntryUniqueID"/>
+  </message>
+  <message name="getCallBarringEntryRequest">
+    <part type="xsd:unsignedInt" name="NewPhonebookEntryID"/>
+  </message>
+  <message name="getCallBarringEntryResponse">
+    <part type="xsd:string" name="NewPhonebookEntryData"/>
+  </message>
+  <message name="getCallBarringEntryByNumRequest">
+    <part type="xsd:string" name="NewNumber"/>
+  </message>
+  <message name="getCallBarringEntryByNumResponse">
+    <part type="xsd:string" name="NewPhonebookEntryData"/>
+  </message>
+  <message name="getCallBarringListResponse">
+    <part type="xsd:string" name="NewPhonebookURL"/>
+  </message>
+  <message name="setCallBarringEntryRequest">
+    <part type="xsd:string" name="NewPhonebookEntryData"/>
+  </message>
+  <message name="setCallBarringEntryResponse">
+    <part type="xsd:unsignedInt" name="NewPhonebookEntryUniqueID"/>
+  </message>
+  <message name="deleteCallBarringEntryUIDRequest">
+    <part type="xsd:unsignedInt" name="NewPhonebookEntryUniqueID"/>
+  </message>
+  <message name="getDECTHandsetListResponse">
+    <part type="xsd:string" name="NewDectIDList"/>
+  </message>
+  <message name="getDECTHandsetInfoRequest">
+    <part type="xsd:unsignedShort" name="NewDectID"/>
+  </message>
+  <message name="getDECTHandsetInfoResponse">
+    <part type="xsd:string" name="NewHandsetName"/>
+    <part type="xsd:unsignedShort" name="NewPhonebookID"/>
+  </message>
+  <message name="setDECTHandsetPhonebookRequest">
+    <part type="xsd:unsignedShort" name="NewDectID"/>
+    <part type="xsd:unsignedShort" name="NewPhonebookID"/>
+  </message>
+  <message name="getNumberOfDeflectionsResponse">
+    <part type="xsd:unsignedShort" name="NewNumberOfDeflections"/>
+  </message>
+  <message name="getDeflectionRequest">
+    <part type="xsd:unsignedShort" name="NewDeflectionId"/>
+  </message>
+  <message name="getDeflectionResponse">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewType"/>
+    <part type="xsd:string" name="NewNumber"/>
+    <part type="xsd:string" name="NewDeflectionToNumber"/>
+    <part type="xsd:string" name="NewMode"/>
+    <part type="xsd:string" name="NewOutgoing"/>
+    <part type="xsd:unsignedShort" name="NewPhonebookID"/>
+  </message>
+  <message name="getDeflectionsResponse">
+    <part type="xsd:string" name="NewDeflectionList"/>
+  </message>
+  <message name="setDeflectionEnableRequest">
+    <part type="xsd:unsignedShort" name="NewDeflectionId"/>
+    <part type="xsd:boolean" name="NewEnable"/>
+  </message>
+</definitions>

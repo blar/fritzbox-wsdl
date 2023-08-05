@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="ManagementServer">
+    <port binding="ManagementServer">
+      <soap:address location="http://fritz.box:49000/upnp/control/mgmsrv"/>
+    </port>
+  </service>
+  <binding name="ManagementServer" type="ManagementServer">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#GetInfo"/>
+    </operation>
+    <operation name="setManagementServerURL">
+      <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#SetManagementServerURL"/>
+    </operation>
+    <operation name="setManagementServerUsername">
+      <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#SetManagementServerUsername"/>
+    </operation>
+    <operation name="setManagementServerPassword">
+      <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#SetManagementServerPassword"/>
+    </operation>
+    <operation name="setPeriodicInform">
+      <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#SetPeriodicInform"/>
+    </operation>
+    <operation name="setConnectionRequestAuthentication">
+      <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#SetConnectionRequestAuthentication"/>
+    </operation>
+    <operation name="setUpgradeManagement">
+      <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#SetUpgradeManagement"/>
+    </operation>
+    <operation name="x_SetTR069Enable">
+      <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#X_SetTR069Enable"/>
+    </operation>
+    <operation name="getTR069FirmwareDownloadEnabled">
+      <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#X_AVM-DE_GetTR069FirmwareDownloadEnabled"/>
+    </operation>
+    <operation name="setTR069FirmwareDownloadEnabled">
+      <soap:operation soapAction="urn:dslforum-org:service:ManagementServer:1#X_AVM-DE_SetTR069FirmwareDownloadEnabled"/>
+    </operation>
+  </binding>
+  <portType name="ManagementServer">
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="setManagementServerURL">
+      <input message="setManagementServerURLRequest"/>
+    </operation>
+    <operation name="setManagementServerUsername">
+      <input message="setManagementServerUsernameRequest"/>
+    </operation>
+    <operation name="setManagementServerPassword">
+      <input message="setManagementServerPasswordRequest"/>
+    </operation>
+    <operation name="setPeriodicInform">
+      <input message="setPeriodicInformRequest"/>
+    </operation>
+    <operation name="setConnectionRequestAuthentication">
+      <input message="setConnectionRequestAuthenticationRequest"/>
+    </operation>
+    <operation name="setUpgradeManagement">
+      <input message="setUpgradeManagementRequest"/>
+    </operation>
+    <operation name="x_SetTR069Enable">
+      <input message="x_SetTR069EnableRequest"/>
+    </operation>
+    <operation name="getTR069FirmwareDownloadEnabled">
+      <output message="getTR069FirmwareDownloadEnabledResponse"/>
+    </operation>
+    <operation name="setTR069FirmwareDownloadEnabled">
+      <input message="setTR069FirmwareDownloadEnabledRequest"/>
+    </operation>
+  </portType>
+  <message name="getInfoResponse">
+    <part type="xsd:string" name="NewURL"/>
+    <part type="xsd:string" name="NewUsername"/>
+    <part type="xsd:boolean" name="NewPeriodicInformEnable"/>
+    <part type="xsd:unsignedInt" name="NewPeriodicInformInterval"/>
+    <part type="xsd:dateTime" name="NewPeriodicInformTime"/>
+    <part type="xsd:string" name="NewParameterKey"/>
+    <part type="xsd:string" name="NewParameterHash"/>
+    <part type="xsd:string" name="NewConnectionRequestURL"/>
+    <part type="xsd:string" name="NewConnectionRequestUsername"/>
+    <part type="xsd:boolean" name="NewUpgradesManaged"/>
+  </message>
+  <message name="setManagementServerURLRequest">
+    <part type="xsd:string" name="NewURL"/>
+  </message>
+  <message name="setManagementServerUsernameRequest">
+    <part type="xsd:string" name="NewUsername"/>
+  </message>
+  <message name="setManagementServerPasswordRequest">
+    <part type="xsd:string" name="NewPassword"/>
+  </message>
+  <message name="setPeriodicInformRequest">
+    <part type="xsd:boolean" name="NewPeriodicInformEnable"/>
+    <part type="xsd:unsignedInt" name="NewPeriodicInformInterval"/>
+    <part type="xsd:dateTime" name="NewPeriodicInformTime"/>
+  </message>
+  <message name="setConnectionRequestAuthenticationRequest">
+    <part type="xsd:string" name="NewConnectionRequestUsername"/>
+    <part type="xsd:string" name="NewConnectionRequestPassword"/>
+  </message>
+  <message name="setUpgradeManagementRequest">
+    <part type="xsd:boolean" name="NewUpgradesManaged"/>
+  </message>
+  <message name="x_SetTR069EnableRequest">
+    <part type="xsd:boolean" name="NewTR069Enabled"/>
+  </message>
+  <message name="getTR069FirmwareDownloadEnabledResponse">
+    <part type="xsd:boolean" name="NewTR069FirmwareDownloadEnabled"/>
+  </message>
+  <message name="setTR069FirmwareDownloadEnabledRequest">
+    <part type="xsd:boolean" name="NewTR069FirmwareDownloadEnabled"/>
+  </message>
+</definitions>

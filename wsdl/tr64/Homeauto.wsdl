@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="X_AVM-DE_Homeauto">
+    <port binding="X_AVM-DE_Homeauto">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_homeauto"/>
+    </port>
+  </service>
+  <binding name="X_AVM-DE_Homeauto" type="X_AVM-DE_Homeauto">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Homeauto:1#GetInfo"/>
+    </operation>
+    <operation name="getGenericDeviceInfos">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Homeauto:1#GetGenericDeviceInfos"/>
+    </operation>
+    <operation name="getSpecificDeviceInfos">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Homeauto:1#GetSpecificDeviceInfos"/>
+    </operation>
+    <operation name="setDeviceName">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Homeauto:1#SetDeviceName"/>
+    </operation>
+    <operation name="setSwitch">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Homeauto:1#SetSwitch"/>
+    </operation>
+  </binding>
+  <portType name="X_AVM-DE_Homeauto">
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="getGenericDeviceInfos">
+      <input message="getGenericDeviceInfosRequest"/>
+      <output message="getGenericDeviceInfosResponse"/>
+    </operation>
+    <operation name="getSpecificDeviceInfos">
+      <input message="getSpecificDeviceInfosRequest"/>
+      <output message="getSpecificDeviceInfosResponse"/>
+    </operation>
+    <operation name="setDeviceName">
+      <input message="setDeviceNameRequest"/>
+    </operation>
+    <operation name="setSwitch">
+      <input message="setSwitchRequest"/>
+    </operation>
+  </portType>
+  <message name="getInfoResponse">
+    <part type="xsd:string" name="NewAllowedCharsAIN"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsAIN"/>
+    <part type="xsd:unsignedShort" name="NewMinCharsAIN"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsDeviceName"/>
+    <part type="xsd:unsignedShort" name="NewMinCharsDeviceName"/>
+  </message>
+  <message name="getGenericDeviceInfosRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+  </message>
+  <message name="getGenericDeviceInfosResponse">
+    <part type="xsd:string" name="NewAIN"/>
+    <part type="xsd:unsignedShort" name="NewDeviceId"/>
+    <part type="xsd:unsignedShort" name="NewFunctionBitMask"/>
+    <part type="xsd:string" name="NewFirmwareVersion"/>
+    <part type="xsd:string" name="NewManufacturer"/>
+    <part type="xsd:string" name="NewProductName"/>
+    <part type="xsd:string" name="NewDeviceName"/>
+    <part type="xsd:string" name="NewPresent"/>
+    <part type="xsd:string" name="NewMultimeterIsEnabled"/>
+    <part type="xsd:string" name="NewMultimeterIsValid"/>
+    <part type="xsd:unsignedInt" name="NewMultimeterPower"/>
+    <part type="xsd:unsignedInt" name="NewMultimeterEnergy"/>
+    <part type="xsd:string" name="NewTemperatureIsEnabled"/>
+    <part type="xsd:string" name="NewTemperatureIsValid"/>
+    <part type="xsd:int" name="NewTemperatureCelsius"/>
+    <part type="xsd:int" name="NewTemperatureOffset"/>
+    <part type="xsd:string" name="NewSwitchIsEnabled"/>
+    <part type="xsd:string" name="NewSwitchIsValid"/>
+    <part type="xsd:string" name="NewSwitchState"/>
+    <part type="xsd:string" name="NewSwitchMode"/>
+    <part type="xsd:boolean" name="NewSwitchLock"/>
+    <part type="xsd:string" name="NewHkrIsEnabled"/>
+    <part type="xsd:string" name="NewHkrIsValid"/>
+    <part type="xsd:int" name="NewHkrIsTemperature"/>
+    <part type="xsd:string" name="NewHkrSetVentilStatus"/>
+    <part type="xsd:int" name="NewHkrSetTemperature"/>
+    <part type="xsd:string" name="NewHkrReduceVentilStatus"/>
+    <part type="xsd:int" name="NewHkrReduceTemperature"/>
+    <part type="xsd:string" name="NewHkrComfortVentilStatus"/>
+    <part type="xsd:int" name="NewHkrComfortTemperature"/>
+  </message>
+  <message name="getSpecificDeviceInfosRequest">
+    <part type="xsd:string" name="NewAIN"/>
+  </message>
+  <message name="getSpecificDeviceInfosResponse">
+    <part type="xsd:unsignedShort" name="NewDeviceId"/>
+    <part type="xsd:unsignedShort" name="NewFunctionBitMask"/>
+    <part type="xsd:string" name="NewFirmwareVersion"/>
+    <part type="xsd:string" name="NewManufacturer"/>
+    <part type="xsd:string" name="NewProductName"/>
+    <part type="xsd:string" name="NewDeviceName"/>
+    <part type="xsd:string" name="NewPresent"/>
+    <part type="xsd:string" name="NewMultimeterIsEnabled"/>
+    <part type="xsd:string" name="NewMultimeterIsValid"/>
+    <part type="xsd:unsignedInt" name="NewMultimeterPower"/>
+    <part type="xsd:unsignedInt" name="NewMultimeterEnergy"/>
+    <part type="xsd:string" name="NewTemperatureIsEnabled"/>
+    <part type="xsd:string" name="NewTemperatureIsValid"/>
+    <part type="xsd:int" name="NewTemperatureCelsius"/>
+    <part type="xsd:int" name="NewTemperatureOffset"/>
+    <part type="xsd:string" name="NewSwitchIsEnabled"/>
+    <part type="xsd:string" name="NewSwitchIsValid"/>
+    <part type="xsd:string" name="NewSwitchState"/>
+    <part type="xsd:string" name="NewSwitchMode"/>
+    <part type="xsd:boolean" name="NewSwitchLock"/>
+    <part type="xsd:string" name="NewHkrIsEnabled"/>
+    <part type="xsd:string" name="NewHkrIsValid"/>
+    <part type="xsd:int" name="NewHkrIsTemperature"/>
+    <part type="xsd:string" name="NewHkrSetVentilStatus"/>
+    <part type="xsd:int" name="NewHkrSetTemperature"/>
+    <part type="xsd:string" name="NewHkrReduceVentilStatus"/>
+    <part type="xsd:int" name="NewHkrReduceTemperature"/>
+    <part type="xsd:string" name="NewHkrComfortVentilStatus"/>
+    <part type="xsd:int" name="NewHkrComfortTemperature"/>
+  </message>
+  <message name="setDeviceNameRequest">
+    <part type="xsd:string" name="NewAIN"/>
+    <part type="xsd:string" name="NewDeviceName"/>
+  </message>
+  <message name="setSwitchRequest">
+    <part type="xsd:string" name="NewAIN"/>
+    <part type="xsd:string" name="NewSwitchState"/>
+  </message>
+</definitions>

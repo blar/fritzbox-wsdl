@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="LANHostConfigManagement">
+    <port binding="LANHostConfigManagement">
+      <soap:address location="http://fritz.box:49000/upnp/control/lanhostconfigmgm"/>
+    </port>
+  </service>
+  <binding name="LANHostConfigManagement" type="LANHostConfigManagement">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#GetInfo"/>
+    </operation>
+    <operation name="setDHCPServerEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#SetDHCPServerEnable"/>
+    </operation>
+    <operation name="setIPInterface">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#SetIPInterface"/>
+    </operation>
+    <operation name="getAddressRange">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#GetAddressRange"/>
+    </operation>
+    <operation name="setAddressRange">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#SetAddressRange"/>
+    </operation>
+    <operation name="getIPRoutersList">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#GetIPRoutersList"/>
+    </operation>
+    <operation name="setIPRouter">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#SetIPRouter"/>
+    </operation>
+    <operation name="getSubnetMask">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#GetSubnetMask"/>
+    </operation>
+    <operation name="setSubnetMask">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#SetSubnetMask"/>
+    </operation>
+    <operation name="getDNSServers">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#GetDNSServers"/>
+    </operation>
+    <operation name="getIPInterfaceNumberOfEntries">
+      <soap:operation soapAction="urn:dslforum-org:service:LANHostConfigManagement:1#GetIPInterfaceNumberOfEntries"/>
+    </operation>
+  </binding>
+  <portType name="LANHostConfigManagement">
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="setDHCPServerEnable">
+      <input message="setDHCPServerEnableRequest"/>
+    </operation>
+    <operation name="setIPInterface">
+      <input message="setIPInterfaceRequest"/>
+    </operation>
+    <operation name="getAddressRange">
+      <output message="getAddressRangeResponse"/>
+    </operation>
+    <operation name="setAddressRange">
+      <input message="setAddressRangeRequest"/>
+    </operation>
+    <operation name="getIPRoutersList">
+      <output message="getIPRoutersListResponse"/>
+    </operation>
+    <operation name="setIPRouter">
+      <input message="setIPRouterRequest"/>
+    </operation>
+    <operation name="getSubnetMask">
+      <output message="getSubnetMaskResponse"/>
+    </operation>
+    <operation name="setSubnetMask">
+      <input message="setSubnetMaskRequest"/>
+    </operation>
+    <operation name="getDNSServers">
+      <output message="getDNSServersResponse"/>
+    </operation>
+    <operation name="getIPInterfaceNumberOfEntries">
+      <output message="getIPInterfaceNumberOfEntriesResponse"/>
+    </operation>
+  </portType>
+  <message name="getInfoResponse">
+    <part type="xsd:boolean" name="NewDHCPServerConfigurable"/>
+    <part type="xsd:boolean" name="NewDHCPRelay"/>
+    <part type="xsd:string" name="NewMinAddress"/>
+    <part type="xsd:string" name="NewMaxAddress"/>
+    <part type="xsd:string" name="NewReservedAddresses"/>
+    <part type="xsd:boolean" name="NewDHCPServerEnable"/>
+    <part type="xsd:string" name="NewDNSServers"/>
+    <part type="xsd:string" name="NewDomainName"/>
+    <part type="xsd:string" name="NewIPRouters"/>
+    <part type="xsd:string" name="NewSubnetMask"/>
+  </message>
+  <message name="setDHCPServerEnableRequest">
+    <part type="xsd:boolean" name="NewDHCPServerEnable"/>
+  </message>
+  <message name="setIPInterfaceRequest">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewIPAddress"/>
+    <part type="xsd:string" name="NewSubnetMask"/>
+    <part type="xsd:string" name="NewIPAddressingType"/>
+  </message>
+  <message name="getAddressRangeResponse">
+    <part type="xsd:string" name="NewMinAddress"/>
+    <part type="xsd:string" name="NewMaxAddress"/>
+  </message>
+  <message name="setAddressRangeRequest">
+    <part type="xsd:string" name="NewMinAddress"/>
+    <part type="xsd:string" name="NewMaxAddress"/>
+  </message>
+  <message name="getIPRoutersListResponse">
+    <part type="xsd:string" name="NewIPRouters"/>
+  </message>
+  <message name="setIPRouterRequest">
+    <part type="xsd:string" name="NewIPRouters"/>
+  </message>
+  <message name="getSubnetMaskResponse">
+    <part type="xsd:string" name="NewSubnetMask"/>
+  </message>
+  <message name="setSubnetMaskRequest">
+    <part type="xsd:string" name="NewSubnetMask"/>
+  </message>
+  <message name="getDNSServersResponse">
+    <part type="xsd:string" name="NewDNSServers"/>
+  </message>
+  <message name="getIPInterfaceNumberOfEntriesResponse">
+    <part type="xsd:unsignedShort" name="NewIPInterfaceNumberOfEntries"/>
+  </message>
+</definitions>

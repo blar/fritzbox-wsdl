@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="DeviceConfig">
+    <port binding="DeviceConfig">
+      <soap:address location="http://fritz.box:49000/upnp/control/deviceconfig"/>
+    </port>
+  </service>
+  <binding name="DeviceConfig" type="DeviceConfig">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getPersistentData">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#GetPersistentData"/>
+    </operation>
+    <operation name="setPersistentData">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#SetPersistentData"/>
+    </operation>
+    <operation name="configurationStarted">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#ConfigurationStarted"/>
+    </operation>
+    <operation name="configurationFinished">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#ConfigurationFinished"/>
+    </operation>
+    <operation name="factoryReset">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#FactoryReset"/>
+    </operation>
+    <operation name="reboot">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#Reboot"/>
+    </operation>
+    <operation name="x_GenerateUUID">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#X_GenerateUUID"/>
+    </operation>
+    <operation name="getConfigFile">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#X_AVM-DE_GetConfigFile"/>
+    </operation>
+    <operation name="setConfigFile">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#X_AVM-DE_SetConfigFile"/>
+    </operation>
+    <operation name="createUrlSID">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#X_AVM-DE_CreateUrlSID"/>
+    </operation>
+    <operation name="sendSupportData">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#X_AVM-DE_SendSupportData"/>
+    </operation>
+    <operation name="getSupportDataInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#X_AVM-DE_GetSupportDataInfo"/>
+    </operation>
+    <operation name="getSupportDataEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#X_AVM-DE_GetSupportDataEnable"/>
+    </operation>
+    <operation name="setSupportDataEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:DeviceConfig:1#X_AVM-DE_SetSupportDataEnable"/>
+    </operation>
+  </binding>
+  <portType name="DeviceConfig">
+    <operation name="getPersistentData">
+      <output message="getPersistentDataResponse"/>
+    </operation>
+    <operation name="setPersistentData">
+      <input message="setPersistentDataRequest"/>
+    </operation>
+    <operation name="configurationStarted">
+      <input message="configurationStartedRequest"/>
+    </operation>
+    <operation name="configurationFinished">
+      <output message="configurationFinishedResponse"/>
+    </operation>
+    <operation name="factoryReset"/>
+    <operation name="reboot"/>
+    <operation name="x_GenerateUUID">
+      <output message="x_GenerateUUIDResponse"/>
+    </operation>
+    <operation name="getConfigFile">
+      <input message="getConfigFileRequest"/>
+      <output message="getConfigFileResponse"/>
+    </operation>
+    <operation name="setConfigFile">
+      <input message="setConfigFileRequest"/>
+    </operation>
+    <operation name="createUrlSID">
+      <output message="createUrlSIDResponse"/>
+    </operation>
+    <operation name="sendSupportData">
+      <input message="sendSupportDataRequest"/>
+    </operation>
+    <operation name="getSupportDataInfo">
+      <output message="getSupportDataInfoResponse"/>
+    </operation>
+    <operation name="getSupportDataEnable">
+      <output message="getSupportDataEnableResponse"/>
+    </operation>
+    <operation name="setSupportDataEnable">
+      <input message="setSupportDataEnableRequest"/>
+    </operation>
+  </portType>
+  <message name="getPersistentDataResponse">
+    <part type="xsd:string" name="NewPersistentData"/>
+  </message>
+  <message name="setPersistentDataRequest">
+    <part type="xsd:string" name="NewPersistentData"/>
+  </message>
+  <message name="configurationStartedRequest">
+    <part type="xsd:string" name="NewSessionID"/>
+  </message>
+  <message name="configurationFinishedResponse">
+    <part type="xsd:string" name="NewStatus"/>
+  </message>
+  <message name="x_GenerateUUIDResponse">
+    <part type="xsd:string" name="NewUUID"/>
+  </message>
+  <message name="getConfigFileRequest">
+    <part type="xsd:string" name="NewX_AVM-DE_Password"/>
+  </message>
+  <message name="getConfigFileResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_ConfigFileUrl"/>
+  </message>
+  <message name="setConfigFileRequest">
+    <part type="xsd:string" name="NewX_AVM-DE_Password"/>
+    <part type="xsd:string" name="NewX_AVM-DE_ConfigFileUrl"/>
+  </message>
+  <message name="createUrlSIDResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_UrlSID"/>
+  </message>
+  <message name="sendSupportDataRequest">
+    <part type="xsd:string" name="NewX_AVM-DE_SupportDataMode"/>
+  </message>
+  <message name="getSupportDataInfoResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_SupportDataMode"/>
+    <part type="xsd:string" name="NewX_AVM-DE_SupportDataID"/>
+    <part type="xsd:dateTime" name="NewX_AVM-DE_SupportDataTimestamp"/>
+    <part type="xsd:string" name="NewX_AVM-DE_SupportDataStatus"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_SupportDataEnabled"/>
+  </message>
+  <message name="getSupportDataEnableResponse">
+    <part type="xsd:boolean" name="NewX_AVM-DE_SupportDataEnabled"/>
+  </message>
+  <message name="setSupportDataEnableRequest">
+    <part type="xsd:boolean" name="NewX_AVM-DE_SupportDataEnabled"/>
+  </message>
+</definitions>

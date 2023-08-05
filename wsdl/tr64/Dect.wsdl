@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="X_AVM-DE_Dect">
+    <port binding="X_AVM-DE_Dect">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_dect"/>
+    </port>
+  </service>
+  <binding name="X_AVM-DE_Dect" type="X_AVM-DE_Dect">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getNumberOfDectEntries">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Dect:1#GetNumberOfDectEntries"/>
+    </operation>
+    <operation name="getGenericDectEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Dect:1#GetGenericDectEntry"/>
+    </operation>
+    <operation name="getSpecificDectEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Dect:1#GetSpecificDectEntry"/>
+    </operation>
+    <operation name="dectDoUpdate">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Dect:1#DectDoUpdate"/>
+    </operation>
+    <operation name="getDectListPath">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Dect:1#GetDectListPath"/>
+    </operation>
+  </binding>
+  <portType name="X_AVM-DE_Dect">
+    <operation name="getNumberOfDectEntries">
+      <output message="getNumberOfDectEntriesResponse"/>
+    </operation>
+    <operation name="getGenericDectEntry">
+      <input message="getGenericDectEntryRequest"/>
+      <output message="getGenericDectEntryResponse"/>
+    </operation>
+    <operation name="getSpecificDectEntry">
+      <input message="getSpecificDectEntryRequest"/>
+      <output message="getSpecificDectEntryResponse"/>
+    </operation>
+    <operation name="dectDoUpdate">
+      <input message="dectDoUpdateRequest"/>
+    </operation>
+    <operation name="getDectListPath">
+      <output message="getDectListPathResponse"/>
+    </operation>
+  </portType>
+  <message name="getNumberOfDectEntriesResponse">
+    <part type="xsd:unsignedShort" name="NewNumberOfEntries"/>
+  </message>
+  <message name="getGenericDectEntryRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+  </message>
+  <message name="getGenericDectEntryResponse">
+    <part type="xsd:string" name="NewID"/>
+    <part type="xsd:boolean" name="NewActive"/>
+    <part type="xsd:string" name="NewName"/>
+    <part type="xsd:string" name="NewModel"/>
+    <part type="xsd:boolean" name="NewUpdateAvailable"/>
+    <part type="xsd:string" name="NewUpdateSuccessful"/>
+    <part type="xsd:string" name="NewUpdateInfo"/>
+  </message>
+  <message name="getSpecificDectEntryRequest">
+    <part type="xsd:string" name="NewID"/>
+  </message>
+  <message name="getSpecificDectEntryResponse">
+    <part type="xsd:boolean" name="NewActive"/>
+    <part type="xsd:string" name="NewName"/>
+    <part type="xsd:string" name="NewModel"/>
+    <part type="xsd:boolean" name="NewUpdateAvailable"/>
+    <part type="xsd:string" name="NewUpdateSuccessful"/>
+    <part type="xsd:string" name="NewUpdateInfo"/>
+  </message>
+  <message name="dectDoUpdateRequest">
+    <part type="xsd:string" name="NewID"/>
+  </message>
+  <message name="getDectListPathResponse">
+    <part type="xsd:string" name="NewDectListPath"/>
+  </message>
+</definitions>

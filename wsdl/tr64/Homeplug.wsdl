@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="X_AVM-DE_Homeplug">
+    <port binding="X_AVM-DE_Homeplug">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_homeplug"/>
+    </port>
+  </service>
+  <binding name="X_AVM-DE_Homeplug" type="X_AVM-DE_Homeplug">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getNumberOfDeviceEntries">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Homeplug:1#GetNumberOfDeviceEntries"/>
+    </operation>
+    <operation name="getGenericDeviceEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Homeplug:1#GetGenericDeviceEntry"/>
+    </operation>
+    <operation name="getSpecificDeviceEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Homeplug:1#GetSpecificDeviceEntry"/>
+    </operation>
+    <operation name="deviceDoUpdate">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Homeplug:1#DeviceDoUpdate"/>
+    </operation>
+  </binding>
+  <portType name="X_AVM-DE_Homeplug">
+    <operation name="getNumberOfDeviceEntries">
+      <output message="getNumberOfDeviceEntriesResponse"/>
+    </operation>
+    <operation name="getGenericDeviceEntry">
+      <input message="getGenericDeviceEntryRequest"/>
+      <output message="getGenericDeviceEntryResponse"/>
+    </operation>
+    <operation name="getSpecificDeviceEntry">
+      <input message="getSpecificDeviceEntryRequest"/>
+      <output message="getSpecificDeviceEntryResponse"/>
+    </operation>
+    <operation name="deviceDoUpdate">
+      <input message="deviceDoUpdateRequest"/>
+    </operation>
+  </portType>
+  <message name="getNumberOfDeviceEntriesResponse">
+    <part type="xsd:unsignedShort" name="NewNumberOfEntries"/>
+  </message>
+  <message name="getGenericDeviceEntryRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+  </message>
+  <message name="getGenericDeviceEntryResponse">
+    <part type="xsd:string" name="NewMACAddress"/>
+    <part type="xsd:boolean" name="NewActive"/>
+    <part type="xsd:string" name="NewName"/>
+    <part type="xsd:string" name="NewModel"/>
+    <part type="xsd:boolean" name="NewUpdateAvailable"/>
+    <part type="xsd:string" name="NewUpdateSuccessful"/>
+  </message>
+  <message name="getSpecificDeviceEntryRequest">
+    <part type="xsd:string" name="NewMACAddress"/>
+  </message>
+  <message name="getSpecificDeviceEntryResponse">
+    <part type="xsd:boolean" name="NewActive"/>
+    <part type="xsd:string" name="NewName"/>
+    <part type="xsd:string" name="NewModel"/>
+    <part type="xsd:boolean" name="NewUpdateAvailable"/>
+    <part type="xsd:string" name="NewUpdateSuccessful"/>
+  </message>
+  <message name="deviceDoUpdateRequest">
+    <part type="xsd:string" name="NewMACAddress"/>
+  </message>
+</definitions>

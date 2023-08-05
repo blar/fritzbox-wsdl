@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="WANPPPConnection">
+    <port binding="WANPPPConnection">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanpppconn1"/>
+    </port>
+  </service>
+  <binding name="WANPPPConnection" type="WANPPPConnection">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#GetInfo"/>
+    </operation>
+    <operation name="getConnectionTypeInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#GetConnectionTypeInfo"/>
+    </operation>
+    <operation name="setConnectionType">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#SetConnectionType"/>
+    </operation>
+    <operation name="getStatusInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#GetStatusInfo"/>
+    </operation>
+    <operation name="getUserName">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#GetUserName"/>
+    </operation>
+    <operation name="setUserName">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#SetUserName"/>
+    </operation>
+    <operation name="setPassword">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#SetPassword"/>
+    </operation>
+    <operation name="getNATRSIPStatus">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#GetNATRSIPStatus"/>
+    </operation>
+    <operation name="setConnectionTrigger">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#SetConnectionTrigger"/>
+    </operation>
+    <operation name="forceTermination">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#ForceTermination"/>
+    </operation>
+    <operation name="requestConnection">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#RequestConnection"/>
+    </operation>
+    <operation name="getGenericPortMappingEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#GetGenericPortMappingEntry"/>
+    </operation>
+    <operation name="getSpecificPortMappingEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#GetSpecificPortMappingEntry"/>
+    </operation>
+    <operation name="addPortMapping">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#AddPortMapping"/>
+    </operation>
+    <operation name="deletePortMapping">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#DeletePortMapping"/>
+    </operation>
+    <operation name="getExternalIPAddress">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#GetExternalIPAddress"/>
+    </operation>
+    <operation name="x_GetDNSServers">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#X_GetDNSServers"/>
+    </operation>
+    <operation name="getLinkLayerMaxBitRates">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#GetLinkLayerMaxBitRates"/>
+    </operation>
+    <operation name="getPortMappingNumberOfEntries">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#GetPortMappingNumberOfEntries"/>
+    </operation>
+    <operation name="setRouteProtocolRx">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#SetRouteProtocolRx"/>
+    </operation>
+    <operation name="setIdleDisconnectTime">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#SetIdleDisconnectTime"/>
+    </operation>
+    <operation name="getAutoDisconnectTimeSpan">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#X_AVM-DE_GetAutoDisconnectTimeSpan"/>
+    </operation>
+    <operation name="setAutoDisconnectTimeSpan">
+      <soap:operation soapAction="urn:dslforum-org:service:WANPPPConnection:1#X_AVM-DE_SetAutoDisconnectTimeSpan"/>
+    </operation>
+  </binding>
+  <portType name="WANPPPConnection">
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="getConnectionTypeInfo">
+      <output message="getConnectionTypeInfoResponse"/>
+    </operation>
+    <operation name="setConnectionType">
+      <input message="setConnectionTypeRequest"/>
+    </operation>
+    <operation name="getStatusInfo">
+      <output message="getStatusInfoResponse"/>
+    </operation>
+    <operation name="getUserName">
+      <output message="getUserNameResponse"/>
+    </operation>
+    <operation name="setUserName">
+      <input message="setUserNameRequest"/>
+    </operation>
+    <operation name="setPassword">
+      <input message="setPasswordRequest"/>
+    </operation>
+    <operation name="getNATRSIPStatus">
+      <output message="getNATRSIPStatusResponse"/>
+    </operation>
+    <operation name="setConnectionTrigger">
+      <input message="setConnectionTriggerRequest"/>
+    </operation>
+    <operation name="forceTermination"/>
+    <operation name="requestConnection"/>
+    <operation name="getGenericPortMappingEntry">
+      <input message="getGenericPortMappingEntryRequest"/>
+      <output message="getGenericPortMappingEntryResponse"/>
+    </operation>
+    <operation name="getSpecificPortMappingEntry">
+      <input message="getSpecificPortMappingEntryRequest"/>
+      <output message="getSpecificPortMappingEntryResponse"/>
+    </operation>
+    <operation name="addPortMapping">
+      <input message="addPortMappingRequest"/>
+    </operation>
+    <operation name="deletePortMapping">
+      <input message="deletePortMappingRequest"/>
+    </operation>
+    <operation name="getExternalIPAddress">
+      <output message="getExternalIPAddressResponse"/>
+    </operation>
+    <operation name="x_GetDNSServers">
+      <output message="x_GetDNSServersResponse"/>
+    </operation>
+    <operation name="getLinkLayerMaxBitRates">
+      <output message="getLinkLayerMaxBitRatesResponse"/>
+    </operation>
+    <operation name="getPortMappingNumberOfEntries">
+      <output message="getPortMappingNumberOfEntriesResponse"/>
+    </operation>
+    <operation name="setRouteProtocolRx">
+      <input message="setRouteProtocolRxRequest"/>
+    </operation>
+    <operation name="setIdleDisconnectTime">
+      <input message="setIdleDisconnectTimeRequest"/>
+    </operation>
+    <operation name="getAutoDisconnectTimeSpan">
+      <output message="getAutoDisconnectTimeSpanResponse"/>
+    </operation>
+    <operation name="setAutoDisconnectTimeSpan">
+      <input message="setAutoDisconnectTimeSpanRequest"/>
+    </operation>
+  </portType>
+  <message name="getInfoResponse">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewConnectionStatus"/>
+    <part type="xsd:string" name="NewPossibleConnectionTypes"/>
+    <part type="xsd:string" name="NewConnectionType"/>
+    <part type="xsd:string" name="NewName"/>
+    <part type="xsd:unsignedInt" name="NewUptime"/>
+    <part type="xsd:unsignedInt" name="NewUpstreamMaxBitRate"/>
+    <part type="xsd:unsignedInt" name="NewDownstreamMaxBitRate"/>
+    <part type="xsd:string" name="NewLastConnectionError"/>
+    <part type="xsd:unsignedInt" name="NewIdleDisconnectTime"/>
+    <part type="xsd:boolean" name="NewRSIPAvailable"/>
+    <part type="xsd:string" name="NewUserName"/>
+    <part type="xsd:boolean" name="NewNATEnabled"/>
+    <part type="xsd:string" name="NewExternalIPAddress"/>
+    <part type="xsd:string" name="NewDNSServers"/>
+    <part type="xsd:string" name="NewMACAddress"/>
+    <part type="xsd:string" name="NewConnectionTrigger"/>
+    <part type="xsd:string" name="NewLastAuthErrorInfo"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsUsername"/>
+    <part type="xsd:unsignedShort" name="NewMinCharsUsername"/>
+    <part type="xsd:string" name="NewAllowedCharsUsername"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsPassword"/>
+    <part type="xsd:unsignedShort" name="NewMinCharsPassword"/>
+    <part type="xsd:string" name="NewAllowedCharsPassword"/>
+    <part type="xsd:string" name="NewTransportType"/>
+    <part type="xsd:string" name="NewRouteProtocolRx"/>
+    <part type="xsd:string" name="NewPPPoEServiceName"/>
+    <part type="xsd:string" name="NewRemoteIPAddress"/>
+    <part type="xsd:string" name="NewPPPoEACName"/>
+    <part type="xsd:boolean" name="NewDNSEnabled"/>
+    <part type="xsd:boolean" name="NewDNSOverrideAllowed"/>
+  </message>
+  <message name="getConnectionTypeInfoResponse">
+    <part type="xsd:string" name="NewConnectionType"/>
+    <part type="xsd:string" name="NewPossibleConnectionTypes"/>
+  </message>
+  <message name="setConnectionTypeRequest">
+    <part type="xsd:string" name="NewConnectionType"/>
+  </message>
+  <message name="getStatusInfoResponse">
+    <part type="xsd:string" name="NewConnectionStatus"/>
+    <part type="xsd:string" name="NewLastConnectionError"/>
+    <part type="xsd:unsignedInt" name="NewUptime"/>
+  </message>
+  <message name="getUserNameResponse">
+    <part type="xsd:string" name="NewUserName"/>
+  </message>
+  <message name="setUserNameRequest">
+    <part type="xsd:string" name="NewUserName"/>
+  </message>
+  <message name="setPasswordRequest">
+    <part type="xsd:string" name="NewPassword"/>
+  </message>
+  <message name="getNATRSIPStatusResponse">
+    <part type="xsd:boolean" name="NewRSIPAvailable"/>
+    <part type="xsd:boolean" name="NewNATEnabled"/>
+  </message>
+  <message name="setConnectionTriggerRequest">
+    <part type="xsd:string" name="NewConnectionTrigger"/>
+  </message>
+  <message name="getGenericPortMappingEntryRequest">
+    <part type="xsd:unsignedShort" name="NewPortMappingIndex"/>
+  </message>
+  <message name="getGenericPortMappingEntryResponse">
+    <part type="xsd:string" name="NewRemoteHost"/>
+    <part type="xsd:unsignedShort" name="NewExternalPort"/>
+    <part type="xsd:string" name="NewProtocol"/>
+    <part type="xsd:unsignedShort" name="NewInternalPort"/>
+    <part type="xsd:string" name="NewInternalClient"/>
+    <part type="xsd:boolean" name="NewEnabled"/>
+    <part type="xsd:string" name="NewPortMappingDescription"/>
+    <part type="xsd:unsignedInt" name="NewLeaseDuration"/>
+  </message>
+  <message name="getSpecificPortMappingEntryRequest">
+    <part type="xsd:string" name="NewRemoteHost"/>
+    <part type="xsd:unsignedShort" name="NewExternalPort"/>
+    <part type="xsd:string" name="NewProtocol"/>
+  </message>
+  <message name="getSpecificPortMappingEntryResponse">
+    <part type="xsd:unsignedShort" name="NewInternalPort"/>
+    <part type="xsd:string" name="NewInternalClient"/>
+    <part type="xsd:boolean" name="NewEnabled"/>
+    <part type="xsd:string" name="NewPortMappingDescription"/>
+    <part type="xsd:unsignedInt" name="NewLeaseDuration"/>
+  </message>
+  <message name="addPortMappingRequest">
+    <part type="xsd:string" name="NewRemoteHost"/>
+    <part type="xsd:unsignedShort" name="NewExternalPort"/>
+    <part type="xsd:string" name="NewProtocol"/>
+    <part type="xsd:unsignedShort" name="NewInternalPort"/>
+    <part type="xsd:string" name="NewInternalClient"/>
+    <part type="xsd:boolean" name="NewEnabled"/>
+    <part type="xsd:string" name="NewPortMappingDescription"/>
+    <part type="xsd:unsignedInt" name="NewLeaseDuration"/>
+  </message>
+  <message name="deletePortMappingRequest">
+    <part type="xsd:string" name="NewRemoteHost"/>
+    <part type="xsd:unsignedShort" name="NewExternalPort"/>
+    <part type="xsd:string" name="NewProtocol"/>
+  </message>
+  <message name="getExternalIPAddressResponse">
+    <part type="xsd:string" name="NewExternalIPAddress"/>
+  </message>
+  <message name="x_GetDNSServersResponse">
+    <part type="xsd:string" name="NewDNSServers"/>
+  </message>
+  <message name="getLinkLayerMaxBitRatesResponse">
+    <part type="xsd:unsignedInt" name="NewUpstreamMaxBitRate"/>
+    <part type="xsd:unsignedInt" name="NewDownstreamMaxBitRate"/>
+  </message>
+  <message name="getPortMappingNumberOfEntriesResponse">
+    <part type="xsd:unsignedShort" name="NewPortMappingNumberOfEntries"/>
+  </message>
+  <message name="setRouteProtocolRxRequest">
+    <part type="xsd:string" name="NewRouteProtocolRx"/>
+  </message>
+  <message name="setIdleDisconnectTimeRequest">
+    <part type="xsd:unsignedInt" name="NewIdleDisconnectTime"/>
+  </message>
+  <message name="getAutoDisconnectTimeSpanResponse">
+    <part type="xsd:boolean" name="NewX_AVM-DE_DisconnectPreventionEnable"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_DisconnectPreventionHour"/>
+  </message>
+  <message name="setAutoDisconnectTimeSpanRequest">
+    <part type="xsd:boolean" name="NewX_AVM-DE_DisconnectPreventionEnable"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_DisconnectPreventionHour"/>
+  </message>
+</definitions>

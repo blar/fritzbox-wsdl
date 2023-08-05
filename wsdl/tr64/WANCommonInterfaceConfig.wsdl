@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="WANCommonInterfaceConfig">
+    <port binding="WANCommonInterfaceConfig">
+      <soap:address location="http://fritz.box:49000/upnp/control/wancommonifconfig1"/>
+    </port>
+  </service>
+  <binding name="WANCommonInterfaceConfig" type="WANCommonInterfaceConfig">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getCommonLinkProperties">
+      <soap:operation soapAction="urn:dslforum-org:service:WANCommonInterfaceConfig:1#GetCommonLinkProperties"/>
+    </operation>
+    <operation name="getTotalBytesSent">
+      <soap:operation soapAction="urn:dslforum-org:service:WANCommonInterfaceConfig:1#GetTotalBytesSent"/>
+    </operation>
+    <operation name="getTotalBytesReceived">
+      <soap:operation soapAction="urn:dslforum-org:service:WANCommonInterfaceConfig:1#GetTotalBytesReceived"/>
+    </operation>
+    <operation name="getTotalPacketsSent">
+      <soap:operation soapAction="urn:dslforum-org:service:WANCommonInterfaceConfig:1#GetTotalPacketsSent"/>
+    </operation>
+    <operation name="getTotalPacketsReceived">
+      <soap:operation soapAction="urn:dslforum-org:service:WANCommonInterfaceConfig:1#GetTotalPacketsReceived"/>
+    </operation>
+    <operation name="setWANAccessType">
+      <soap:operation soapAction="urn:dslforum-org:service:WANCommonInterfaceConfig:1#X_AVM-DE_SetWANAccessType"/>
+    </operation>
+    <operation name="getActiveProvider">
+      <soap:operation soapAction="urn:dslforum-org:service:WANCommonInterfaceConfig:1#X_AVM-DE_GetActiveProvider"/>
+    </operation>
+    <operation name="getOnlineMonitor">
+      <soap:operation soapAction="urn:dslforum-org:service:WANCommonInterfaceConfig:1#X_AVM-DE_GetOnlineMonitor"/>
+    </operation>
+  </binding>
+  <portType name="WANCommonInterfaceConfig">
+    <operation name="getCommonLinkProperties">
+      <output message="getCommonLinkPropertiesResponse"/>
+    </operation>
+    <operation name="getTotalBytesSent">
+      <output message="getTotalBytesSentResponse"/>
+    </operation>
+    <operation name="getTotalBytesReceived">
+      <output message="getTotalBytesReceivedResponse"/>
+    </operation>
+    <operation name="getTotalPacketsSent">
+      <output message="getTotalPacketsSentResponse"/>
+    </operation>
+    <operation name="getTotalPacketsReceived">
+      <output message="getTotalPacketsReceivedResponse"/>
+    </operation>
+    <operation name="setWANAccessType">
+      <input message="setWANAccessTypeRequest"/>
+    </operation>
+    <operation name="getActiveProvider">
+      <output message="getActiveProviderResponse"/>
+    </operation>
+    <operation name="getOnlineMonitor">
+      <input message="getOnlineMonitorRequest"/>
+      <output message="getOnlineMonitorResponse"/>
+    </operation>
+  </portType>
+  <message name="getCommonLinkPropertiesResponse">
+    <part type="xsd:string" name="NewWANAccessType"/>
+    <part type="xsd:unsignedInt" name="NewLayer1UpstreamMaxBitRate"/>
+    <part type="xsd:unsignedInt" name="NewLayer1DownstreamMaxBitRate"/>
+    <part type="xsd:string" name="NewPhysicalLinkStatus"/>
+    <part type="xsd:string" name="NewX_AVM-DE_DownstreamCurrentUtilization"/>
+    <part type="xsd:string" name="NewX_AVM-DE_UpstreamCurrentUtilization"/>
+    <part type="xsd:unsignedInt" name="NewX_AVM-DE_DownstreamCurrentMaxSpeed"/>
+    <part type="xsd:unsignedInt" name="NewX_AVM-DE_UpstreamCurrentMaxSpeed"/>
+  </message>
+  <message name="getTotalBytesSentResponse">
+    <part type="xsd:unsignedInt" name="NewTotalBytesSent"/>
+  </message>
+  <message name="getTotalBytesReceivedResponse">
+    <part type="xsd:unsignedInt" name="NewTotalBytesReceived"/>
+  </message>
+  <message name="getTotalPacketsSentResponse">
+    <part type="xsd:unsignedInt" name="NewTotalPacketsSent"/>
+  </message>
+  <message name="getTotalPacketsReceivedResponse">
+    <part type="xsd:unsignedInt" name="NewTotalPacketsReceived"/>
+  </message>
+  <message name="setWANAccessTypeRequest">
+    <part type="xsd:string" name="NewAccessType"/>
+  </message>
+  <message name="getActiveProviderResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_Provider"/>
+  </message>
+  <message name="getOnlineMonitorRequest">
+    <part type="xsd:unsignedInt" name="NewSyncGroupIndex"/>
+  </message>
+  <message name="getOnlineMonitorResponse">
+    <part type="xsd:unsignedInt" name="NewTotalNumberSyncGroups"/>
+    <part type="xsd:string" name="NewSyncGroupName"/>
+    <part type="xsd:string" name="NewSyncGroupMode"/>
+    <part type="xsd:unsignedInt" name="Newmax_ds"/>
+    <part type="xsd:unsignedInt" name="Newmax_us"/>
+    <part type="xsd:string" name="Newds_current_bps"/>
+    <part type="xsd:string" name="Newmc_current_bps"/>
+    <part type="xsd:string" name="Newus_current_bps"/>
+    <part type="xsd:string" name="Newprio_realtime_bps"/>
+    <part type="xsd:string" name="Newprio_high_bps"/>
+    <part type="xsd:string" name="Newprio_default_bps"/>
+    <part type="xsd:string" name="Newprio_low_bps"/>
+  </message>
+</definitions>

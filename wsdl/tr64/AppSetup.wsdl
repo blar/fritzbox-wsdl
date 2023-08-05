@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="X_AVM-DE_AppSetup">
+    <port binding="X_AVM-DE_AppSetup">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_appsetup"/>
+    </port>
+  </service>
+  <binding name="X_AVM-DE_AppSetup" type="X_AVM-DE_AppSetup">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_AppSetup:1#GetInfo"/>
+    </operation>
+    <operation name="getConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_AppSetup:1#GetConfig"/>
+    </operation>
+    <operation name="getAppMessageFilter">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_AppSetup:1#GetAppMessageFilter"/>
+    </operation>
+    <operation name="registerApp">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_AppSetup:1#RegisterApp"/>
+    </operation>
+    <operation name="setAppVPN">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_AppSetup:1#SetAppVPN"/>
+    </operation>
+    <operation name="setAppVPNwithPFS">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_AppSetup:1#SetAppVPNwithPFS"/>
+    </operation>
+    <operation name="setAppMessageFilter">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_AppSetup:1#SetAppMessageFilter"/>
+    </operation>
+    <operation name="setAppMessageReceiver">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_AppSetup:1#SetAppMessageReceiver"/>
+    </operation>
+    <operation name="resetEvent">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_AppSetup:1#ResetEvent"/>
+    </operation>
+    <operation name="getAppRemoteInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_AppSetup:1#GetAppRemoteInfo"/>
+    </operation>
+    <operation name="getBoxSenderId">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_AppSetup:1#GetBoxSenderId"/>
+    </operation>
+  </binding>
+  <portType name="X_AVM-DE_AppSetup">
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="getConfig">
+      <output message="getConfigResponse"/>
+    </operation>
+    <operation name="getAppMessageFilter">
+      <input message="getAppMessageFilterRequest"/>
+      <output message="getAppMessageFilterResponse"/>
+    </operation>
+    <operation name="registerApp">
+      <input message="registerAppRequest"/>
+    </operation>
+    <operation name="setAppVPN">
+      <input message="setAppVPNRequest"/>
+    </operation>
+    <operation name="setAppVPNwithPFS">
+      <input message="setAppVPNwithPFSRequest"/>
+    </operation>
+    <operation name="setAppMessageFilter">
+      <input message="setAppMessageFilterRequest"/>
+    </operation>
+    <operation name="setAppMessageReceiver">
+      <input message="setAppMessageReceiverRequest"/>
+      <output message="setAppMessageReceiverResponse"/>
+    </operation>
+    <operation name="resetEvent">
+      <input message="resetEventRequest"/>
+    </operation>
+    <operation name="getAppRemoteInfo">
+      <output message="getAppRemoteInfoResponse"/>
+    </operation>
+    <operation name="getBoxSenderId">
+      <input message="getBoxSenderIdRequest"/>
+      <output message="getBoxSenderIdResponse"/>
+    </operation>
+  </portType>
+  <message name="getInfoResponse">
+    <part type="xsd:unsignedShort" name="NewMinCharsAppId"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsAppId"/>
+    <part type="xsd:string" name="NewAllowedCharsAppId"/>
+    <part type="xsd:unsignedShort" name="NewMinCharsAppDisplayName"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsAppDisplayName"/>
+    <part type="xsd:unsignedShort" name="NewMinCharsAppUsername"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsAppUsername"/>
+    <part type="xsd:string" name="NewAllowedCharsAppUsername"/>
+    <part type="xsd:unsignedShort" name="NewMinCharsAppPassword"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsAppPassword"/>
+    <part type="xsd:string" name="NewAllowedCharsAppPassword"/>
+    <part type="xsd:unsignedShort" name="NewMinCharsIPSecIdentifier"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsIPSecIdentifier"/>
+    <part type="xsd:string" name="NewAllowedCharsIPSecIdentifier"/>
+    <part type="xsd:string" name="NewAllowedCharsCryptAlgos"/>
+    <part type="xsd:string" name="NewAllowedCharsAppAVMAddress"/>
+    <part type="xsd:unsignedShort" name="NewMinCharsFilter"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsFilter"/>
+    <part type="xsd:string" name="NewAllowedCharsFilter"/>
+    <part type="xsd:unsignedShort" name="NewMinCharsIPSecPreSharedKey"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsIPSecPreSharedKey"/>
+    <part type="xsd:string" name="NewAllowedCharsIPSecPreSharedKey"/>
+    <part type="xsd:unsignedShort" name="NewMinCharsIPSecXauthUsername"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsIPSecXauthUsername"/>
+    <part type="xsd:string" name="NewAllowedCharsIPSecXauthUsername"/>
+    <part type="xsd:unsignedShort" name="NewMinCharsIPSecXauthPassword"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsIPSecXauthPassword"/>
+    <part type="xsd:string" name="NewAllowedCharsIPSecXauthPassword"/>
+  </message>
+  <message name="getConfigResponse">
+    <part type="xsd:string" name="NewConfigRight"/>
+    <part type="xsd:string" name="NewAppRight"/>
+    <part type="xsd:string" name="NewNasRight"/>
+    <part type="xsd:string" name="NewPhoneRight"/>
+    <part type="xsd:string" name="NewDialRight"/>
+    <part type="xsd:string" name="NewHomeautoRight"/>
+    <part type="xsd:boolean" name="NewInternetRights"/>
+    <part type="xsd:boolean" name="NewAccessFromInternet"/>
+  </message>
+  <message name="getAppMessageFilterRequest">
+    <part type="xsd:string" name="NewAppId"/>
+  </message>
+  <message name="getAppMessageFilterResponse">
+    <part type="xsd:string" name="NewFilterList"/>
+  </message>
+  <message name="registerAppRequest">
+    <part type="xsd:string" name="NewAppId"/>
+    <part type="xsd:string" name="NewAppDisplayName"/>
+    <part type="xsd:string" name="NewAppDeviceMAC"/>
+    <part type="xsd:string" name="NewAppUsername"/>
+    <part type="xsd:string" name="NewAppPassword"/>
+    <part type="xsd:string" name="NewAppRight"/>
+    <part type="xsd:string" name="NewNasRight"/>
+    <part type="xsd:string" name="NewPhoneRight"/>
+    <part type="xsd:string" name="NewHomeautoRight"/>
+    <part type="xsd:boolean" name="NewAppInternetRights"/>
+  </message>
+  <message name="setAppVPNRequest">
+    <part type="xsd:string" name="NewAppId"/>
+    <part type="xsd:string" name="NewIPSecIdentifier"/>
+    <part type="xsd:string" name="NewIPSecPreSharedKey"/>
+    <part type="xsd:string" name="NewIPSecXauthUsername"/>
+    <part type="xsd:string" name="NewIPSecXauthPassword"/>
+  </message>
+  <message name="setAppVPNwithPFSRequest">
+    <part type="xsd:string" name="NewAppId"/>
+    <part type="xsd:string" name="NewIPSecIdentifier"/>
+    <part type="xsd:string" name="NewIPSecPreSharedKey"/>
+    <part type="xsd:string" name="NewIPSecXauthUsername"/>
+    <part type="xsd:string" name="NewIPSecXauthPassword"/>
+  </message>
+  <message name="setAppMessageFilterRequest">
+    <part type="xsd:string" name="NewAppId"/>
+    <part type="xsd:string" name="NewType"/>
+    <part type="xsd:string" name="NewFilter"/>
+  </message>
+  <message name="setAppMessageReceiverRequest">
+    <part type="xsd:string" name="NewAppId"/>
+    <part type="xsd:string" name="NewCryptAlgos"/>
+    <part type="xsd:string" name="NewAppAVMAddress"/>
+    <part type="xsd:string" name="NewAppAVMPasswordHash"/>
+  </message>
+  <message name="setAppMessageReceiverResponse">
+    <part type="xsd:string" name="EncryptionSecret"/>
+    <part type="xsd:string" name="BoxSenderId"/>
+  </message>
+  <message name="resetEventRequest">
+    <part type="xsd:unsignedInt" name="NewEventId"/>
+  </message>
+  <message name="getAppRemoteInfoResponse">
+    <part type="xsd:string" name="NewSubnetMask"/>
+    <part type="xsd:string" name="NewIPAddress"/>
+    <part type="xsd:string" name="NewExternalIPAddress"/>
+    <part type="xsd:string" name="NewExternalIPv6Address"/>
+    <part type="xsd:boolean" name="NewRemoteAccessDDNSEnabled"/>
+    <part type="xsd:string" name="NewRemoteAccessDDNSDomain"/>
+    <part type="xsd:boolean" name="NewMyFritzEnabled"/>
+    <part type="xsd:string" name="NewMyFritzDynDNSName"/>
+  </message>
+  <message name="getBoxSenderIdRequest">
+    <part type="xsd:string" name="NewAppId"/>
+  </message>
+  <message name="getBoxSenderIdResponse">
+    <part type="xsd:string" name="NewBoxSenderId"/>
+  </message>
+</definitions>

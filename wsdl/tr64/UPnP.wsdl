@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="X_AVM-DE_UPnP">
+    <port binding="X_AVM-DE_UPnP">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_upnp"/>
+    </port>
+  </service>
+  <binding name="X_AVM-DE_UPnP" type="X_AVM-DE_UPnP">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_UPnP:1#GetInfo"/>
+    </operation>
+    <operation name="setConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_UPnP:1#SetConfig"/>
+    </operation>
+  </binding>
+  <portType name="X_AVM-DE_UPnP">
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="setConfig">
+      <input message="setConfigRequest"/>
+    </operation>
+  </portType>
+  <message name="getInfoResponse">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:boolean" name="NewUPnPMediaServer"/>
+  </message>
+  <message name="setConfigRequest">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:boolean" name="NewUPnPMediaServer"/>
+  </message>
+</definitions>

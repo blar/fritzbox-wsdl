@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="X_AVM-DE_Auth">
+    <port binding="X_AVM-DE_Auth">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_auth"/>
+    </port>
+  </service>
+  <binding name="X_AVM-DE_Auth" type="X_AVM-DE_Auth">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Auth:1#GetInfo"/>
+    </operation>
+    <operation name="getState">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Auth:1#GetState"/>
+    </operation>
+    <operation name="setConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Auth:1#SetConfig"/>
+    </operation>
+  </binding>
+  <portType name="X_AVM-DE_Auth">
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="getState">
+      <output message="getStateResponse"/>
+    </operation>
+    <operation name="setConfig">
+      <input message="setConfigRequest"/>
+      <output message="setConfigResponse"/>
+    </operation>
+  </portType>
+  <message name="getInfoResponse">
+    <part type="xsd:boolean" name="NewEnabled"/>
+  </message>
+  <message name="getStateResponse">
+    <part type="xsd:string" name="NewState"/>
+  </message>
+  <message name="setConfigRequest">
+    <part type="xsd:string" name="NewAction"/>
+  </message>
+  <message name="setConfigResponse">
+    <part type="xsd:string" name="NewState"/>
+    <part type="xsd:string" name="NewToken"/>
+    <part type="xsd:string" name="NewMethods"/>
+  </message>
+</definitions>

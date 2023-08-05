@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="WANCommonInterfaceConfig">
+    <port binding="WANCommonInterfaceConfig">
+      <soap:address location="http://fritz.box:49000/igd2upnp/control/WANCommonIFC1"/>
+    </port>
+  </service>
+  <binding name="WANCommonInterfaceConfig" type="WANCommonInterfaceConfig">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getCommonLinkProperties">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1#GetCommonLinkProperties"/>
+    </operation>
+    <operation name="getTotalBytesSent">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1#GetTotalBytesSent"/>
+    </operation>
+    <operation name="getTotalBytesReceived">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1#GetTotalBytesReceived"/>
+    </operation>
+    <operation name="getTotalPacketsSent">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1#GetTotalPacketsSent"/>
+    </operation>
+    <operation name="getTotalPacketsReceived">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1#GetTotalPacketsReceived"/>
+    </operation>
+    <operation name="getAddonInfos">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1#GetAddonInfos"/>
+    </operation>
+    <operation name="getDsliteStatus">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1#X_AVM_DE_GetDsliteStatus"/>
+    </operation>
+    <operation name="getIPTVInfos">
+      <soap:operation soapAction="urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1#X_AVM_DE_GetIPTVInfos"/>
+    </operation>
+  </binding>
+  <portType name="WANCommonInterfaceConfig">
+    <operation name="getCommonLinkProperties">
+      <output message="getCommonLinkPropertiesResponse"/>
+    </operation>
+    <operation name="getTotalBytesSent">
+      <output message="getTotalBytesSentResponse"/>
+    </operation>
+    <operation name="getTotalBytesReceived">
+      <output message="getTotalBytesReceivedResponse"/>
+    </operation>
+    <operation name="getTotalPacketsSent">
+      <output message="getTotalPacketsSentResponse"/>
+    </operation>
+    <operation name="getTotalPacketsReceived">
+      <output message="getTotalPacketsReceivedResponse"/>
+    </operation>
+    <operation name="getAddonInfos">
+      <output message="getAddonInfosResponse"/>
+    </operation>
+    <operation name="getDsliteStatus">
+      <output message="getDsliteStatusResponse"/>
+    </operation>
+    <operation name="getIPTVInfos">
+      <output message="getIPTVInfosResponse"/>
+    </operation>
+  </portType>
+  <message name="getCommonLinkPropertiesResponse">
+    <part type="xsd:string" name="NewWANAccessType"/>
+    <part type="xsd:unsignedInt" name="NewLayer1UpstreamMaxBitRate"/>
+    <part type="xsd:unsignedInt" name="NewLayer1DownstreamMaxBitRate"/>
+    <part type="xsd:string" name="NewPhysicalLinkStatus"/>
+  </message>
+  <message name="getTotalBytesSentResponse">
+    <part type="xsd:unsignedInt" name="NewTotalBytesSent"/>
+  </message>
+  <message name="getTotalBytesReceivedResponse">
+    <part type="xsd:unsignedInt" name="NewTotalBytesReceived"/>
+  </message>
+  <message name="getTotalPacketsSentResponse">
+    <part type="xsd:unsignedInt" name="NewTotalPacketsSent"/>
+  </message>
+  <message name="getTotalPacketsReceivedResponse">
+    <part type="xsd:unsignedInt" name="NewTotalPacketsReceived"/>
+  </message>
+  <message name="getAddonInfosResponse">
+    <part type="xsd:unsignedInt" name="NewByteSendRate"/>
+    <part type="xsd:unsignedInt" name="NewByteReceiveRate"/>
+    <part type="xsd:unsignedInt" name="NewPacketSendRate"/>
+    <part type="xsd:unsignedInt" name="NewPacketReceiveRate"/>
+    <part type="xsd:unsignedInt" name="NewTotalBytesSent"/>
+    <part type="xsd:unsignedInt" name="NewTotalBytesReceived"/>
+    <part type="xsd:unsignedInt" name="NewAutoDisconnectTime"/>
+    <part type="xsd:unsignedInt" name="NewIdleDisconnectTime"/>
+    <part type="xsd:string" name="NewDNSServer1"/>
+    <part type="xsd:string" name="NewDNSServer2"/>
+    <part type="xsd:string" name="NewVoipDNSServer1"/>
+    <part type="xsd:string" name="NewVoipDNSServer2"/>
+    <part type="xsd:boolean" name="NewUpnpControlEnabled"/>
+    <part type="xsd:unsignedByte" name="NewRoutedBridgedModeBoth"/>
+    <part type="xsd:string" name="NewX_AVM_DE_TotalBytesSent64"/>
+    <part type="xsd:string" name="NewX_AVM_DE_TotalBytesReceived64"/>
+    <part type="xsd:string" name="NewX_AVM_DE_WANAccessType"/>
+  </message>
+  <message name="getDsliteStatusResponse">
+    <part type="xsd:boolean" name="NewX_AVM_DE_DsliteStatus"/>
+  </message>
+  <message name="getIPTVInfosResponse">
+    <part type="xsd:boolean" name="NewX_AVM_DE_IPTV_Enabled"/>
+    <part type="xsd:string" name="NewX_AVM_DE_IPTV_Provider"/>
+    <part type="xsd:string" name="NewX_AVM_DE_IPTV_URL"/>
+  </message>
+</definitions>

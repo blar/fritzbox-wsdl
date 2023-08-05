@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="LANEthernetInterfaceConfig">
+    <port binding="LANEthernetInterfaceConfig">
+      <soap:address location="http://fritz.box:49000/upnp/control/lanethernetifcfg"/>
+    </port>
+  </service>
+  <binding name="LANEthernetInterfaceConfig" type="LANEthernetInterfaceConfig">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="setEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:LANEthernetInterfaceConfig:1#SetEnable"/>
+    </operation>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:LANEthernetInterfaceConfig:1#GetInfo"/>
+    </operation>
+    <operation name="getStatistics">
+      <soap:operation soapAction="urn:dslforum-org:service:LANEthernetInterfaceConfig:1#GetStatistics"/>
+    </operation>
+  </binding>
+  <portType name="LANEthernetInterfaceConfig">
+    <operation name="setEnable">
+      <input message="setEnableRequest"/>
+    </operation>
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="getStatistics">
+      <output message="getStatisticsResponse"/>
+    </operation>
+  </portType>
+  <message name="setEnableRequest">
+    <part type="xsd:boolean" name="NewEnable"/>
+  </message>
+  <message name="getInfoResponse">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewStatus"/>
+    <part type="xsd:string" name="NewMACAddress"/>
+    <part type="xsd:string" name="NewMaxBitRate"/>
+    <part type="xsd:string" name="NewDuplexMode"/>
+  </message>
+  <message name="getStatisticsResponse">
+    <part type="xsd:unsignedInt" name="NewBytesSent"/>
+    <part type="xsd:unsignedInt" name="NewBytesReceived"/>
+    <part type="xsd:unsignedInt" name="NewPacketsSent"/>
+    <part type="xsd:unsignedInt" name="NewPacketsReceived"/>
+  </message>
+</definitions>

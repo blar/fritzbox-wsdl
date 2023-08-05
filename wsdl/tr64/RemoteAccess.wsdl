@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="X_AVM-DE_RemoteAccess">
+    <port binding="X_AVM-DE_RemoteAccess">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_remote"/>
+    </port>
+  </service>
+  <binding name="X_AVM-DE_RemoteAccess" type="X_AVM-DE_RemoteAccess">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_RemoteAccess:1#GetInfo"/>
+    </operation>
+    <operation name="setConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_RemoteAccess:1#SetConfig"/>
+    </operation>
+    <operation name="setEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_RemoteAccess:1#SetEnable"/>
+    </operation>
+    <operation name="setLetsEncryptEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_RemoteAccess:1#SetLetsEncryptEnable"/>
+    </operation>
+    <operation name="getDDNSInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_RemoteAccess:1#GetDDNSInfo"/>
+    </operation>
+    <operation name="getDDNSProviders">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_RemoteAccess:1#GetDDNSProviders"/>
+    </operation>
+    <operation name="setDDNSConfig">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_RemoteAccess:1#SetDDNSConfig"/>
+    </operation>
+  </binding>
+  <portType name="X_AVM-DE_RemoteAccess">
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="setConfig">
+      <input message="setConfigRequest"/>
+    </operation>
+    <operation name="setEnable">
+      <input message="setEnableRequest"/>
+      <output message="setEnableResponse"/>
+    </operation>
+    <operation name="setLetsEncryptEnable">
+      <input message="setLetsEncryptEnableRequest"/>
+    </operation>
+    <operation name="getDDNSInfo">
+      <output message="getDDNSInfoResponse"/>
+    </operation>
+    <operation name="getDDNSProviders">
+      <output message="getDDNSProvidersResponse"/>
+    </operation>
+    <operation name="setDDNSConfig">
+      <input message="setDDNSConfigRequest"/>
+    </operation>
+  </portType>
+  <message name="getInfoResponse">
+    <part type="xsd:boolean" name="NewEnabled"/>
+    <part type="xsd:string" name="NewPort"/>
+    <part type="xsd:string" name="NewUsername"/>
+    <part type="xsd:boolean" name="NewLetsEncryptEnabled"/>
+    <part type="xsd:string" name="NewLetsEncryptState"/>
+  </message>
+  <message name="setConfigRequest">
+    <part type="xsd:boolean" name="NewEnabled"/>
+    <part type="xsd:string" name="NewPort"/>
+    <part type="xsd:string" name="NewUsername"/>
+    <part type="xsd:string" name="NewPassword"/>
+  </message>
+  <message name="setEnableRequest">
+    <part type="xsd:boolean" name="NewEnabled"/>
+  </message>
+  <message name="setEnableResponse">
+    <part type="xsd:string" name="NewPort"/>
+  </message>
+  <message name="setLetsEncryptEnableRequest">
+    <part type="xsd:boolean" name="NewLetsEncryptEnabled"/>
+  </message>
+  <message name="getDDNSInfoResponse">
+    <part type="xsd:boolean" name="NewEnabled"/>
+    <part type="xsd:string" name="NewProviderName"/>
+    <part type="xsd:string" name="NewUpdateURL"/>
+    <part type="xsd:string" name="NewDomain"/>
+    <part type="xsd:string" name="NewStatusIPv4"/>
+    <part type="xsd:string" name="NewStatusIPv6"/>
+    <part type="xsd:string" name="NewUsername"/>
+    <part type="xsd:string" name="NewMode"/>
+    <part type="xsd:string" name="NewServerIPv4"/>
+    <part type="xsd:string" name="NewServerIPv6"/>
+  </message>
+  <message name="getDDNSProvidersResponse">
+    <part type="xsd:string" name="NewProviderList"/>
+  </message>
+  <message name="setDDNSConfigRequest">
+    <part type="xsd:boolean" name="NewEnabled"/>
+    <part type="xsd:string" name="NewProviderName"/>
+    <part type="xsd:string" name="NewUpdateURL"/>
+    <part type="xsd:string" name="NewDomain"/>
+    <part type="xsd:string" name="NewUsername"/>
+    <part type="xsd:string" name="NewMode"/>
+    <part type="xsd:string" name="NewServerIPv4"/>
+    <part type="xsd:string" name="NewServerIPv6"/>
+    <part type="xsd:string" name="NewPassword"/>
+  </message>
+</definitions>

@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="X_AVM-DE_Media">
+    <port binding="X_AVM-DE_Media">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_media"/>
+    </port>
+  </service>
+  <binding name="X_AVM-DE_Media" type="X_AVM-DE_Media">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Media:1#GetInfo"/>
+    </operation>
+    <operation name="getDVBCEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Media:1#GetDVBCEnable"/>
+    </operation>
+    <operation name="setDVBCEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Media:1#SetDVBCEnable"/>
+    </operation>
+    <operation name="stationSearch">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Media:1#StationSearch"/>
+    </operation>
+    <operation name="getSearchProgress">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_Media:1#GetSearchProgress"/>
+    </operation>
+  </binding>
+  <portType name="X_AVM-DE_Media">
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="getDVBCEnable">
+      <output message="getDVBCEnableResponse"/>
+    </operation>
+    <operation name="setDVBCEnable">
+      <input message="setDVBCEnableRequest"/>
+    </operation>
+    <operation name="stationSearch">
+      <input message="stationSearchRequest"/>
+      <output message="stationSearchResponse"/>
+    </operation>
+    <operation name="getSearchProgress">
+      <output message="getSearchProgressResponse"/>
+    </operation>
+  </portType>
+  <message name="getInfoResponse">
+    <part type="xsd:boolean" name="NewDVBCEnabled"/>
+    <part type="xsd:string" name="NewStationSearchStatus"/>
+    <part type="xsd:unsignedByte" name="NewSearchProgress"/>
+  </message>
+  <message name="getDVBCEnableResponse">
+    <part type="xsd:boolean" name="NewDVBCEnabled"/>
+  </message>
+  <message name="setDVBCEnableRequest">
+    <part type="xsd:boolean" name="NewDVBCEnabled"/>
+  </message>
+  <message name="stationSearchRequest">
+    <part type="xsd:string" name="NewStationSearchMode"/>
+  </message>
+  <message name="stationSearchResponse">
+    <part type="xsd:string" name="NewStationSearchStatus"/>
+  </message>
+  <message name="getSearchProgressResponse">
+    <part type="xsd:string" name="NewStationSearchStatus"/>
+    <part type="xsd:unsignedByte" name="NewSearchProgress"/>
+  </message>
+</definitions>

@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="Hosts">
+    <port binding="Hosts">
+      <soap:address location="http://fritz.box:49000/upnp/control/hosts"/>
+    </port>
+  </service>
+  <binding name="Hosts" type="Hosts">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getHostNumberOfEntries">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#GetHostNumberOfEntries"/>
+    </operation>
+    <operation name="getSpecificHostEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#GetSpecificHostEntry"/>
+    </operation>
+    <operation name="getGenericHostEntry">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#GetGenericHostEntry"/>
+    </operation>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_GetInfo"/>
+    </operation>
+    <operation name="getChangeCounter">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_GetChangeCounter"/>
+    </operation>
+    <operation name="setHostNameByMACAddress">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_SetHostNameByMACAddress"/>
+    </operation>
+    <operation name="getAutoWakeOnLANByMACAddress">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_GetAutoWakeOnLANByMACAddress"/>
+    </operation>
+    <operation name="setAutoWakeOnLANByMACAddress">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_SetAutoWakeOnLANByMACAddress"/>
+    </operation>
+    <operation name="wakeOnLANByMACAddress">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_WakeOnLANByMACAddress"/>
+    </operation>
+    <operation name="getSpecificHostEntryByIP">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_GetSpecificHostEntryByIP"/>
+    </operation>
+    <operation name="hostsCheckUpdate">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_HostsCheckUpdate"/>
+    </operation>
+    <operation name="hostDoUpdate">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_HostDoUpdate"/>
+    </operation>
+    <operation name="setPrioritizationByIP">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_SetPrioritizationByIP"/>
+    </operation>
+    <operation name="getHostListPath">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_GetHostListPath"/>
+    </operation>
+    <operation name="getMeshListPath">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_GetMeshListPath"/>
+    </operation>
+    <operation name="getFriendlyName">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_GetFriendlyName"/>
+    </operation>
+    <operation name="setFriendlyName">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_SetFriendlyName"/>
+    </operation>
+    <operation name="setFriendlyNameByIP">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_SetFriendlyNameByIP"/>
+    </operation>
+    <operation name="setFriendlyNameByMAC">
+      <soap:operation soapAction="urn:dslforum-org:service:Hosts:1#X_AVM-DE_SetFriendlyNameByMAC"/>
+    </operation>
+  </binding>
+  <portType name="Hosts">
+    <operation name="getHostNumberOfEntries">
+      <output message="getHostNumberOfEntriesResponse"/>
+    </operation>
+    <operation name="getSpecificHostEntry">
+      <input message="getSpecificHostEntryRequest"/>
+      <output message="getSpecificHostEntryResponse"/>
+    </operation>
+    <operation name="getGenericHostEntry">
+      <input message="getGenericHostEntryRequest"/>
+      <output message="getGenericHostEntryResponse"/>
+    </operation>
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="getChangeCounter">
+      <output message="getChangeCounterResponse"/>
+    </operation>
+    <operation name="setHostNameByMACAddress">
+      <input message="setHostNameByMACAddressRequest"/>
+    </operation>
+    <operation name="getAutoWakeOnLANByMACAddress">
+      <input message="getAutoWakeOnLANByMACAddressRequest"/>
+      <output message="getAutoWakeOnLANByMACAddressResponse"/>
+    </operation>
+    <operation name="setAutoWakeOnLANByMACAddress">
+      <input message="setAutoWakeOnLANByMACAddressRequest"/>
+    </operation>
+    <operation name="wakeOnLANByMACAddress">
+      <input message="wakeOnLANByMACAddressRequest"/>
+    </operation>
+    <operation name="getSpecificHostEntryByIP">
+      <input message="getSpecificHostEntryByIPRequest"/>
+      <output message="getSpecificHostEntryByIPResponse"/>
+    </operation>
+    <operation name="hostsCheckUpdate"/>
+    <operation name="hostDoUpdate">
+      <input message="hostDoUpdateRequest"/>
+    </operation>
+    <operation name="setPrioritizationByIP">
+      <input message="setPrioritizationByIPRequest"/>
+    </operation>
+    <operation name="getHostListPath">
+      <output message="getHostListPathResponse"/>
+    </operation>
+    <operation name="getMeshListPath">
+      <output message="getMeshListPathResponse"/>
+    </operation>
+    <operation name="getFriendlyName">
+      <output message="getFriendlyNameResponse"/>
+    </operation>
+    <operation name="setFriendlyName">
+      <input message="setFriendlyNameRequest"/>
+    </operation>
+    <operation name="setFriendlyNameByIP">
+      <input message="setFriendlyNameByIPRequest"/>
+    </operation>
+    <operation name="setFriendlyNameByMAC">
+      <input message="setFriendlyNameByMACRequest"/>
+    </operation>
+  </portType>
+  <message name="getHostNumberOfEntriesResponse">
+    <part type="xsd:unsignedShort" name="NewHostNumberOfEntries"/>
+  </message>
+  <message name="getSpecificHostEntryRequest">
+    <part type="xsd:string" name="NewMACAddress"/>
+  </message>
+  <message name="getSpecificHostEntryResponse">
+    <part type="xsd:string" name="NewIPAddress"/>
+    <part type="xsd:string" name="NewAddressSource"/>
+    <part type="xsd:int" name="NewLeaseTimeRemaining"/>
+    <part type="xsd:string" name="NewInterfaceType"/>
+    <part type="xsd:boolean" name="NewActive"/>
+    <part type="xsd:string" name="NewHostName"/>
+  </message>
+  <message name="getGenericHostEntryRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+  </message>
+  <message name="getGenericHostEntryResponse">
+    <part type="xsd:string" name="NewIPAddress"/>
+    <part type="xsd:string" name="NewAddressSource"/>
+    <part type="xsd:int" name="NewLeaseTimeRemaining"/>
+    <part type="xsd:string" name="NewMACAddress"/>
+    <part type="xsd:string" name="NewInterfaceType"/>
+    <part type="xsd:boolean" name="NewActive"/>
+    <part type="xsd:string" name="NewHostName"/>
+  </message>
+  <message name="getInfoResponse">
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_FriendlynameMinChars"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_FriendlynameMaxChars"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_HostnameMinChars"/>
+    <part type="xsd:unsignedShort" name="NewX_AVM-DE_HostnameMaxChars"/>
+    <part type="xsd:string" name="NewX_AVM-DE_HostnameAllowedChars"/>
+  </message>
+  <message name="getChangeCounterResponse">
+    <part type="xsd:unsignedInt" name="NewX_AVM-DE_ChangeCounter"/>
+  </message>
+  <message name="setHostNameByMACAddressRequest">
+    <part type="xsd:string" name="NewMACAddress"/>
+    <part type="xsd:string" name="NewHostName"/>
+  </message>
+  <message name="getAutoWakeOnLANByMACAddressRequest">
+    <part type="xsd:string" name="NewMACAddress"/>
+  </message>
+  <message name="getAutoWakeOnLANByMACAddressResponse">
+    <part type="xsd:boolean" name="NewAutoWOLEnabled"/>
+  </message>
+  <message name="setAutoWakeOnLANByMACAddressRequest">
+    <part type="xsd:string" name="NewMACAddress"/>
+    <part type="xsd:boolean" name="NewAutoWOLEnabled"/>
+  </message>
+  <message name="wakeOnLANByMACAddressRequest">
+    <part type="xsd:string" name="NewMACAddress"/>
+  </message>
+  <message name="getSpecificHostEntryByIPRequest">
+    <part type="xsd:string" name="NewIPAddress"/>
+  </message>
+  <message name="getSpecificHostEntryByIPResponse">
+    <part type="xsd:string" name="NewMACAddress"/>
+    <part type="xsd:boolean" name="NewActive"/>
+    <part type="xsd:string" name="NewHostName"/>
+    <part type="xsd:string" name="NewInterfaceType"/>
+    <part type="xsd:unsignedInt" name="NewX_AVM-DE_Port"/>
+    <part type="xsd:unsignedInt" name="NewX_AVM-DE_Speed"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_UpdateAvailable"/>
+    <part type="xsd:string" name="NewX_AVM-DE_UpdateSuccessful"/>
+    <part type="xsd:string" name="NewX_AVM-DE_InfoURL"/>
+    <part type="xsd:string" name="NewX_AVM-DE_MACAddressList"/>
+    <part type="xsd:string" name="NewX_AVM-DE_Model"/>
+    <part type="xsd:string" name="NewX_AVM-DE_URL"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_Guest"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_RequestClient"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_VPN"/>
+    <part type="xsd:string" name="NewX_AVM-DE_WANAccess"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_Disallow"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_IsMeshable"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_Priority"/>
+    <part type="xsd:string" name="NewX_AVM-DE_FriendlyName"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_FriendlyNameIsWriteable"/>
+  </message>
+  <message name="hostDoUpdateRequest">
+    <part type="xsd:string" name="NewMACAddress"/>
+  </message>
+  <message name="setPrioritizationByIPRequest">
+    <part type="xsd:string" name="NewIPAddress"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_Priority"/>
+  </message>
+  <message name="getHostListPathResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_HostListPath"/>
+  </message>
+  <message name="getMeshListPathResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_MeshListPath"/>
+  </message>
+  <message name="getFriendlyNameResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_FriendlyName"/>
+  </message>
+  <message name="setFriendlyNameRequest">
+    <part type="xsd:string" name="NewX_AVM-DE_FriendlyName"/>
+  </message>
+  <message name="setFriendlyNameByIPRequest">
+    <part type="xsd:string" name="NewIPAddress"/>
+    <part type="xsd:string" name="NewX_AVM-DE_FriendlyName"/>
+  </message>
+  <message name="setFriendlyNameByMACRequest">
+    <part type="xsd:string" name="NewMACAddress"/>
+    <part type="xsd:string" name="NewX_AVM-DE_FriendlyName"/>
+  </message>
+</definitions>

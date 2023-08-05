@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="WANEthernetLinkConfig">
+    <port binding="WANEthernetLinkConfig">
+      <soap:address location="http://fritz.box:49000/upnp/control/wanethlinkconfig1"/>
+    </port>
+  </service>
+  <binding name="WANEthernetLinkConfig" type="WANEthernetLinkConfig">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getEthernetLinkStatus">
+      <soap:operation soapAction="urn:dslforum-org:service:WANEthernetLinkConfig:1#GetEthernetLinkStatus"/>
+    </operation>
+  </binding>
+  <portType name="WANEthernetLinkConfig">
+    <operation name="getEthernetLinkStatus">
+      <output message="getEthernetLinkStatusResponse"/>
+    </operation>
+  </portType>
+  <message name="getEthernetLinkStatusResponse">
+    <part type="xsd:string" name="NewEthernetLinkStatus"/>
+  </message>
+</definitions>

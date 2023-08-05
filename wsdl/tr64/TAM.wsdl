@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="X_AVM-DE_TAM">
+    <port binding="X_AVM-DE_TAM">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_tam"/>
+    </port>
+  </service>
+  <binding name="X_AVM-DE_TAM" type="X_AVM-DE_TAM">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_TAM:1#GetInfo"/>
+    </operation>
+    <operation name="setEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_TAM:1#SetEnable"/>
+    </operation>
+    <operation name="getMessageList">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_TAM:1#GetMessageList"/>
+    </operation>
+    <operation name="markMessage">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_TAM:1#MarkMessage"/>
+    </operation>
+    <operation name="deleteMessage">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_TAM:1#DeleteMessage"/>
+    </operation>
+    <operation name="getList">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_TAM:1#GetList"/>
+    </operation>
+  </binding>
+  <portType name="X_AVM-DE_TAM">
+    <operation name="getInfo">
+      <input message="getInfoRequest"/>
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="setEnable">
+      <input message="setEnableRequest"/>
+    </operation>
+    <operation name="getMessageList">
+      <input message="getMessageListRequest"/>
+      <output message="getMessageListResponse"/>
+    </operation>
+    <operation name="markMessage">
+      <input message="markMessageRequest"/>
+    </operation>
+    <operation name="deleteMessage">
+      <input message="deleteMessageRequest"/>
+    </operation>
+    <operation name="getList">
+      <output message="getListResponse"/>
+    </operation>
+  </portType>
+  <message name="getInfoRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+  </message>
+  <message name="getInfoResponse">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewName"/>
+    <part type="xsd:boolean" name="NewTAMRunning"/>
+    <part type="xsd:unsignedShort" name="NewStick"/>
+    <part type="xsd:unsignedShort" name="NewStatus"/>
+    <part type="xsd:unsignedInt" name="NewCapacity"/>
+    <part type="xsd:string" name="NewMode"/>
+    <part type="xsd:unsignedShort" name="NewRingSeconds"/>
+    <part type="xsd:string" name="NewPhoneNumbers"/>
+  </message>
+  <message name="setEnableRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+    <part type="xsd:boolean" name="NewEnable"/>
+  </message>
+  <message name="getMessageListRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+  </message>
+  <message name="getMessageListResponse">
+    <part type="xsd:string" name="NewURL"/>
+  </message>
+  <message name="markMessageRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+    <part type="xsd:unsignedShort" name="NewMessageIndex"/>
+    <part type="xsd:boolean" name="NewMarkedAsRead"/>
+  </message>
+  <message name="deleteMessageRequest">
+    <part type="xsd:unsignedShort" name="NewIndex"/>
+    <part type="xsd:unsignedShort" name="NewMessageIndex"/>
+  </message>
+  <message name="getListResponse">
+    <part type="xsd:string" name="NewTAMList"/>
+  </message>
+</definitions>

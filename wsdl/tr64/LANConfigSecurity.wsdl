@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="LANConfigSecurity">
+    <port binding="LANConfigSecurity">
+      <soap:address location="http://fritz.box:49000/upnp/control/lanconfigsecurity"/>
+    </port>
+  </service>
+  <binding name="LANConfigSecurity" type="LANConfigSecurity">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:LANConfigSecurity:1#GetInfo"/>
+    </operation>
+    <operation name="getCurrentUser">
+      <soap:operation soapAction="urn:dslforum-org:service:LANConfigSecurity:1#X_AVM-DE_GetCurrentUser"/>
+    </operation>
+    <operation name="getAnonymousLogin">
+      <soap:operation soapAction="urn:dslforum-org:service:LANConfigSecurity:1#X_AVM-DE_GetAnonymousLogin"/>
+    </operation>
+    <operation name="setConfigPassword">
+      <soap:operation soapAction="urn:dslforum-org:service:LANConfigSecurity:1#SetConfigPassword"/>
+    </operation>
+    <operation name="getUserList">
+      <soap:operation soapAction="urn:dslforum-org:service:LANConfigSecurity:1#X_AVM-DE_GetUserList"/>
+    </operation>
+  </binding>
+  <portType name="LANConfigSecurity">
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="getCurrentUser">
+      <output message="getCurrentUserResponse"/>
+    </operation>
+    <operation name="getAnonymousLogin">
+      <output message="getAnonymousLoginResponse"/>
+    </operation>
+    <operation name="setConfigPassword">
+      <input message="setConfigPasswordRequest"/>
+    </operation>
+    <operation name="getUserList">
+      <output message="getUserListResponse"/>
+    </operation>
+  </portType>
+  <message name="getInfoResponse">
+    <part type="xsd:unsignedShort" name="NewMaxCharsPassword"/>
+    <part type="xsd:unsignedShort" name="NewMinCharsPassword"/>
+    <part type="xsd:string" name="NewAllowedCharsPassword"/>
+    <part type="xsd:string" name="NewAllowedCharsUsername"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_IsDefaultPasswordActive"/>
+  </message>
+  <message name="getCurrentUserResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_CurrentUsername"/>
+    <part type="xsd:string" name="NewX_AVM-DE_CurrentUserRights"/>
+  </message>
+  <message name="getAnonymousLoginResponse">
+    <part type="xsd:boolean" name="NewX_AVM-DE_AnonymousLoginEnabled"/>
+    <part type="xsd:boolean" name="NewX_AVM-DE_ButtonLoginEnabled"/>
+  </message>
+  <message name="setConfigPasswordRequest">
+    <part type="xsd:string" name="NewPassword"/>
+  </message>
+  <message name="getUserListResponse">
+    <part type="xsd:string" name="NewX_AVM-DE_UserList"/>
+  </message>
+</definitions>

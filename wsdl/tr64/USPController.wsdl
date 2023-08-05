@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="X_AVM-DE_USPController">
+    <port binding="X_AVM-DE_USPController">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_uspcontroller"/>
+    </port>
+  </service>
+  <binding name="X_AVM-DE_USPController" type="X_AVM-DE_USPController">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getInfo">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_USPController:1#GetInfo"/>
+    </operation>
+    <operation name="getUSPControllerByIndex">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_USPController:1#GetUSPControllerByIndex"/>
+    </operation>
+    <operation name="getUSPControllerNumberOfEntries">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_USPController:1#GetUSPControllerNumberOfEntries"/>
+    </operation>
+    <operation name="addUSPController">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_USPController:1#AddUSPController"/>
+    </operation>
+    <operation name="deleteUSPControllerByIndex">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_USPController:1#DeleteUSPControllerByIndex"/>
+    </operation>
+    <operation name="setUSPControllerEnableByIndex">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_USPController:1#SetUSPControllerEnableByIndex"/>
+    </operation>
+    <operation name="getUSPMyFRITZEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_USPController:1#GetUSPMyFRITZEnable"/>
+    </operation>
+    <operation name="setUSPMyFRITZEnable">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_USPController:1#SetUSPMyFRITZEnable"/>
+    </operation>
+  </binding>
+  <portType name="X_AVM-DE_USPController">
+    <operation name="getInfo">
+      <output message="getInfoResponse"/>
+    </operation>
+    <operation name="getUSPControllerByIndex">
+      <input message="getUSPControllerByIndexRequest"/>
+      <output message="getUSPControllerByIndexResponse"/>
+    </operation>
+    <operation name="getUSPControllerNumberOfEntries">
+      <output message="getUSPControllerNumberOfEntriesResponse"/>
+    </operation>
+    <operation name="addUSPController">
+      <input message="addUSPControllerRequest"/>
+      <output message="addUSPControllerResponse"/>
+    </operation>
+    <operation name="deleteUSPControllerByIndex">
+      <input message="deleteUSPControllerByIndexRequest"/>
+    </operation>
+    <operation name="setUSPControllerEnableByIndex">
+      <input message="setUSPControllerEnableByIndexRequest"/>
+    </operation>
+    <operation name="getUSPMyFRITZEnable">
+      <output message="getUSPMyFRITZEnableResponse"/>
+    </operation>
+    <operation name="setUSPMyFRITZEnable">
+      <input message="setUSPMyFRITZEnableRequest"/>
+    </operation>
+  </portType>
+  <message name="getInfoResponse">
+    <part type="xsd:unsignedShort" name="NewMinCharsEndpointID"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsEndpointID"/>
+    <part type="xsd:string" name="NewAllowedCharsEndpointID"/>
+    <part type="xsd:unsignedShort" name="NewMinCharsHostname"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsHostname"/>
+    <part type="xsd:unsignedShort" name="NewMinCharsPath"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsPath"/>
+    <part type="xsd:unsignedShort" name="NewMinCharsUsername"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsUsername"/>
+    <part type="xsd:unsignedShort" name="NewMinCharsPassword"/>
+    <part type="xsd:unsignedShort" name="NewMaxCharsPassword"/>
+    <part type="xsd:boolean" name="NewUSPMyFRITZEnabled"/>
+  </message>
+  <message name="getUSPControllerByIndexRequest">
+    <part type="xsd:unsignedInt" name="NewIndex"/>
+  </message>
+  <message name="getUSPControllerByIndexResponse">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewEndpointID"/>
+    <part type="xsd:string" name="NewMTP"/>
+    <part type="xsd:string" name="NewHostname"/>
+    <part type="xsd:string" name="NewPath"/>
+    <part type="xsd:unsignedShort" name="NewPort"/>
+    <part type="xsd:boolean" name="NewUseTLS"/>
+    <part type="xsd:boolean" name="NewAccessRightSmarthome"/>
+    <part type="xsd:boolean" name="NewAccessRightMesh"/>
+    <part type="xsd:boolean" name="NewAccessRightInternet"/>
+    <part type="xsd:boolean" name="NewAccessRightSystem"/>
+    <part type="xsd:boolean" name="NewAccessRightController"/>
+    <part type="xsd:boolean" name="NewAccessRightWiFi"/>
+    <part type="xsd:boolean" name="NewAccessRightVoIP"/>
+    <part type="xsd:string" name="NewUsername"/>
+  </message>
+  <message name="getUSPControllerNumberOfEntriesResponse">
+    <part type="xsd:unsignedInt" name="NewUSPControllerNumberOfEntries"/>
+  </message>
+  <message name="addUSPControllerRequest">
+    <part type="xsd:boolean" name="NewEnable"/>
+    <part type="xsd:string" name="NewEndpointID"/>
+    <part type="xsd:string" name="NewMTP"/>
+    <part type="xsd:string" name="NewHostname"/>
+    <part type="xsd:string" name="NewPath"/>
+    <part type="xsd:unsignedShort" name="NewPort"/>
+    <part type="xsd:boolean" name="NewUseTLS"/>
+    <part type="xsd:boolean" name="NewAccessRightSmarthome"/>
+    <part type="xsd:boolean" name="NewAccessRightMesh"/>
+    <part type="xsd:boolean" name="NewAccessRightInternet"/>
+    <part type="xsd:boolean" name="NewAccessRightSystem"/>
+    <part type="xsd:boolean" name="NewAccessRightController"/>
+    <part type="xsd:boolean" name="NewAccessRightWiFi"/>
+    <part type="xsd:boolean" name="NewAccessRightVoIP"/>
+    <part type="xsd:string" name="NewUsername"/>
+    <part type="xsd:string" name="NewPassword"/>
+  </message>
+  <message name="addUSPControllerResponse">
+    <part type="xsd:unsignedInt" name="NewIndex"/>
+  </message>
+  <message name="deleteUSPControllerByIndexRequest">
+    <part type="xsd:unsignedInt" name="NewIndex"/>
+  </message>
+  <message name="setUSPControllerEnableByIndexRequest">
+    <part type="xsd:unsignedInt" name="NewIndex"/>
+    <part type="xsd:boolean" name="NewEnable"/>
+  </message>
+  <message name="getUSPMyFRITZEnableResponse">
+    <part type="xsd:boolean" name="NewUSPMyFRITZEnabled"/>
+  </message>
+  <message name="setUSPMyFRITZEnableRequest">
+    <part type="xsd:boolean" name="NewUSPMyFRITZEnabled"/>
+  </message>
+</definitions>

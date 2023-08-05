@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <service name="X_AVM-DE_HostFilter">
+    <port binding="X_AVM-DE_HostFilter">
+      <soap:address location="http://fritz.box:49000/upnp/control/x_hostfilter"/>
+    </port>
+  </service>
+  <binding name="X_AVM-DE_HostFilter" type="X_AVM-DE_HostFilter">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="markTicket">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_HostFilter:1#MarkTicket"/>
+    </operation>
+    <operation name="getTicketIDStatus">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_HostFilter:1#GetTicketIDStatus"/>
+    </operation>
+    <operation name="discardAllTickets">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_HostFilter:1#DiscardAllTickets"/>
+    </operation>
+    <operation name="disallowWANAccessByIP">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_HostFilter:1#DisallowWANAccessByIP"/>
+    </operation>
+    <operation name="getWANAccessByIP">
+      <soap:operation soapAction="urn:dslforum-org:service:X_AVM-DE_HostFilter:1#GetWANAccessByIP"/>
+    </operation>
+  </binding>
+  <portType name="X_AVM-DE_HostFilter">
+    <operation name="markTicket">
+      <output message="markTicketResponse"/>
+    </operation>
+    <operation name="getTicketIDStatus">
+      <input message="getTicketIDStatusRequest"/>
+      <output message="getTicketIDStatusResponse"/>
+    </operation>
+    <operation name="discardAllTickets"/>
+    <operation name="disallowWANAccessByIP">
+      <input message="disallowWANAccessByIPRequest"/>
+    </operation>
+    <operation name="getWANAccessByIP">
+      <input message="getWANAccessByIPRequest"/>
+      <output message="getWANAccessByIPResponse"/>
+    </operation>
+  </portType>
+  <message name="markTicketResponse">
+    <part type="xsd:string" name="NewTicketID"/>
+  </message>
+  <message name="getTicketIDStatusRequest">
+    <part type="xsd:string" name="NewTicketID"/>
+  </message>
+  <message name="getTicketIDStatusResponse">
+    <part type="xsd:string" name="NewTicketIDStatus"/>
+  </message>
+  <message name="disallowWANAccessByIPRequest">
+    <part type="xsd:string" name="NewIPv4Address"/>
+    <part type="xsd:boolean" name="NewDisallow"/>
+  </message>
+  <message name="getWANAccessByIPRequest">
+    <part type="xsd:string" name="NewIPv4Address"/>
+  </message>
+  <message name="getWANAccessByIPResponse">
+    <part type="xsd:boolean" name="NewDisallow"/>
+    <part type="xsd:string" name="NewWANAccess"/>
+  </message>
+</definitions>
