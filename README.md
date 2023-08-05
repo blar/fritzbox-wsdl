@@ -72,7 +72,7 @@ Für die Beispiele werden die [SOAP-Klasse](http://php.net/soap) von PHP verwend
 
 ## Linkgeschwindigkeit
 
-    $client = new SoapClient('wsdl/idg2/WANCommonInterfaceConfig.wsdl', [
+    $client = new SoapClient('wsdl/igd2/WANCommonInterfaceConfig.wsdl', [
         'login' => FRITZBOX_USERNAME,
         'password' => FRITZBOX_PASSWORD
     ]);
